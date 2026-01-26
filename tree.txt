@@ -1,0 +1,5182 @@
+tree
+.
+├── APPLE_LICENSE
+├── EXTERNAL_HEADERS
+│   ├── AssertMacros.h
+│   ├── Availability.h
+│   ├── AvailabilityInternal.h
+│   ├── AvailabilityMacros.h
+│   ├── CoreEntitlements
+│   │   ├── CoreEntitlements.h
+│   │   ├── CoreEntitlementsPriv.h
+│   │   ├── Entitlements.h
+│   │   ├── EntitlementsPriv.h
+│   │   ├── Errors.h
+│   │   ├── KernelUtils.hpp
+│   │   ├── QueryHelpers.h
+│   │   ├── Result.h
+│   │   ├── Runtime.h
+│   │   ├── Serialization.h
+│   │   └── der_vm.h
+│   ├── Info.plist
+│   ├── Makefile
+│   ├── acpi
+│   │   ├── Acpi.h
+│   │   └── Acpi_v1.h
+│   ├── architecture
+│   │   ├── Makefile
+│   │   ├── arm
+│   │   │   └── Makefile
+│   │   ├── byte_order.h
+│   │   └── i386
+│   │       ├── Makefile
+│   │       ├── asm_help.h
+│   │       ├── cpu.h
+│   │       ├── desc.h
+│   │       ├── io.h
+│   │       ├── pio.h
+│   │       ├── reg_help.h
+│   │       ├── sel.h
+│   │       ├── table.h
+│   │       └── tss.h
+│   ├── corecrypto
+│   │   ├── cc.h
+│   │   ├── cc_config.h
+│   │   ├── cc_error.h
+│   │   ├── cc_fault_canary.h
+│   │   ├── cc_macros.h
+│   │   ├── cc_priv.h
+│   │   ├── cc_runtime_config.h
+│   │   ├── ccaes.h
+│   │   ├── ccasn1.h
+│   │   ├── ccchacha20poly1305.h
+│   │   ├── cccmac.h
+│   │   ├── ccder.h
+│   │   ├── ccdes.h
+│   │   ├── ccdigest.h
+│   │   ├── ccdigest_priv.h
+│   │   ├── ccdrbg.h
+│   │   ├── ccdrbg_impl.h
+│   │   ├── cchmac.h
+│   │   ├── cckprng.h
+│   │   ├── ccmd4.h
+│   │   ├── ccmode.h
+│   │   ├── ccmode_impl.h
+│   │   ├── ccmode_siv.h
+│   │   ├── ccmode_siv_hmac.h
+│   │   ├── ccn.h
+│   │   ├── ccpad.h
+│   │   ├── ccrng.h
+│   │   ├── ccrsa.h
+│   │   ├── ccsha1.h
+│   │   ├── ccsha2.h
+│   │   ├── cczp.h
+│   │   └── fipspost_trace.h
+│   ├── coretrust
+│   │   └── CTEvaluate.h
+│   ├── img4
+│   │   ├── api.h
+│   │   ├── chip.h
+│   │   ├── firmware.h
+│   │   ├── image.h
+│   │   ├── nonce.h
+│   │   ├── object.h
+│   │   ├── runtime.h
+│   │   ├── shim.h
+│   │   └── shim_xnu.h
+│   ├── mach-o
+│   │   ├── Makefile
+│   │   ├── arm
+│   │   │   └── reloc.h
+│   │   ├── arm64
+│   │   │   └── reloc.h
+│   │   ├── fat.h
+│   │   ├── fixup-chains.h
+│   │   ├── loader.h
+│   │   ├── nlist.h
+│   │   ├── reloc.h
+│   │   ├── stab.h
+│   │   └── x86_64
+│   │       └── reloc.h
+│   ├── ptrauth.h
+│   ├── ptrcheck.h
+│   ├── stdarg.h
+│   ├── stdatomic.h
+│   ├── stdbool.h
+│   ├── stddef.h
+│   ├── stdint.h
+│   └── sys
+│       ├── Makefile
+│       └── _pthread
+│           ├── Makefile
+│           └── _pthread_types.h
+├── Makefile
+├── README.md
+├── SETUP
+│   ├── Makefile
+│   ├── config
+│   │   ├── Makefile
+│   │   ├── config.h
+│   │   ├── doconf
+│   │   ├── externs.c
+│   │   ├── lexer.l
+│   │   ├── main.c
+│   │   ├── mkheaders.c
+│   │   ├── mkioconf.c
+│   │   ├── mkmakefile.c
+│   │   ├── openp.c
+│   │   ├── parser.y
+│   │   └── searchp.c
+│   ├── decomment
+│   │   ├── Makefile
+│   │   └── decomment.c
+│   ├── installfile
+│   │   ├── Makefile
+│   │   └── installfile.c
+│   ├── json_compilation_db
+│   │   ├── Makefile
+│   │   └── json_compilation_db.c
+│   ├── kextsymboltool
+│   │   ├── Makefile
+│   │   └── kextsymboltool.c
+│   ├── newvers
+│   ├── replacecontents
+│   │   ├── Makefile
+│   │   └── replacecontents.c
+│   ├── setsegname
+│   │   ├── Makefile
+│   │   └── setsegname.c
+│   └── setup.sh
+├── bsd
+│   ├── Makefile
+│   ├── arm
+│   │   ├── Makefile
+│   │   ├── _limits.h
+│   │   ├── _mcontext.h
+│   │   ├── _param.h
+│   │   ├── _types.h
+│   │   ├── disklabel.h
+│   │   ├── endian.h
+│   │   ├── fasttrap_isa.h
+│   │   ├── limits.h
+│   │   ├── param.h
+│   │   ├── profile.h
+│   │   ├── psl.h
+│   │   ├── ptrace.h
+│   │   ├── reg.h
+│   │   ├── signal.h
+│   │   ├── types.h
+│   │   └── vmparam.h
+│   ├── bsm
+│   │   ├── Makefile
+│   │   ├── audit.h
+│   │   ├── audit_domain.h
+│   │   ├── audit_errno.h
+│   │   ├── audit_fcntl.h
+│   │   ├── audit_internal.h
+│   │   ├── audit_kernel.h
+│   │   ├── audit_kevents.h
+│   │   ├── audit_record.h
+│   │   └── audit_socket_type.h
+│   ├── conf
+│   │   ├── Makefile
+│   │   ├── Makefile.arm
+│   │   ├── Makefile.arm64
+│   │   ├── Makefile.template
+│   │   ├── Makefile.x86_64
+│   │   ├── compat_hdrs.awk
+│   │   ├── copyright
+│   │   ├── files
+│   │   ├── files.arm
+│   │   ├── files.arm64
+│   │   ├── files.x86_64
+│   │   └── param.c
+│   ├── crypto
+│   │   ├── Makefile
+│   │   ├── aes.h
+│   │   ├── aesxts.h
+│   │   ├── des.h
+│   │   ├── doc
+│   │   │   ├── KernelCrypto.plist
+│   │   │   └── KernelCrypto.txt
+│   │   ├── entropy
+│   │   │   ├── Makefile
+│   │   │   └── entropy_sysctl.c
+│   │   ├── sha1.h
+│   │   └── sha2.h
+│   ├── dev
+│   │   ├── Makefile
+│   │   ├── arm
+│   │   │   ├── conf.c
+│   │   │   ├── cons.c
+│   │   │   ├── cpu_copy_in_cksum.s
+│   │   │   ├── cpu_in_cksum.s
+│   │   │   ├── cpu_memcmp_mask.s
+│   │   │   ├── disassembler.c
+│   │   │   ├── dtrace_isa.c
+│   │   │   ├── dtrace_subr_arm.c
+│   │   │   ├── fasttrap_isa.c
+│   │   │   ├── fbt_arm.c
+│   │   │   ├── kern_machdep.c
+│   │   │   ├── km.c
+│   │   │   ├── munge.c
+│   │   │   ├── sdt_arm.c
+│   │   │   ├── stubs.c
+│   │   │   ├── sysctl.c
+│   │   │   ├── systemcalls.c
+│   │   │   └── unix_signal.c
+│   │   ├── arm64
+│   │   │   ├── conf.c
+│   │   │   ├── cpu_copy_in_cksum.s
+│   │   │   ├── cpu_in_cksum.s
+│   │   │   ├── cpu_memcmp_mask.s
+│   │   │   ├── disassembler.c
+│   │   │   ├── dtrace_isa.c
+│   │   │   ├── dtrace_subr_arm.c
+│   │   │   ├── fasttrap_isa.c
+│   │   │   ├── fbt_arm.c
+│   │   │   ├── sdt_arm.c
+│   │   │   └── sysctl.c
+│   │   ├── busvar.h
+│   │   ├── cpu_copy_in_cksum_gen.c
+│   │   ├── dev_perfmon.c
+│   │   ├── dtrace
+│   │   │   ├── Makefile
+│   │   │   ├── blist.c
+│   │   │   ├── blist.h
+│   │   │   ├── dtrace.c
+│   │   │   ├── dtrace_glue.c
+│   │   │   ├── dtrace_ptss.c
+│   │   │   ├── dtrace_subr.c
+│   │   │   ├── dtrace_xoroshiro128_plus.c
+│   │   │   ├── dtrace_xoroshiro128_plus.h
+│   │   │   ├── fasttrap.c
+│   │   │   ├── fbt.c
+│   │   │   ├── fbt_blacklist.c
+│   │   │   ├── lockprof.c
+│   │   │   ├── lockstat.c
+│   │   │   ├── profile_prvd.c
+│   │   │   ├── scripts
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── darwin.d
+│   │   │   │   ├── errno.d
+│   │   │   │   ├── io.d
+│   │   │   │   ├── ip.d
+│   │   │   │   ├── log_unnest_badness.d
+│   │   │   │   ├── mptcp.d
+│   │   │   │   ├── ptrauth_arm64.d
+│   │   │   │   ├── regs_arm.d
+│   │   │   │   ├── regs_arm64.d
+│   │   │   │   ├── regs_x86_64.d
+│   │   │   │   ├── sched.d
+│   │   │   │   ├── signal.d
+│   │   │   │   ├── socket.d
+│   │   │   │   ├── tcp.d
+│   │   │   │   ├── unistd.d
+│   │   │   │   ├── vm_map_delete_permanent.d
+│   │   │   │   ├── vm_object_ownership.d
+│   │   │   │   └── vmx_compat.d
+│   │   │   ├── sdt.c
+│   │   │   ├── sdt_subr.c
+│   │   │   ├── systrace.c
+│   │   │   └── systrace.h
+│   │   ├── i386
+│   │   │   ├── conf.c
+│   │   │   ├── cons.c
+│   │   │   ├── cpu_copy_in_cksum.s
+│   │   │   ├── cpu_memcmp_mask.s
+│   │   │   ├── dis_tables.c
+│   │   │   ├── dtrace_isa.c
+│   │   │   ├── dtrace_subr_x86.c
+│   │   │   ├── fasttrap_isa.c
+│   │   │   ├── fasttrap_regset.h
+│   │   │   ├── fbt_x86.c
+│   │   │   ├── instr_size.c
+│   │   │   ├── kern_machdep.c
+│   │   │   ├── km.c
+│   │   │   ├── sdt_x86.c
+│   │   │   ├── stubs.c
+│   │   │   ├── sysctl.c
+│   │   │   ├── systemcalls.c
+│   │   │   └── unix_signal.c
+│   │   ├── kmreg_com.h
+│   │   ├── ldd.h
+│   │   ├── mem.c
+│   │   ├── memdev.c
+│   │   ├── memdev.h
+│   │   ├── monotonic.c
+│   │   ├── munge.c
+│   │   ├── random
+│   │   │   ├── Makefile
+│   │   │   ├── randomdev.c
+│   │   │   └── randomdev.h
+│   │   ├── unix_startup.c
+│   │   └── vn
+│   │       ├── shadow.c
+│   │       ├── shadow.h
+│   │       └── vn.c
+│   ├── i386
+│   │   ├── Makefile
+│   │   ├── _limits.h
+│   │   ├── _mcontext.h
+│   │   ├── _param.h
+│   │   ├── _types.h
+│   │   ├── dis_tables.h
+│   │   ├── disklabel.h
+│   │   ├── endian.h
+│   │   ├── fasttrap_isa.h
+│   │   ├── limits.h
+│   │   ├── param.h
+│   │   ├── profile.h
+│   │   ├── psl.h
+│   │   ├── ptrace.h
+│   │   ├── reg.h
+│   │   ├── signal.h
+│   │   ├── types.h
+│   │   └── vmparam.h
+│   ├── kern
+│   │   ├── ast.h
+│   │   ├── bsd_init.c
+│   │   ├── bsd_stubs.c
+│   │   ├── chunklist.c
+│   │   ├── chunklist.h
+│   │   ├── counter_test.c
+│   │   ├── decmpfs.c
+│   │   ├── imageboot.c
+│   │   ├── kdebug.c
+│   │   ├── kdebug_common.c
+│   │   ├── kdebug_triage.c
+│   │   ├── kern_acct.c
+│   │   ├── kern_aio.c
+│   │   ├── kern_asl.c
+│   │   ├── kern_authorization.c
+│   │   ├── kern_backtrace.c
+│   │   ├── kern_clock.c
+│   │   ├── kern_control.c
+│   │   ├── kern_core.c
+│   │   ├── kern_credential.c
+│   │   ├── kern_cs.c
+│   │   ├── kern_csr.c
+│   │   ├── kern_debug.c
+│   │   ├── kern_descrip.c
+│   │   ├── kern_ecc.c
+│   │   ├── kern_event.c
+│   │   ├── kern_exec.c
+│   │   ├── kern_exec_internal.h
+│   │   ├── kern_exit.c
+│   │   ├── kern_fork.c
+│   │   ├── kern_guarded.c
+│   │   ├── kern_kpc.c
+│   │   ├── kern_ktrace.c
+│   │   ├── kern_lockf.c
+│   │   ├── kern_malloc.c
+│   │   ├── kern_memorystatus.c
+│   │   ├── kern_memorystatus_freeze.c
+│   │   ├── kern_memorystatus_notify.c
+│   │   ├── kern_mib.c
+│   │   ├── kern_mman.c
+│   │   ├── kern_newsysctl.c
+│   │   ├── kern_ntptime.c
+│   │   ├── kern_overrides.c
+│   │   ├── kern_persona.c
+│   │   ├── kern_physio.c
+│   │   ├── kern_priv.c
+│   │   ├── kern_proc.c
+│   │   ├── kern_prot.c
+│   │   ├── kern_resource.c
+│   │   ├── kern_sfi.c
+│   │   ├── kern_shutdown.c
+│   │   ├── kern_sig.c
+│   │   ├── kern_subr.c
+│   │   ├── kern_symfile.c
+│   │   ├── kern_synch.c
+│   │   ├── kern_sysctl.c
+│   │   ├── kern_time.c
+│   │   ├── kern_xxx.c
+│   │   ├── kpi_mbuf.c
+│   │   ├── kpi_mbuf_internal.h
+│   │   ├── kpi_socket.c
+│   │   ├── kpi_socketfilter.c
+│   │   ├── mach_fat.c
+│   │   ├── mach_fat.h
+│   │   ├── mach_loader.c
+│   │   ├── mach_loader.h
+│   │   ├── mach_process.c
+│   │   ├── makesyscalls.sh
+│   │   ├── mcache.c
+│   │   ├── netboot.c
+│   │   ├── policy_check.c
+│   │   ├── posix_sem.c
+│   │   ├── posix_shm.c
+│   │   ├── proc_info.c
+│   │   ├── proc_uuid_policy.c
+│   │   ├── process_policy.c
+│   │   ├── qsort.c
+│   │   ├── socket_flows.c
+│   │   ├── socket_flows.h
+│   │   ├── socket_info.c
+│   │   ├── stackshot.c
+│   │   ├── subr_eventhandler.c
+│   │   ├── subr_log.c
+│   │   ├── subr_prf.c
+│   │   ├── subr_sbuf.c
+│   │   ├── subr_xxx.c
+│   │   ├── sys_coalition.c
+│   │   ├── sys_domain.c
+│   │   ├── sys_eventlink.c
+│   │   ├── sys_generic.c
+│   │   ├── sys_persona.c
+│   │   ├── sys_pipe.c
+│   │   ├── sys_reason.c
+│   │   ├── sys_socket.c
+│   │   ├── sys_ulock.c
+│   │   ├── sys_work_interval.c
+│   │   ├── syscalls.master
+│   │   ├── sysv_ipc.c
+│   │   ├── sysv_msg.c
+│   │   ├── sysv_sem.c
+│   │   ├── sysv_shm.c
+│   │   ├── trace_codes
+│   │   ├── tracker.c
+│   │   ├── tty.c
+│   │   ├── tty_compat.c
+│   │   ├── tty_conf.c
+│   │   ├── tty_dev.c
+│   │   ├── tty_dev.h
+│   │   ├── tty_ptmx.c
+│   │   ├── tty_pty.c
+│   │   ├── tty_subr.c
+│   │   ├── tty_tty.c
+│   │   ├── ubc_subr.c
+│   │   ├── uipc_domain.c
+│   │   ├── uipc_mbuf.c
+│   │   ├── uipc_mbuf2.c
+│   │   ├── uipc_proto.c
+│   │   ├── uipc_socket.c
+│   │   ├── uipc_socket2.c
+│   │   ├── uipc_syscalls.c
+│   │   ├── uipc_usrreq.c
+│   │   └── vsock_domain.c
+│   ├── libkern
+│   │   ├── Makefile
+│   │   ├── bcd.c
+│   │   ├── copyio.h
+│   │   ├── crc16.c
+│   │   ├── crc32.c
+│   │   ├── libkern.h
+│   │   ├── memchr.c
+│   │   ├── random.c
+│   │   ├── scanc.c
+│   │   ├── strsep.c
+│   │   └── url_encode.c
+│   ├── machine
+│   │   ├── Makefile
+│   │   ├── _limits.h
+│   │   ├── _mcontext.h
+│   │   ├── _param.h
+│   │   ├── _types.h
+│   │   ├── byte_order.h
+│   │   ├── cons.h
+│   │   ├── dis_tables.h
+│   │   ├── disklabel.h
+│   │   ├── endian.h
+│   │   ├── exec.h
+│   │   ├── fasttrap_isa.h
+│   │   ├── limits.h
+│   │   ├── machine.modulemap
+│   │   ├── machine_private.modulemap
+│   │   ├── param.h
+│   │   ├── profile.h
+│   │   ├── psl.h
+│   │   ├── ptrace.h
+│   │   ├── reg.h
+│   │   ├── signal.h
+│   │   ├── smp.h
+│   │   ├── types.h
+│   │   └── vmparam.h
+│   ├── man
+│   │   ├── Makefile
+│   │   ├── man2
+│   │   │   ├── EV_SET.2
+│   │   │   ├── FD_CLR.2
+│   │   │   ├── FD_COPY.2
+│   │   │   ├── FD_ISSET.2
+│   │   │   ├── FD_SET.2
+│   │   │   ├── FD_ZERO.2
+│   │   │   ├── Makefile
+│   │   │   ├── _exit.2
+│   │   │   ├── accept.2
+│   │   │   ├── access.2
+│   │   │   ├── acct.2
+│   │   │   ├── adjtime.2
+│   │   │   ├── aio_cancel.2
+│   │   │   ├── aio_error.2
+│   │   │   ├── aio_read.2
+│   │   │   ├── aio_return.2
+│   │   │   ├── aio_suspend.2
+│   │   │   ├── aio_write.2
+│   │   │   ├── audit.2
+│   │   │   ├── auditctl.2
+│   │   │   ├── auditon.2
+│   │   │   ├── bind.2
+│   │   │   ├── chdir.2
+│   │   │   ├── chflags.2
+│   │   │   ├── chmod.2
+│   │   │   ├── chown.2
+│   │   │   ├── chroot.2
+│   │   │   ├── clonefile.2
+│   │   │   ├── clonefileat.2
+│   │   │   ├── close.2
+│   │   │   ├── connect.2
+│   │   │   ├── connectx.2
+│   │   │   ├── disconnectx.2
+│   │   │   ├── dup.2
+│   │   │   ├── dup2.2
+│   │   │   ├── errno.2
+│   │   │   ├── exchangedata.2
+│   │   │   ├── execve.2
+│   │   │   ├── faccessat.2
+│   │   │   ├── fchdir.2
+│   │   │   ├── fchflags.2
+│   │   │   ├── fchmod.2
+│   │   │   ├── fchmodat.2
+│   │   │   ├── fchown.2
+│   │   │   ├── fchownat.2
+│   │   │   ├── fclonefileat.2
+│   │   │   ├── fcntl.2
+│   │   │   ├── fgetattrlist.2
+│   │   │   ├── fgetxattr.2
+│   │   │   ├── fhopen.2
+│   │   │   ├── flistxattr.2
+│   │   │   ├── flock.2
+│   │   │   ├── fork.2
+│   │   │   ├── fpathconf.2
+│   │   │   ├── fremovexattr.2
+│   │   │   ├── fs_snapshot_create.2
+│   │   │   ├── fs_snapshot_delete.2
+│   │   │   ├── fs_snapshot_list.2
+│   │   │   ├── fs_snapshot_rename.2
+│   │   │   ├── fsctl.2
+│   │   │   ├── fsetattrlist.2
+│   │   │   ├── fsetxattr.2
+│   │   │   ├── fsgetpath.2
+│   │   │   ├── fstat.2
+│   │   │   ├── fstat64.2
+│   │   │   ├── fstatat.2
+│   │   │   ├── fstatfs.2
+│   │   │   ├── fstatfs64.2
+│   │   │   ├── fsync.2
+│   │   │   ├── ftruncate.2
+│   │   │   ├── futimens.2
+│   │   │   ├── futimes.2
+│   │   │   ├── getattrlist.2
+│   │   │   ├── getattrlistat.2
+│   │   │   ├── getattrlistbulk.2
+│   │   │   ├── getaudit.2
+│   │   │   ├── getaudit_addr.2
+│   │   │   ├── getauid.2
+│   │   │   ├── getdirentries.2
+│   │   │   ├── getdirentriesattr.2
+│   │   │   ├── getdtablesize.2
+│   │   │   ├── getegid.2
+│   │   │   ├── getentropy.2
+│   │   │   ├── geteuid.2
+│   │   │   ├── getfh.2
+│   │   │   ├── getfsstat.2
+│   │   │   ├── getgid.2
+│   │   │   ├── getgroups.2
+│   │   │   ├── getitimer.2
+│   │   │   ├── getlogin.2
+│   │   │   ├── getpeername.2
+│   │   │   ├── getpgid.2
+│   │   │   ├── getpgrp.2
+│   │   │   ├── getpid.2
+│   │   │   ├── getppid.2
+│   │   │   ├── getpriority.2
+│   │   │   ├── getrlimit.2
+│   │   │   ├── getrusage.2
+│   │   │   ├── getsid.2
+│   │   │   ├── getsockname.2
+│   │   │   ├── getsockopt.2
+│   │   │   ├── gettimeofday.2
+│   │   │   ├── getuid.2
+│   │   │   ├── getxattr.2
+│   │   │   ├── i386_get_ldt.2
+│   │   │   ├── i386_set_ldt.2
+│   │   │   ├── intro.2
+│   │   │   ├── ioctl.2
+│   │   │   ├── issetugid.2
+│   │   │   ├── kevent.2
+│   │   │   ├── kevent64.2
+│   │   │   ├── kevent_qos.2
+│   │   │   ├── kill.2
+│   │   │   ├── kqueue.2
+│   │   │   ├── lchown.2
+│   │   │   ├── link.2
+│   │   │   ├── linkat.2
+│   │   │   ├── listen.2
+│   │   │   ├── listxattr.2
+│   │   │   ├── lseek.2
+│   │   │   ├── lstat.2
+│   │   │   ├── lstat64.2
+│   │   │   ├── madvise.2
+│   │   │   ├── mincore.2
+│   │   │   ├── minherit.2
+│   │   │   ├── mkdir.2
+│   │   │   ├── mkdirat.2
+│   │   │   ├── mkfifo.2
+│   │   │   ├── mknod.2
+│   │   │   ├── mlock.2
+│   │   │   ├── mmap.2
+│   │   │   ├── mount.2
+│   │   │   ├── mprotect.2
+│   │   │   ├── msync.2
+│   │   │   ├── munlock.2
+│   │   │   ├── munmap.2
+│   │   │   ├── nfsclnt.2
+│   │   │   ├── nfssvc.2
+│   │   │   ├── open.2
+│   │   │   ├── openat.2
+│   │   │   ├── pathconf.2
+│   │   │   ├── pipe.2
+│   │   │   ├── poll.2
+│   │   │   ├── posix_madvise.2
+│   │   │   ├── posix_spawn.2
+│   │   │   ├── pread.2
+│   │   │   ├── preadv.2
+│   │   │   ├── pselect.2
+│   │   │   ├── pthread_setugid_np.2
+│   │   │   ├── ptrace.2
+│   │   │   ├── pwrite.2
+│   │   │   ├── pwritev.2
+│   │   │   ├── quotactl.2
+│   │   │   ├── read.2
+│   │   │   ├── readlink.2
+│   │   │   ├── readlinkat.2
+│   │   │   ├── readv.2
+│   │   │   ├── reboot.2
+│   │   │   ├── recv.2
+│   │   │   ├── recvfrom.2
+│   │   │   ├── recvmsg.2
+│   │   │   ├── removexattr.2
+│   │   │   ├── rename.2
+│   │   │   ├── renameat.2
+│   │   │   ├── renameatx_np.2
+│   │   │   ├── renamex_np.2
+│   │   │   ├── revoke.2
+│   │   │   ├── rmdir.2
+│   │   │   ├── searchfs.2
+│   │   │   ├── select.2
+│   │   │   ├── sem_close.2
+│   │   │   ├── sem_open.2
+│   │   │   ├── sem_post.2
+│   │   │   ├── sem_unlink.2
+│   │   │   ├── sem_wait.2
+│   │   │   ├── semctl.2
+│   │   │   ├── semget.2
+│   │   │   ├── semop.2
+│   │   │   ├── send.2
+│   │   │   ├── sendfile.2
+│   │   │   ├── sendmsg.2
+│   │   │   ├── sendto.2
+│   │   │   ├── setattrlist.2
+│   │   │   ├── setattrlistat.2
+│   │   │   ├── setaudit.2
+│   │   │   ├── setaudit_addr.2
+│   │   │   ├── setauid.2
+│   │   │   ├── setegid.2
+│   │   │   ├── seteuid.2
+│   │   │   ├── setgid.2
+│   │   │   ├── setgroups.2
+│   │   │   ├── setitimer.2
+│   │   │   ├── setlogin.2
+│   │   │   ├── setpgid.2
+│   │   │   ├── setpgrp.2
+│   │   │   ├── setpriority.2
+│   │   │   ├── setregid.2
+│   │   │   ├── setreuid.2
+│   │   │   ├── setrlimit.2
+│   │   │   ├── setsid.2
+│   │   │   ├── setsockopt.2
+│   │   │   ├── settimeofday.2
+│   │   │   ├── setuid.2
+│   │   │   ├── setxattr.2
+│   │   │   ├── shm_open.2
+│   │   │   ├── shm_unlink.2
+│   │   │   ├── shmat.2
+│   │   │   ├── shmctl.2
+│   │   │   ├── shmdt.2
+│   │   │   ├── shmget.2
+│   │   │   ├── shutdown.2
+│   │   │   ├── sigaction.2
+│   │   │   ├── sigaltstack.2
+│   │   │   ├── sigpending.2
+│   │   │   ├── sigprocmask.2
+│   │   │   ├── sigstack.2
+│   │   │   ├── sigsuspend.2
+│   │   │   ├── socket.2
+│   │   │   ├── socketpair.2
+│   │   │   ├── stat.2
+│   │   │   ├── stat64.2
+│   │   │   ├── statfs.2
+│   │   │   ├── statfs64.2
+│   │   │   ├── symlink.2
+│   │   │   ├── symlinkat.2
+│   │   │   ├── sync.2
+│   │   │   ├── syscall.2
+│   │   │   ├── truncate.2
+│   │   │   ├── umask.2
+│   │   │   ├── undelete.2
+│   │   │   ├── unlink.2
+│   │   │   ├── unlinkat.2
+│   │   │   ├── unmount.2
+│   │   │   ├── utimensat.2
+│   │   │   ├── utimes.2
+│   │   │   ├── vfork.2
+│   │   │   ├── wait.2
+│   │   │   ├── wait3.2
+│   │   │   ├── wait4.2
+│   │   │   ├── waitpid.2
+│   │   │   ├── write.2
+│   │   │   └── writev.2
+│   │   ├── man3
+│   │   │   ├── Makefile
+│   │   │   ├── getiopolicy_np.3
+│   │   │   ├── posix_spawn_file_actions_addclose.3
+│   │   │   ├── posix_spawn_file_actions_init.3
+│   │   │   ├── posix_spawnattr_init.3
+│   │   │   ├── posix_spawnattr_setarchpref_np.3
+│   │   │   ├── posix_spawnattr_setbinpref_np.3
+│   │   │   ├── posix_spawnattr_setflags.3
+│   │   │   ├── posix_spawnattr_setpgroup.3
+│   │   │   ├── posix_spawnattr_setsigdefault.3
+│   │   │   ├── posix_spawnattr_setsigmask.3
+│   │   │   ├── posix_spawnattr_setspecialport_np.3
+│   │   │   └── queue.3
+│   │   ├── man4
+│   │   │   ├── Makefile
+│   │   │   ├── aio.4
+│   │   │   ├── arp.4
+│   │   │   ├── audit.4
+│   │   │   ├── auditpipe.4
+│   │   │   ├── bpf.4
+│   │   │   ├── dummynet.4
+│   │   │   ├── faith.4
+│   │   │   ├── fd.4
+│   │   │   ├── gif.4
+│   │   │   ├── icmp.4
+│   │   │   ├── icmp6.4
+│   │   │   ├── ifmib.4
+│   │   │   ├── inet.4
+│   │   │   ├── inet6.4
+│   │   │   ├── ip.4
+│   │   │   ├── ip6.4
+│   │   │   ├── ipl.4
+│   │   │   ├── ipsec.4
+│   │   │   ├── lo.4
+│   │   │   ├── netintro.4
+│   │   │   ├── networking.4
+│   │   │   ├── null.4
+│   │   │   ├── pty.4
+│   │   │   ├── random.4
+│   │   │   ├── route.4
+│   │   │   ├── stderr.4
+│   │   │   ├── stdin.4
+│   │   │   ├── stdout.4
+│   │   │   ├── stf.4
+│   │   │   ├── tcp.4
+│   │   │   ├── termios.4
+│   │   │   ├── tty.4
+│   │   │   ├── udp.4
+│   │   │   ├── unix.4
+│   │   │   ├── urandom.4
+│   │   │   └── vsock.4
+│   │   ├── man5
+│   │   │   ├── Makefile
+│   │   │   ├── acct.5
+│   │   │   ├── core.5
+│   │   │   ├── dir.5
+│   │   │   ├── dirent.5
+│   │   │   └── types.5
+│   │   ├── man7
+│   │   │   ├── Makefile
+│   │   │   └── sticky.7
+│   │   └── man9
+│   │       ├── Makefile
+│   │       ├── backtrace.9
+│   │       ├── backtrace_pack.9
+│   │       ├── backtrace_packed.9
+│   │       ├── backtrace_unpack.9
+│   │       ├── backtrace_user.9
+│   │       ├── copy.9
+│   │       ├── copyin.9
+│   │       ├── copyinstr.9
+│   │       ├── copyout.9
+│   │       ├── copystr.9
+│   │       ├── fetch.9
+│   │       ├── fubyte.9
+│   │       ├── fuibyte.9
+│   │       ├── fuiword.9
+│   │       ├── fulong.9
+│   │       ├── fuulong.9
+│   │       ├── fuword.9
+│   │       ├── intro.9
+│   │       ├── monotonic.9
+│   │       ├── store.9
+│   │       ├── style.9
+│   │       ├── subyte.9
+│   │       ├── suibyte.9
+│   │       ├── suiword.9
+│   │       ├── sulong.9
+│   │       ├── suulong.9
+│   │       └── suword.9
+│   ├── miscfs
+│   │   ├── Makefile
+│   │   ├── bindfs
+│   │   │   ├── Makefile
+│   │   │   ├── bind_subr.c
+│   │   │   ├── bind_vfsops.c
+│   │   │   ├── bind_vnops.c
+│   │   │   └── bindfs.h
+│   │   ├── deadfs
+│   │   │   └── dead_vnops.c
+│   │   ├── devfs
+│   │   │   ├── Makefile
+│   │   │   ├── README
+│   │   │   ├── devfs.h
+│   │   │   ├── devfs_fdesc_support.c
+│   │   │   ├── devfs_proto.h
+│   │   │   ├── devfs_tree.c
+│   │   │   ├── devfs_vfsops.c
+│   │   │   ├── devfs_vnops.c
+│   │   │   ├── devfsdefs.h
+│   │   │   ├── fdesc.h
+│   │   │   └── reproto.sh
+│   │   ├── fifofs
+│   │   │   ├── Makefile
+│   │   │   ├── fifo.h
+│   │   │   └── fifo_vnops.c
+│   │   ├── mockfs
+│   │   │   ├── mockfs.h
+│   │   │   ├── mockfs_fsnode.c
+│   │   │   ├── mockfs_fsnode.h
+│   │   │   ├── mockfs_vfsops.c
+│   │   │   ├── mockfs_vnops.c
+│   │   │   └── mockfs_vnops.h
+│   │   ├── nullfs
+│   │   │   ├── Makefile
+│   │   │   ├── null_subr.c
+│   │   │   ├── null_vfsops.c
+│   │   │   ├── null_vnops.c
+│   │   │   └── nullfs.h
+│   │   ├── routefs
+│   │   │   ├── Makefile
+│   │   │   ├── routefs.h
+│   │   │   └── routefs_ops.c
+│   │   ├── specfs
+│   │   │   ├── Makefile
+│   │   │   ├── spec_vnops.c
+│   │   │   └── specdev.h
+│   │   └── union
+│   │       ├── Makefile
+│   │       └── union.h
+│   ├── net
+│   │   ├── Makefile
+│   │   ├── altq
+│   │   │   ├── Makefile
+│   │   │   ├── altq.h
+│   │   │   ├── altq_cbq.h
+│   │   │   ├── altq_fairq.h
+│   │   │   ├── altq_hfsc.h
+│   │   │   ├── altq_priq.h
+│   │   │   └── altq_qfq.h
+│   │   ├── bloom_filter.c
+│   │   ├── bloom_filter.h
+│   │   ├── bpf.c
+│   │   ├── bpf.h
+│   │   ├── bpf_compat.h
+│   │   ├── bpf_filter.c
+│   │   ├── bpfdesc.h
+│   │   ├── bridgestp.c
+│   │   ├── bridgestp.h
+│   │   ├── cc.h
+│   │   ├── classq
+│   │   │   ├── Makefile
+│   │   │   ├── classq.c
+│   │   │   ├── classq.h
+│   │   │   ├── classq_blue.h
+│   │   │   ├── classq_fq_codel.c
+│   │   │   ├── classq_fq_codel.h
+│   │   │   ├── classq_red.h
+│   │   │   ├── classq_rio.h
+│   │   │   ├── classq_sfb.h
+│   │   │   ├── classq_subr.c
+│   │   │   ├── classq_util.c
+│   │   │   └── if_classq.h
+│   │   ├── content_filter.c
+│   │   ├── content_filter.h
+│   │   ├── content_filter_crypto.c
+│   │   ├── content_filter_crypto.h
+│   │   ├── contiki-conf.h
+│   │   ├── contiki-default-conf.h
+│   │   ├── contiki-lib.h
+│   │   ├── contiki-net.h
+│   │   ├── contiki-version.h
+│   │   ├── contiki.h
+│   │   ├── devtimer.c
+│   │   ├── devtimer.h
+│   │   ├── dlil.c
+│   │   ├── dlil.h
+│   │   ├── ether_if_module.c
+│   │   ├── ether_if_module.h
+│   │   ├── ether_inet6_pr_module.c
+│   │   ├── ether_inet_pr_module.c
+│   │   ├── etherdefs.h
+│   │   ├── ethernet.h
+│   │   ├── firewire.h
+│   │   ├── flowadv.c
+│   │   ├── flowadv.h
+│   │   ├── flowhash.c
+│   │   ├── flowhash.h
+│   │   ├── frame802154.c
+│   │   ├── frame802154.h
+│   │   ├── ieee8023ad.h
+│   │   ├── if.c
+│   │   ├── if.h
+│   │   ├── if_6lowpan.c
+│   │   ├── if_6lowpan_var.h
+│   │   ├── if_arp.h
+│   │   ├── if_bond.c
+│   │   ├── if_bond_internal.h
+│   │   ├── if_bond_var.h
+│   │   ├── if_bridge.c
+│   │   ├── if_bridgevar.h
+│   │   ├── if_dl.h
+│   │   ├── if_ether.h
+│   │   ├── if_fake.c
+│   │   ├── if_fake_var.h
+│   │   ├── if_gif.c
+│   │   ├── if_gif.h
+│   │   ├── if_headless.c
+│   │   ├── if_ipsec.c
+│   │   ├── if_ipsec.h
+│   │   ├── if_llatbl.c
+│   │   ├── if_llatbl.h
+│   │   ├── if_llc.h
+│   │   ├── if_llreach.c
+│   │   ├── if_llreach.h
+│   │   ├── if_loop.c
+│   │   ├── if_low_power_mode.c
+│   │   ├── if_media.h
+│   │   ├── if_mib.c
+│   │   ├── if_mib.h
+│   │   ├── if_pflog.c
+│   │   ├── if_pflog.h
+│   │   ├── if_ports_used.c
+│   │   ├── if_ports_used.h
+│   │   ├── if_ppp.h
+│   │   ├── if_stf.c
+│   │   ├── if_types.h
+│   │   ├── if_utun.c
+│   │   ├── if_utun.h
+│   │   ├── if_var.h
+│   │   ├── if_vlan.c
+│   │   ├── if_vlan_var.h
+│   │   ├── init.c
+│   │   ├── init.h
+│   │   ├── iptap.c
+│   │   ├── iptap.h
+│   │   ├── kext_net.h
+│   │   ├── kpi_interface.c
+│   │   ├── kpi_interface.h
+│   │   ├── kpi_interfacefilter.c
+│   │   ├── kpi_interfacefilter.h
+│   │   ├── kpi_protocol.c
+│   │   ├── kpi_protocol.h
+│   │   ├── lacp.h
+│   │   ├── linkaddr.c
+│   │   ├── linkaddr.h
+│   │   ├── multi_layer_pkt_log.c
+│   │   ├── multi_layer_pkt_log.h
+│   │   ├── multicast_list.c
+│   │   ├── multicast_list.h
+│   │   ├── nat464_utils.c
+│   │   ├── nat464_utils.h
+│   │   ├── ndrv.c
+│   │   ├── ndrv.h
+│   │   ├── ndrv_var.h
+│   │   ├── necp.c
+│   │   ├── necp.h
+│   │   ├── necp_client.c
+│   │   ├── net.modulemap
+│   │   ├── net_api_stats.h
+│   │   ├── net_kev.h
+│   │   ├── net_log_common.h
+│   │   ├── net_osdep.h
+│   │   ├── net_perf.c
+│   │   ├── net_perf.h
+│   │   ├── net_private.modulemap
+│   │   ├── net_str_id.c
+│   │   ├── net_str_id.h
+│   │   ├── net_stubs.c
+│   │   ├── netsrc.c
+│   │   ├── netsrc.h
+│   │   ├── network_agent.c
+│   │   ├── network_agent.h
+│   │   ├── ntstat.c
+│   │   ├── ntstat.h
+│   │   ├── nwk_wq.c
+│   │   ├── nwk_wq.h
+│   │   ├── packet_mangler.c
+│   │   ├── packet_mangler.h
+│   │   ├── pf.c
+│   │   ├── pf_if.c
+│   │   ├── pf_ioctl.c
+│   │   ├── pf_norm.c
+│   │   ├── pf_osfp.c
+│   │   ├── pf_pbuf.c
+│   │   ├── pf_pbuf.h
+│   │   ├── pf_ruleset.c
+│   │   ├── pf_table.c
+│   │   ├── pfkeyv2.h
+│   │   ├── pfvar.h
+│   │   ├── pktap.c
+│   │   ├── pktap.h
+│   │   ├── pktsched
+│   │   │   ├── Makefile
+│   │   │   ├── pktsched.c
+│   │   │   ├── pktsched.h
+│   │   │   ├── pktsched_cbq.h
+│   │   │   ├── pktsched_fairq.h
+│   │   │   ├── pktsched_fq_codel.c
+│   │   │   ├── pktsched_fq_codel.h
+│   │   │   ├── pktsched_hfsc.h
+│   │   │   ├── pktsched_netem.c
+│   │   │   ├── pktsched_netem.h
+│   │   │   ├── pktsched_priq.h
+│   │   │   └── pktsched_rmclass.h
+│   │   ├── ppp_comp.h
+│   │   ├── ppp_defs.h
+│   │   ├── radix.c
+│   │   ├── radix.h
+│   │   ├── raw_cb.c
+│   │   ├── raw_cb.h
+│   │   ├── raw_usrreq.c
+│   │   ├── remote_vif.c
+│   │   ├── remote_vif.h
+│   │   ├── restricted_in_port.c
+│   │   ├── restricted_in_port.h
+│   │   ├── route.c
+│   │   ├── route.h
+│   │   ├── rtsock.c
+│   │   ├── sixxlowpan.c
+│   │   ├── sixxlowpan.h
+│   │   ├── skmem_sysctl.c
+│   │   ├── skywalk_stubs.c
+│   │   └── zlib.h
+│   ├── netinet
+│   │   ├── Makefile
+│   │   ├── bootp.h
+│   │   ├── cbrtf.c
+│   │   ├── cpu_in_cksum_gen.c
+│   │   ├── dhcp.h
+│   │   ├── dhcp_options.c
+│   │   ├── dhcp_options.h
+│   │   ├── flow_divert.c
+│   │   ├── flow_divert.h
+│   │   ├── flow_divert_proto.h
+│   │   ├── icmp6.h
+│   │   ├── icmp_var.h
+│   │   ├── if_ether.h
+│   │   ├── if_tun.h
+│   │   ├── igmp.c
+│   │   ├── igmp.h
+│   │   ├── igmp_var.h
+│   │   ├── in.c
+│   │   ├── in.h
+│   │   ├── in_arp.c
+│   │   ├── in_arp.h
+│   │   ├── in_cksum.c
+│   │   ├── in_gif.c
+│   │   ├── in_gif.h
+│   │   ├── in_mcast.c
+│   │   ├── in_pcb.c
+│   │   ├── in_pcb.h
+│   │   ├── in_pcblist.c
+│   │   ├── in_proto.c
+│   │   ├── in_rmx.c
+│   │   ├── in_stat.c
+│   │   ├── in_stat.h
+│   │   ├── in_systm.h
+│   │   ├── in_tclass.c
+│   │   ├── in_tclass.h
+│   │   ├── in_var.h
+│   │   ├── ip.h
+│   │   ├── ip6.h
+│   │   ├── ip_compat.h
+│   │   ├── ip_dummynet.c
+│   │   ├── ip_dummynet.h
+│   │   ├── ip_ecn.c
+│   │   ├── ip_ecn.h
+│   │   ├── ip_encap.c
+│   │   ├── ip_encap.h
+│   │   ├── ip_flowid.h
+│   │   ├── ip_icmp.c
+│   │   ├── ip_icmp.h
+│   │   ├── ip_id.c
+│   │   ├── ip_input.c
+│   │   ├── ip_output.c
+│   │   ├── ip_var.h
+│   │   ├── isakmp.h
+│   │   ├── kpi_ipfilter.c
+│   │   ├── kpi_ipfilter.h
+│   │   ├── kpi_ipfilter_var.h
+│   │   ├── mp_pcb.c
+│   │   ├── mp_pcb.h
+│   │   ├── mp_proto.c
+│   │   ├── mptcp.c
+│   │   ├── mptcp.h
+│   │   ├── mptcp_opt.c
+│   │   ├── mptcp_opt.h
+│   │   ├── mptcp_seq.h
+│   │   ├── mptcp_subr.c
+│   │   ├── mptcp_timer.c
+│   │   ├── mptcp_timer.h
+│   │   ├── mptcp_usrreq.c
+│   │   ├── mptcp_var.h
+│   │   ├── netinet.modulemap
+│   │   ├── raw_ip.c
+│   │   ├── tcp.h
+│   │   ├── tcp_cache.c
+│   │   ├── tcp_cache.h
+│   │   ├── tcp_cc.c
+│   │   ├── tcp_cc.h
+│   │   ├── tcp_cubic.c
+│   │   ├── tcp_debug.c
+│   │   ├── tcp_debug.h
+│   │   ├── tcp_fsm.h
+│   │   ├── tcp_input.c
+│   │   ├── tcp_ledbat.c
+│   │   ├── tcp_log.c
+│   │   ├── tcp_log.h
+│   │   ├── tcp_newreno.c
+│   │   ├── tcp_output.c
+│   │   ├── tcp_rledbat.c
+│   │   ├── tcp_sack.c
+│   │   ├── tcp_seq.h
+│   │   ├── tcp_subr.c
+│   │   ├── tcp_timer.c
+│   │   ├── tcp_timer.h
+│   │   ├── tcp_usrreq.c
+│   │   ├── tcp_var.h
+│   │   ├── tcpip.h
+│   │   ├── udp.h
+│   │   ├── udp_usrreq.c
+│   │   └── udp_var.h
+│   ├── netinet6
+│   │   ├── Makefile
+│   │   ├── ah.h
+│   │   ├── ah6.h
+│   │   ├── ah_core.c
+│   │   ├── ah_input.c
+│   │   ├── ah_output.c
+│   │   ├── dest6.c
+│   │   ├── esp.h
+│   │   ├── esp6.h
+│   │   ├── esp_chachapoly.c
+│   │   ├── esp_chachapoly.h
+│   │   ├── esp_core.c
+│   │   ├── esp_input.c
+│   │   ├── esp_output.c
+│   │   ├── esp_rijndael.c
+│   │   ├── esp_rijndael.h
+│   │   ├── frag6.c
+│   │   ├── icmp6.c
+│   │   ├── icmp6.h
+│   │   ├── in6.c
+│   │   ├── in6.h
+│   │   ├── in6_cga.c
+│   │   ├── in6_cksum.c
+│   │   ├── in6_gif.c
+│   │   ├── in6_gif.h
+│   │   ├── in6_ifattach.c
+│   │   ├── in6_ifattach.h
+│   │   ├── in6_mcast.c
+│   │   ├── in6_pcb.c
+│   │   ├── in6_pcb.h
+│   │   ├── in6_proto.c
+│   │   ├── in6_rmx.c
+│   │   ├── in6_src.c
+│   │   ├── in6_var.h
+│   │   ├── ip6.h
+│   │   ├── ip6_ecn.h
+│   │   ├── ip6_forward.c
+│   │   ├── ip6_id.c
+│   │   ├── ip6_input.c
+│   │   ├── ip6_output.c
+│   │   ├── ip6_var.h
+│   │   ├── ip6protosw.h
+│   │   ├── ipcomp.h
+│   │   ├── ipsec.c
+│   │   ├── ipsec.h
+│   │   ├── ipsec6.h
+│   │   ├── mld6.c
+│   │   ├── mld6.h
+│   │   ├── mld6_var.h
+│   │   ├── nd6.c
+│   │   ├── nd6.h
+│   │   ├── nd6_nbr.c
+│   │   ├── nd6_prproxy.c
+│   │   ├── nd6_rti.c
+│   │   ├── nd6_rtr.c
+│   │   ├── nd6_send.c
+│   │   ├── nd6_var.h
+│   │   ├── netinet6.modulemap
+│   │   ├── raw_ip6.c
+│   │   ├── raw_ip6.h
+│   │   ├── route6.c
+│   │   ├── scope6.c
+│   │   ├── scope6_var.h
+│   │   ├── tcp6_var.h
+│   │   ├── udp6_output.c
+│   │   ├── udp6_usrreq.c
+│   │   └── udp6_var.h
+│   ├── netkey
+│   │   ├── Makefile
+│   │   ├── key.c
+│   │   ├── key.h
+│   │   ├── key_debug.c
+│   │   ├── key_debug.h
+│   │   ├── key_var.h
+│   │   ├── keydb.c
+│   │   ├── keydb.h
+│   │   ├── keysock.c
+│   │   ├── keysock.h
+│   │   └── keyv2.h
+│   ├── nfs
+│   │   ├── Makefile
+│   │   ├── gss
+│   │   │   ├── ccrypto.c
+│   │   │   ├── gss_krb5_mech.c
+│   │   │   └── gss_krb5_mech.h
+│   │   ├── krpc.h
+│   │   ├── krpc_subr.c
+│   │   ├── nfs.h
+│   │   ├── nfs4_subs.c
+│   │   ├── nfs4_vnops.c
+│   │   ├── nfs_bio.c
+│   │   ├── nfs_boot.c
+│   │   ├── nfs_conf.h
+│   │   ├── nfs_gss.c
+│   │   ├── nfs_gss.h
+│   │   ├── nfs_ioctl.h
+│   │   ├── nfs_lock.c
+│   │   ├── nfs_lock.h
+│   │   ├── nfs_node.c
+│   │   ├── nfs_serv.c
+│   │   ├── nfs_socket.c
+│   │   ├── nfs_srvcache.c
+│   │   ├── nfs_subs.c
+│   │   ├── nfs_syscalls.c
+│   │   ├── nfs_upcall.c
+│   │   ├── nfs_vfsops.c
+│   │   ├── nfs_vnops.c
+│   │   ├── nfsdiskless.h
+│   │   ├── nfsm_subs.h
+│   │   ├── nfsmount.h
+│   │   ├── nfsnode.h
+│   │   ├── nfsproto.h
+│   │   ├── nfsrvcache.h
+│   │   ├── rpcv2.h
+│   │   └── xdr_subs.h
+│   ├── pgo
+│   │   ├── profile_runtime.c
+│   │   └── profile_runtime_data.c
+│   ├── pthread
+│   │   ├── Makefile
+│   │   ├── bsdthread_private.h
+│   │   ├── priority_private.h
+│   │   ├── pthread_priority.c
+│   │   ├── pthread_shims.c
+│   │   ├── pthread_workqueue.c
+│   │   ├── workqueue_internal.h
+│   │   ├── workqueue_syscalls.h
+│   │   └── workqueue_trace.h
+│   ├── security
+│   │   ├── Makefile
+│   │   └── audit
+│   │       ├── Makefile
+│   │       ├── audit.c
+│   │       ├── audit.h
+│   │       ├── audit_arg.c
+│   │       ├── audit_bsd.c
+│   │       ├── audit_bsd.h
+│   │       ├── audit_bsm.c
+│   │       ├── audit_bsm_domain.c
+│   │       ├── audit_bsm_errno.c
+│   │       ├── audit_bsm_fcntl.c
+│   │       ├── audit_bsm_klib.c
+│   │       ├── audit_bsm_socket_type.c
+│   │       ├── audit_bsm_token.c
+│   │       ├── audit_ioctl.h
+│   │       ├── audit_mac.c
+│   │       ├── audit_pipe.c
+│   │       ├── audit_private.h
+│   │       ├── audit_session.c
+│   │       ├── audit_syscalls.c
+│   │       └── audit_worker.c
+│   ├── skywalk
+│   │   ├── Makefile
+│   │   ├── channel
+│   │   │   ├── Makefile
+│   │   │   ├── channel.c
+│   │   │   ├── channel_kern.c
+│   │   │   ├── channel_ring.c
+│   │   │   ├── channel_syscalls.c
+│   │   │   ├── channel_var.h
+│   │   │   ├── kern_channel_event.c
+│   │   │   ├── os_channel.h
+│   │   │   ├── os_channel_event.h
+│   │   │   └── os_channel_private.h
+│   │   ├── core
+│   │   │   ├── Makefile
+│   │   │   ├── skywalk.c
+│   │   │   ├── skywalk_common.h
+│   │   │   ├── skywalk_proc_info.c
+│   │   │   ├── skywalk_sysctl.c
+│   │   │   └── skywalk_var.h
+│   │   ├── lib
+│   │   │   ├── cuckoo_hashtable.c
+│   │   │   ├── cuckoo_hashtable.h
+│   │   │   ├── cuckoo_hashtable_test.c
+│   │   │   ├── net_filter_event.c
+│   │   │   └── net_filter_event.h
+│   │   ├── mem
+│   │   │   ├── Makefile
+│   │   │   ├── skmem.c
+│   │   │   ├── skmem_arena.c
+│   │   │   ├── skmem_arena_var.h
+│   │   │   ├── skmem_cache.c
+│   │   │   ├── skmem_cache_var.h
+│   │   │   ├── skmem_region.c
+│   │   │   ├── skmem_region_var.h
+│   │   │   ├── skmem_test.c
+│   │   │   └── skmem_var.h
+│   │   ├── namespace
+│   │   │   ├── Makefile
+│   │   │   ├── netns.c
+│   │   │   ├── netns.h
+│   │   │   ├── protons.c
+│   │   │   └── protons.h
+│   │   ├── nexus
+│   │   │   ├── Makefile
+│   │   │   ├── flowswitch
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── flow
+│   │   │   │   │   ├── flow.c
+│   │   │   │   │   ├── flow_agg.c
+│   │   │   │   │   ├── flow_classifier.c
+│   │   │   │   │   ├── flow_entry.c
+│   │   │   │   │   ├── flow_manager.c
+│   │   │   │   │   ├── flow_namespace.c
+│   │   │   │   │   ├── flow_owner.c
+│   │   │   │   │   ├── flow_route.c
+│   │   │   │   │   ├── flow_stats.c
+│   │   │   │   │   ├── flow_track.c
+│   │   │   │   │   └── flow_var.h
+│   │   │   │   ├── fsw.c
+│   │   │   │   ├── fsw_cellular.c
+│   │   │   │   ├── fsw_classq.c
+│   │   │   │   ├── fsw_dp.c
+│   │   │   │   ├── fsw_ethernet.c
+│   │   │   │   ├── fsw_flow.c
+│   │   │   │   ├── fsw_ip.c
+│   │   │   │   ├── fsw_ip_frag.c
+│   │   │   │   ├── fsw_netagent.c
+│   │   │   │   ├── fsw_qos.c
+│   │   │   │   ├── fsw_var.h
+│   │   │   │   ├── fsw_vp.c
+│   │   │   │   ├── nx_flowswitch.c
+│   │   │   │   └── nx_flowswitch.h
+│   │   │   ├── kpipe
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── nx_kernel_pipe.c
+│   │   │   │   ├── nx_kernel_pipe.h
+│   │   │   │   └── nx_kpipe_loopback.c
+│   │   │   ├── monitor
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── nx_monitor.c
+│   │   │   │   └── nx_monitor.h
+│   │   │   ├── netif
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── nx_netif.c
+│   │   │   │   ├── nx_netif.h
+│   │   │   │   ├── nx_netif_compat.c
+│   │   │   │   ├── nx_netif_compat.h
+│   │   │   │   ├── nx_netif_filter.c
+│   │   │   │   ├── nx_netif_filter_compat.c
+│   │   │   │   ├── nx_netif_filter_native.c
+│   │   │   │   ├── nx_netif_filter_vp.c
+│   │   │   │   ├── nx_netif_flow.c
+│   │   │   │   ├── nx_netif_gso.c
+│   │   │   │   ├── nx_netif_host.c
+│   │   │   │   ├── nx_netif_host.h
+│   │   │   │   ├── nx_netif_llink.c
+│   │   │   │   ├── nx_netif_mit.c
+│   │   │   │   ├── nx_netif_netagent.c
+│   │   │   │   ├── nx_netif_poll.c
+│   │   │   │   ├── nx_netif_util.c
+│   │   │   │   └── nx_netif_vp.c
+│   │   │   ├── nexus.c
+│   │   │   ├── nexus_adapter.c
+│   │   │   ├── nexus_adapter.h
+│   │   │   ├── nexus_common.h
+│   │   │   ├── nexus_kern.c
+│   │   │   ├── nexus_mbq.c
+│   │   │   ├── nexus_mbq.h
+│   │   │   ├── nexus_pktq.c
+│   │   │   ├── nexus_pktq.h
+│   │   │   ├── nexus_syscalls.c
+│   │   │   ├── nexus_var.h
+│   │   │   ├── os_nexus.h
+│   │   │   ├── os_nexus_private.h
+│   │   │   └── upipe
+│   │   │       ├── Makefile
+│   │   │       ├── nx_user_pipe.c
+│   │   │       └── nx_user_pipe.h
+│   │   ├── os_skywalk.h
+│   │   ├── os_skywalk_private.h
+│   │   ├── os_stats_private.h
+│   │   ├── os_sysctls_private.h
+│   │   ├── packet
+│   │   │   ├── Makefile
+│   │   │   ├── os_packet.h
+│   │   │   ├── os_packet_private.h
+│   │   │   ├── packet_common.h
+│   │   │   ├── packet_copy.c
+│   │   │   ├── packet_kern.c
+│   │   │   ├── packet_queue.h
+│   │   │   ├── packet_var.h
+│   │   │   ├── pbufpool.c
+│   │   │   ├── pbufpool_kern.c
+│   │   │   └── pbufpool_var.h
+│   │   └── skywalk.codes
+│   ├── sys
+│   │   ├── Makefile
+│   │   ├── _endian.h
+│   │   ├── _select.h
+│   │   ├── _structs.h
+│   │   ├── _types
+│   │   │   ├── Makefile
+│   │   │   ├── _blkcnt_t.h
+│   │   │   ├── _blksize_t.h
+│   │   │   ├── _caddr_t.h
+│   │   │   ├── _clock_t.h
+│   │   │   ├── _ct_rune_t.h
+│   │   │   ├── _dev_t.h
+│   │   │   ├── _errno_t.h
+│   │   │   ├── _fd_clr.h
+│   │   │   ├── _fd_copy.h
+│   │   │   ├── _fd_def.h
+│   │   │   ├── _fd_isset.h
+│   │   │   ├── _fd_set.h
+│   │   │   ├── _fd_setsize.h
+│   │   │   ├── _fd_zero.h
+│   │   │   ├── _filesec_t.h
+│   │   │   ├── _fsblkcnt_t.h
+│   │   │   ├── _fsfilcnt_t.h
+│   │   │   ├── _fsid_t.h
+│   │   │   ├── _fsobj_id_t.h
+│   │   │   ├── _gid_t.h
+│   │   │   ├── _guid_t.h
+│   │   │   ├── _id_t.h
+│   │   │   ├── _in_addr_t.h
+│   │   │   ├── _in_port_t.h
+│   │   │   ├── _ino64_t.h
+│   │   │   ├── _ino_t.h
+│   │   │   ├── _int16_t.h
+│   │   │   ├── _int32_t.h
+│   │   │   ├── _int64_t.h
+│   │   │   ├── _int8_t.h
+│   │   │   ├── _intptr_t.h
+│   │   │   ├── _iovec_t.h
+│   │   │   ├── _key_t.h
+│   │   │   ├── _mach_port_t.h
+│   │   │   ├── _mbstate_t.h
+│   │   │   ├── _mode_t.h
+│   │   │   ├── _nlink_t.h
+│   │   │   ├── _null.h
+│   │   │   ├── _o_dsync.h
+│   │   │   ├── _o_sync.h
+│   │   │   ├── _off_t.h
+│   │   │   ├── _offsetof.h
+│   │   │   ├── _os_inline.h
+│   │   │   ├── _pid_t.h
+│   │   │   ├── _posix_vdisable.h
+│   │   │   ├── _ptrdiff_t.h
+│   │   │   ├── _rsize_t.h
+│   │   │   ├── _rune_t.h
+│   │   │   ├── _s_ifmt.h
+│   │   │   ├── _sa_family_t.h
+│   │   │   ├── _seek_set.h
+│   │   │   ├── _sigaltstack.h
+│   │   │   ├── _sigset_t.h
+│   │   │   ├── _size_t.h
+│   │   │   ├── _socklen_t.h
+│   │   │   ├── _ssize_t.h
+│   │   │   ├── _suseconds_t.h
+│   │   │   ├── _time_t.h
+│   │   │   ├── _timespec.h
+│   │   │   ├── _timeval.h
+│   │   │   ├── _timeval32.h
+│   │   │   ├── _timeval64.h
+│   │   │   ├── _u_char.h
+│   │   │   ├── _u_int.h
+│   │   │   ├── _u_int16_t.h
+│   │   │   ├── _u_int32_t.h
+│   │   │   ├── _u_int64_t.h
+│   │   │   ├── _u_int8_t.h
+│   │   │   ├── _u_short.h
+│   │   │   ├── _ucontext.h
+│   │   │   ├── _ucontext64.h
+│   │   │   ├── _uid_t.h
+│   │   │   ├── _uintptr_t.h
+│   │   │   ├── _useconds_t.h
+│   │   │   ├── _user32_itimerval.h
+│   │   │   ├── _user32_ntptimeval.h
+│   │   │   ├── _user32_timespec.h
+│   │   │   ├── _user32_timeval.h
+│   │   │   ├── _user32_timex.h
+│   │   │   ├── _user64_itimerval.h
+│   │   │   ├── _user64_ntptimeval.h
+│   │   │   ├── _user64_timespec.h
+│   │   │   ├── _user64_timeval.h
+│   │   │   ├── _user64_timex.h
+│   │   │   ├── _user_timespec.h
+│   │   │   ├── _user_timeval.h
+│   │   │   ├── _uuid_t.h
+│   │   │   ├── _va_list.h
+│   │   │   ├── _wchar_t.h
+│   │   │   └── _wint_t.h
+│   │   ├── _types.h
+│   │   ├── acct.h
+│   │   ├── aio.h
+│   │   ├── aio_kern.h
+│   │   ├── appleapiopts.h
+│   │   ├── attr.h
+│   │   ├── bitstring.h
+│   │   ├── bsdtask_info.h
+│   │   ├── buf.h
+│   │   ├── buf_internal.h
+│   │   ├── cdefs.h
+│   │   ├── clonefile.h
+│   │   ├── coalition.h
+│   │   ├── codedir_internal.h
+│   │   ├── codesign.h
+│   │   ├── commpage.h
+│   │   ├── conf.h
+│   │   ├── content_protection.h
+│   │   ├── cprotect.h
+│   │   ├── csr.h
+│   │   ├── darwin_cdefs.modulemap
+│   │   ├── darwin_posix_sys_types.modulemap
+│   │   ├── decmpfs.h
+│   │   ├── dir.h
+│   │   ├── dirent.h
+│   │   ├── dis_tables.h
+│   │   ├── disk.h
+│   │   ├── disklabel.h
+│   │   ├── disktab.h
+│   │   ├── dkstat.h
+│   │   ├── dmap.h
+│   │   ├── doc_tombstone.h
+│   │   ├── domain.h
+│   │   ├── dtrace.h
+│   │   ├── dtrace_glue.h
+│   │   ├── dtrace_impl.h
+│   │   ├── dtrace_ptss.h
+│   │   ├── errno.h
+│   │   ├── ev.h
+│   │   ├── event.h
+│   │   ├── eventhandler.h
+│   │   ├── eventvar.h
+│   │   ├── exec.h
+│   │   ├── fasttrap.h
+│   │   ├── fasttrap_impl.h
+│   │   ├── fasttrap_isa.h
+│   │   ├── fbt.h
+│   │   ├── fcntl.h
+│   │   ├── file.h
+│   │   ├── file_internal.h
+│   │   ├── filedesc.h
+│   │   ├── fileport.h
+│   │   ├── filio.h
+│   │   ├── fsctl.h
+│   │   ├── fsevents.h
+│   │   ├── fsgetpath.h
+│   │   ├── fslog.h
+│   │   ├── gmon.h
+│   │   ├── guarded.h
+│   │   ├── imageboot.h
+│   │   ├── imgact.h
+│   │   ├── imgsrc.h
+│   │   ├── ioccom.h
+│   │   ├── ioctl.h
+│   │   ├── ioctl_compat.h
+│   │   ├── ipc.h
+│   │   ├── ipcs.h
+│   │   ├── kas_info.h
+│   │   ├── kasl.h
+│   │   ├── kauth.h
+│   │   ├── kdebug.h
+│   │   ├── kdebug_common.h
+│   │   ├── kdebug_kernel.h
+│   │   ├── kdebug_private.h
+│   │   ├── kdebug_signpost.h
+│   │   ├── kdebug_triage.h
+│   │   ├── kern_control.h
+│   │   ├── kern_debug.h
+│   │   ├── kern_event.h
+│   │   ├── kern_memorystatus.h
+│   │   ├── kern_memorystatus_freeze.h
+│   │   ├── kern_memorystatus_notify.h
+│   │   ├── kern_overrides.h
+│   │   ├── kern_sysctl.h
+│   │   ├── kernel.h
+│   │   ├── kernel_types.h
+│   │   ├── kpi_mbuf.h
+│   │   ├── kpi_private.h
+│   │   ├── kpi_socket.h
+│   │   ├── kpi_socketfilter.h
+│   │   ├── ktrace.h
+│   │   ├── lctx.h
+│   │   ├── linker_set.h
+│   │   ├── loadable_fs.h
+│   │   ├── lock.h
+│   │   ├── lockf.h
+│   │   ├── lockstat.h
+│   │   ├── log_data.h
+│   │   ├── mach_swapon.h
+│   │   ├── make_posix_availability.sh
+│   │   ├── make_symbol_aliasing.sh
+│   │   ├── malloc.h
+│   │   ├── mbuf.h
+│   │   ├── mcache.h
+│   │   ├── md5.h
+│   │   ├── memory_maintenance.h
+│   │   ├── mman.h
+│   │   ├── monotonic.h
+│   │   ├── mount.h
+│   │   ├── mount_internal.h
+│   │   ├── msg.h
+│   │   ├── msgbuf.h
+│   │   ├── munge.h
+│   │   ├── namei.h
+│   │   ├── netboot.h
+│   │   ├── netport.h
+│   │   ├── param.h
+│   │   ├── paths.h
+│   │   ├── perfmon_private.h
+│   │   ├── persona.h
+│   │   ├── pgo.h
+│   │   ├── pipe.h
+│   │   ├── poll.h
+│   │   ├── posix_sem.h
+│   │   ├── posix_shm.h
+│   │   ├── priv.h
+│   │   ├── proc.h
+│   │   ├── proc_info.h
+│   │   ├── proc_internal.h
+│   │   ├── proc_require.h
+│   │   ├── proc_ro.h
+│   │   ├── proc_uuid_policy.h
+│   │   ├── process_policy.h
+│   │   ├── protosw.h
+│   │   ├── pthread_internal.h
+│   │   ├── pthread_shims.h
+│   │   ├── ptrace.h
+│   │   ├── queue.h
+│   │   ├── quota.h
+│   │   ├── random.h
+│   │   ├── reason.h
+│   │   ├── reboot.h
+│   │   ├── resource.h
+│   │   ├── resource_private.h
+│   │   ├── resourcevar.h
+│   │   ├── sbuf.h
+│   │   ├── sdt.h
+│   │   ├── sdt_impl.h
+│   │   ├── select.h
+│   │   ├── sem.h
+│   │   ├── sem_internal.h
+│   │   ├── semaphore.h
+│   │   ├── sfi.h
+│   │   ├── shm.h
+│   │   ├── shm_internal.h
+│   │   ├── signal.h
+│   │   ├── signalvar.h
+│   │   ├── snapshot.h
+│   │   ├── socket.h
+│   │   ├── socketvar.h
+│   │   ├── sockio.h
+│   │   ├── spawn.h
+│   │   ├── spawn_internal.h
+│   │   ├── stackshot.h
+│   │   ├── stat.h
+│   │   ├── stdio.h
+│   │   ├── subr_prf.h
+│   │   ├── sys_domain.h
+│   │   ├── sysctl.h
+│   │   ├── sysent.h
+│   │   ├── syslimits.h
+│   │   ├── syslog.h
+│   │   ├── systm.h
+│   │   ├── systrace_args.h
+│   │   ├── termios.h
+│   │   ├── time.h
+│   │   ├── timeb.h
+│   │   ├── times.h
+│   │   ├── timex.h
+│   │   ├── tprintf.h
+│   │   ├── trace.h
+│   │   ├── tree.h
+│   │   ├── tty.h
+│   │   ├── ttychars.h
+│   │   ├── ttycom.h
+│   │   ├── ttydefaults.h
+│   │   ├── ttydev.h
+│   │   ├── types.h
+│   │   ├── ubc.h
+│   │   ├── ubc_internal.h
+│   │   ├── ucontext.h
+│   │   ├── ucred.h
+│   │   ├── uio.h
+│   │   ├── uio_internal.h
+│   │   ├── ulock.h
+│   │   ├── un.h
+│   │   ├── unicode.h
+│   │   ├── unistd.h
+│   │   ├── unpcb.h
+│   │   ├── user.h
+│   │   ├── utfconv.h
+│   │   ├── utsname.h
+│   │   ├── ux_exception.h
+│   │   ├── vadvise.h
+│   │   ├── vcmd.h
+│   │   ├── vfs_context.h
+│   │   ├── vlimit.h
+│   │   ├── vm.h
+│   │   ├── vmmeter.h
+│   │   ├── vmparam.h
+│   │   ├── vnioctl.h
+│   │   ├── vnode.h
+│   │   ├── vnode_if.h
+│   │   ├── vnode_internal.h
+│   │   ├── vsock.h
+│   │   ├── vsock_domain.h
+│   │   ├── vsock_transport.h
+│   │   ├── vstat.h
+│   │   ├── wait.h
+│   │   ├── work_interval.h
+│   │   └── xattr.h
+│   ├── tests
+│   │   ├── bsd_tests.c
+│   │   ├── copyio_tests.c
+│   │   ├── ctrr_test_sysctl.c
+│   │   ├── pmap_test_sysctl.c
+│   │   ├── ptrauth_data_tests_sysctl.c
+│   │   ├── readonly_proc_tests_sysctl.c
+│   │   └── stack_chk_tests_sysctl.c
+│   ├── uuid
+│   │   ├── Makefile
+│   │   ├── uuid.h
+│   │   └── uuid.modulemap
+│   ├── uxkern
+│   │   └── ux_exception.c
+│   ├── vfs
+│   │   ├── Makefile
+│   │   ├── doc_tombstone.c
+│   │   ├── kpi_vfs.c
+│   │   ├── vfs_attrlist.c
+│   │   ├── vfs_bio.c
+│   │   ├── vfs_cache.c
+│   │   ├── vfs_cluster.c
+│   │   ├── vfs_conf.c
+│   │   ├── vfs_cprotect.c
+│   │   ├── vfs_disk_conditioner.c
+│   │   ├── vfs_disk_conditioner.h
+│   │   ├── vfs_fsevents.c
+│   │   ├── vfs_fslog.c
+│   │   ├── vfs_init.c
+│   │   ├── vfs_io_compression_stats.c
+│   │   ├── vfs_io_compression_stats.h
+│   │   ├── vfs_lookup.c
+│   │   ├── vfs_quota.c
+│   │   ├── vfs_subr.c
+│   │   ├── vfs_support.c
+│   │   ├── vfs_support.h
+│   │   ├── vfs_syscalls.c
+│   │   ├── vfs_unicode.c
+│   │   ├── vfs_unicode_data.h
+│   │   ├── vfs_utfconv.c
+│   │   ├── vfs_utfconvdata.h
+│   │   ├── vfs_vnops.c
+│   │   ├── vfs_xattr.c
+│   │   ├── vnode_if.c
+│   │   ├── vnode_if.sh
+│   │   └── vnode_if.src
+│   └── vm
+│       ├── Makefile
+│       ├── dp_backing_file.c
+│       ├── vm_compressor_backing_file.c
+│       ├── vm_pager.h
+│       ├── vm_unix.c
+│       ├── vnode_pager.c
+│       └── vnode_pager.h
+├── config
+│   ├── BSDKernel.arm.exports
+│   ├── BSDKernel.arm64.MacOSX.exports
+│   ├── BSDKernel.arm64.exports
+│   ├── BSDKernel.exports
+│   ├── BSDKernel.x86_64.MacOSX.exports
+│   ├── BSDKernel.x86_64.exports
+│   ├── IOKit.arm.exports
+│   ├── IOKit.arm64.MacOSX.exports
+│   ├── IOKit.arm64.exports
+│   ├── IOKit.arm64.hibernation.MacOSX.exports
+│   ├── IOKit.exports
+│   ├── IOKit.x86_64.MacOSX.exports
+│   ├── IOKit.x86_64.exports
+│   ├── Kasan_disabled.exports
+│   ├── Kasan_enabled.exports
+│   ├── Kcov_disabled.exports
+│   ├── Kcov_enabled.exports
+│   ├── Libkern.arm.exports
+│   ├── Libkern.arm64.MacOSX.exports
+│   ├── Libkern.arm64.exports
+│   ├── Libkern.exports
+│   ├── Libkern.x86_64.MacOSX.exports
+│   ├── Libkern.x86_64.exports
+│   ├── MACFramework.arm.exports
+│   ├── MACFramework.arm64.exports
+│   ├── MACFramework.exports
+│   ├── MACFramework.x86_64.exports
+│   ├── MASTER
+│   ├── MASTER.arm
+│   ├── MASTER.arm64
+│   ├── MASTER.arm64.BridgeOS
+│   ├── MASTER.arm64.MacOSX
+│   ├── MASTER.arm64.bcm2837
+│   ├── MASTER.arm64.iPhoneOS
+│   ├── MASTER.x86_64
+│   ├── Mach.arm.exports
+│   ├── Mach.arm64.exports
+│   ├── Mach.exports
+│   ├── Mach.x86_64.exports
+│   ├── Makefile
+│   ├── MasterVersion
+│   ├── Private.arm.exports
+│   ├── Private.arm64.MacOSX.exports
+│   ├── Private.arm64.exports
+│   ├── Private.exports
+│   ├── Private.x86_64.exports
+│   ├── README.DEBUG-kernel.txt
+│   ├── System.kext
+│   │   ├── Info.plist
+│   │   └── PlugIns
+│   │       ├── AppleNMI.kext
+│   │       │   └── Info.plist
+│   │       ├── ApplePlatformFamily.kext
+│   │       │   └── Info.plist
+│   │       ├── BSDKernel.kext
+│   │       │   └── Info.plist
+│   │       ├── IOKit.kext
+│   │       │   └── Info.plist
+│   │       ├── IONVRAMFamily.kext
+│   │       │   └── Info.plist
+│   │       ├── IOSystemManagement.kext
+│   │       │   └── Info.plist
+│   │       ├── Kasan.kext
+│   │       │   └── Info.plist
+│   │       ├── Kcov.kext
+│   │       │   └── Info.plist
+│   │       ├── Libkern.kext
+│   │       │   └── Info.plist
+│   │       ├── MACFramework.kext
+│   │       │   └── Info.plist
+│   │       ├── Mach.kext
+│   │       │   └── Info.plist
+│   │       ├── Private.kext
+│   │       │   └── Info.plist
+│   │       └── Unsupported.kext
+│   │           └── Info.plist
+│   ├── Unsupported.arm.exports
+│   ├── Unsupported.arm64.MacOSX.exports
+│   ├── Unsupported.arm64.exports
+│   ├── Unsupported.exports
+│   ├── Unsupported.x86_64.MacOSX.exports
+│   ├── Unsupported.x86_64.exports
+│   ├── Unused.arm.exports
+│   ├── Unused.arm64.exports
+│   ├── Unused.exports
+│   ├── generate_combined_symbolsets_plist.sh
+│   ├── generate_linker_aliases.sh
+│   ├── generate_linker_exports.sh
+│   ├── generate_symbolset_plist.sh
+│   ├── list_supported.sh
+│   ├── newvers.pl
+│   └── version.c
+├── doc
+│   ├── allocators
+│   │   ├── api-basics.md
+│   │   └── read-only.md
+│   ├── atomics.md
+│   ├── debugging.md
+│   ├── sched_clutch_edge.md
+│   ├── startup.md
+│   ├── task_ref.md
+│   └── xnu_build_consolidation.md
+├── fetch_apple_oss_12_7_3.sh
+├── iokit
+│   ├── DriverKit
+│   │   ├── IOBufferMemoryDescriptor.iig
+│   │   ├── IODMACommand.iig
+│   │   ├── IODataQueueDispatchSource.iig
+│   │   ├── IODispatchQueue.iig
+│   │   ├── IODispatchSource.iig
+│   │   ├── IOEventLink.iig
+│   │   ├── IOInterruptDispatchSource.iig
+│   │   ├── IOKernelReportStructs.h
+│   │   ├── IOKitKeys.h
+│   │   ├── IOMemoryDescriptor.iig
+│   │   ├── IOMemoryMap.iig
+│   │   ├── IORPC.h
+│   │   ├── IOReportTypes.h
+│   │   ├── IOReturn.h
+│   │   ├── IOService.iig
+│   │   ├── IOServiceNotificationDispatchSource.iig
+│   │   ├── IOServiceStateNotificationDispatchSource.iig
+│   │   ├── IOTypes.h
+│   │   ├── IOUserClient.iig
+│   │   ├── IOUserServer.iig
+│   │   ├── IOWorkGroup.iig
+│   │   ├── Makefile
+│   │   ├── OSAction.iig
+│   │   ├── OSBoundedArray.h
+│   │   ├── OSBoundedArrayRef.h
+│   │   ├── OSBoundedPtr.h
+│   │   ├── OSBoundedPtrFwd.h
+│   │   ├── OSObject.iig
+│   │   ├── bounded_array.h
+│   │   ├── bounded_array_ref.h
+│   │   ├── bounded_ptr.h
+│   │   ├── bounded_ptr_fwd.h
+│   │   ├── crypto
+│   │   │   ├── Makefile
+│   │   │   ├── aes.h
+│   │   │   ├── md5.h
+│   │   │   └── sha1.h
+│   │   ├── macro_help.h
+│   │   ├── queue_implementation.h
+│   │   └── safe_allocation.h
+│   ├── Examples
+│   │   └── drvGenericInterruptController
+│   │       ├── GenericInterruptController.cpp
+│   │       └── GenericInterruptController.h
+│   ├── Families
+│   │   ├── IONVRAM
+│   │   │   └── IONVRAMController.cpp
+│   │   └── IOSystemManagement
+│   │       └── IOWatchDogTimer.cpp
+│   ├── IOKit
+│   │   ├── AppleKeyStoreInterface.h
+│   │   ├── IOBSD.h
+│   │   ├── IOBufferMemoryDescriptor.h
+│   │   ├── IOCPU.h
+│   │   ├── IOCatalogue.h
+│   │   ├── IOCommand.h
+│   │   ├── IOCommandGate.h
+│   │   ├── IOCommandPool.h
+│   │   ├── IOCommandQueue.h
+│   │   ├── IOConditionLock.h
+│   │   ├── IODMACommand.h
+│   │   ├── IODMAController.h
+│   │   ├── IODMAEventSource.h
+│   │   ├── IODataQueue.h
+│   │   ├── IODataQueueShared.h
+│   │   ├── IODeviceMemory.h
+│   │   ├── IODeviceTreeSupport.h
+│   │   ├── IOEventSource.h
+│   │   ├── IOFilterInterruptEventSource.h
+│   │   ├── IOGuardPageMemoryDescriptor.h
+│   │   ├── IOHibernatePrivate.h
+│   │   ├── IOInterleavedMemoryDescriptor.h
+│   │   ├── IOInterruptAccounting.h
+│   │   ├── IOInterruptAccountingPrivate.h
+│   │   ├── IOInterruptController.h
+│   │   ├── IOInterruptEventSource.h
+│   │   ├── IOInterrupts.h
+│   │   ├── IOKernelReportStructs.h
+│   │   ├── IOKernelReporters.h
+│   │   ├── IOKitDebug.h
+│   │   ├── IOKitDiagnosticsUserClient.h
+│   │   ├── IOKitKeys.h
+│   │   ├── IOKitKeysPrivate.h
+│   │   ├── IOKitServer.h
+│   │   ├── IOLib.h
+│   │   ├── IOLocks.h
+│   │   ├── IOLocksPrivate.h
+│   │   ├── IOMapTypes.h
+│   │   ├── IOMapper.h
+│   │   ├── IOMemoryCursor.h
+│   │   ├── IOMemoryDescriptor.h
+│   │   ├── IOMessage.h
+│   │   ├── IOMultiMemoryDescriptor.h
+│   │   ├── IONVRAM.h
+│   │   ├── IONotifier.h
+│   │   ├── IOPMGR.h
+│   │   ├── IOPlatformActions.h
+│   │   ├── IOPlatformExpert.h
+│   │   ├── IOPolledInterface.h
+│   │   ├── IORPC.h
+│   │   ├── IORangeAllocator.h
+│   │   ├── IORegistryEntry.h
+│   │   ├── IOReportMacros.h
+│   │   ├── IOReportTypes.h
+│   │   ├── IOReturn.h
+│   │   ├── IOService.h
+│   │   ├── IOServicePM.h
+│   │   ├── IOServiceStateNotificationEventSource.h
+│   │   ├── IOSharedDataQueue.h
+│   │   ├── IOSharedLock.h
+│   │   ├── IOStatistics.h
+│   │   ├── IOStatisticsPrivate.h
+│   │   ├── IOSubMemoryDescriptor.h
+│   │   ├── IOSyncer.h
+│   │   ├── IOTimeStamp.h
+│   │   ├── IOTimerEventSource.h
+│   │   ├── IOTypes.h
+│   │   ├── IOUserClient.h
+│   │   ├── IOUserServer.h
+│   │   ├── IOWorkLoop.h
+│   │   ├── Makefile
+│   │   ├── OSMessageNotification.h
+│   │   ├── PassthruInterruptController.h
+│   │   ├── assert.h
+│   │   ├── machine
+│   │   │   └── Makefile
+│   │   ├── nvram
+│   │   │   ├── IONVRAMController.h
+│   │   │   └── Makefile
+│   │   ├── perfcontrol
+│   │   │   ├── IOPerfControl.h
+│   │   │   └── Makefile
+│   │   ├── platform
+│   │   │   ├── AppleMacIO.h
+│   │   │   ├── AppleMacIODevice.h
+│   │   │   ├── AppleNMI.h
+│   │   │   ├── ApplePlatformExpert.h
+│   │   │   ├── IOPlatformIO.h
+│   │   │   └── Makefile
+│   │   ├── power
+│   │   │   ├── IOPwrController.h
+│   │   │   └── Makefile
+│   │   ├── pwr_mgt
+│   │   │   ├── IOPM.h
+│   │   │   ├── IOPMLibDefs.h
+│   │   │   ├── IOPMPowerSource.h
+│   │   │   ├── IOPMPowerSourceList.h
+│   │   │   ├── IOPMPrivate.h
+│   │   │   ├── IOPMinformee.h
+│   │   │   ├── IOPMinformeeList.h
+│   │   │   ├── IOPMlog.h
+│   │   │   ├── IOPMpowerState.h
+│   │   │   ├── IOPowerConnection.h
+│   │   │   ├── Makefile
+│   │   │   └── RootDomain.h
+│   │   ├── rtc
+│   │   │   ├── IORTCController.h
+│   │   │   └── Makefile
+│   │   ├── skywalk
+│   │   │   ├── IOSkywalkSupport.h
+│   │   │   └── Makefile
+│   │   ├── system.h
+│   │   └── system_management
+│   │       ├── IOWatchDogTimer.h
+│   │       └── Makefile
+│   ├── IOKitUser
+│   │   ├── IOBlockStorageDevice.h
+│   │   ├── IOBufferMemoryDescriptor.h
+│   │   ├── IODataQueueDispatchSource.h
+│   │   ├── IODispatchQueue.h
+│   │   ├── IODispatchSource.h
+│   │   ├── IOInterruptDispatchSource.h
+│   │   ├── IOMemoryDescriptor.h
+│   │   ├── IOMemoryMap.h
+│   │   ├── IOService.h
+│   │   ├── IOTimerDispatchSource.h
+│   │   ├── IOUserServer.h
+│   │   ├── Makefile
+│   │   ├── OSAction.h
+│   │   ├── OSArray.h
+│   │   ├── OSBoolean.h
+│   │   ├── OSCollection.h
+│   │   ├── OSContainer.h
+│   │   ├── OSData.h
+│   │   ├── OSDictionary.h
+│   │   ├── OSNumber.h
+│   │   ├── OSObject.h
+│   │   ├── OSSerialization.h
+│   │   └── OSString.h
+│   ├── Kernel
+│   │   ├── IOBufferMemoryDescriptor.cpp
+│   │   ├── IOCPU.cpp
+│   │   ├── IOCatalogue.cpp
+│   │   ├── IOCommand.cpp
+│   │   ├── IOCommandGate.cpp
+│   │   ├── IOCommandPool.cpp
+│   │   ├── IOCommandQueue.cpp
+│   │   ├── IOConditionLock.cpp
+│   │   ├── IODMACommand.cpp
+│   │   ├── IODMAController.cpp
+│   │   ├── IODMAEventSource.cpp
+│   │   ├── IODataQueue.cpp
+│   │   ├── IODeviceMemory.cpp
+│   │   ├── IODeviceTreeSupport.cpp
+│   │   ├── IOEventSource.cpp
+│   │   ├── IOFilterInterruptEventSource.cpp
+│   │   ├── IOGuardPageMemoryDescriptor.cpp
+│   │   ├── IOHibernateIO.cpp
+│   │   ├── IOHibernateInternal.h
+│   │   ├── IOHibernateRestoreKernel.c
+│   │   ├── IOHistogramReporter.cpp
+│   │   ├── IOInterleavedMemoryDescriptor.cpp
+│   │   ├── IOInterruptAccounting.cpp
+│   │   ├── IOInterruptController.cpp
+│   │   ├── IOInterruptEventSource.cpp
+│   │   ├── IOKitDebug.cpp
+│   │   ├── IOKitKernelInternal.h
+│   │   ├── IOLib.cpp
+│   │   ├── IOLocks.cpp
+│   │   ├── IOMapper.cpp
+│   │   ├── IOMemoryCursor.cpp
+│   │   ├── IOMemoryDescriptor.cpp
+│   │   ├── IOMultiMemoryDescriptor.cpp
+│   │   ├── IONVRAM.cpp
+│   │   ├── IONVRAMCHRPHandler.cpp
+│   │   ├── IONVRAMV3Handler.cpp
+│   │   ├── IOPMGR.cpp
+│   │   ├── IOPMPowerSource.cpp
+│   │   ├── IOPMPowerSourceList.cpp
+│   │   ├── IOPMPowerStateQueue.cpp
+│   │   ├── IOPMPowerStateQueue.h
+│   │   ├── IOPMinformee.cpp
+│   │   ├── IOPMinformeeList.cpp
+│   │   ├── IOPMrootDomain.cpp
+│   │   ├── IOPMrootDomainInternal.h
+│   │   ├── IOPerfControl.cpp
+│   │   ├── IOPlatformActions.cpp
+│   │   ├── IOPlatformExpert.cpp
+│   │   ├── IOPlatformIO.cpp
+│   │   ├── IOPolledInterface.cpp
+│   │   ├── IOPowerConnection.cpp
+│   │   ├── IORTC.cpp
+│   │   ├── IORangeAllocator.cpp
+│   │   ├── IORegistryEntry.cpp
+│   │   ├── IOReportLegend.cpp
+│   │   ├── IOReporter.cpp
+│   │   ├── IOReporterDefs.h
+│   │   ├── IOService.cpp
+│   │   ├── IOServicePM.cpp
+│   │   ├── IOServicePMPrivate.h
+│   │   ├── IOServicePrivate.h
+│   │   ├── IOSharedDataQueue.cpp
+│   │   ├── IOSimpleReporter.cpp
+│   │   ├── IOStartIOKit.cpp
+│   │   ├── IOStateReporter.cpp
+│   │   ├── IOStatistics.cpp
+│   │   ├── IOStringFuncs.c
+│   │   ├── IOSubMemoryDescriptor.cpp
+│   │   ├── IOSyncer.cpp
+│   │   ├── IOTimerEventSource.cpp
+│   │   ├── IOUserClient.cpp
+│   │   ├── IOUserServer.cpp
+│   │   ├── IOWorkLoop.cpp
+│   │   ├── PassthruInterruptController.cpp
+│   │   ├── RootDomainUserClient.cpp
+│   │   ├── RootDomainUserClient.h
+│   │   ├── arm
+│   │   │   └── AppleARMSMP.cpp
+│   │   ├── i386
+│   │   │   └── IOKeyStoreHelper.cpp
+│   │   ├── printPlist
+│   │   └── x86_64
+│   │       └── IOAsmSupport.s
+│   ├── KernelConfigTables.cpp
+│   ├── Makefile
+│   ├── System
+│   │   ├── IODataQueueDispatchSourceShared.h
+│   │   ├── Makefile
+│   │   └── OSUnserializeXMLSharedImplementation.h
+│   ├── Tests
+│   │   ├── TestCollections.cpp
+│   │   ├── TestContainers.cpp
+│   │   ├── TestDevice.cpp
+│   │   ├── TestIOMemoryDescriptor.cpp
+│   │   ├── TestServices
+│   │   │   ├── TestIOConnectMapMemoryPortLeak45265408.cpp
+│   │   │   ├── TestIOConnectMapMemoryPortLeak45265408.h
+│   │   │   ├── TestIODeviceMemoryRosetta.cpp
+│   │   │   ├── TestIODeviceMemoryRosetta.h
+│   │   │   ├── TestIOServiceUserNotification.cpp
+│   │   │   └── TestIOServiceUserNotification.h
+│   │   ├── Tests.cpp
+│   │   └── Tests.h
+│   ├── bsddev
+│   │   ├── DINetBootHook.cpp
+│   │   ├── DINetBootHook.h
+│   │   ├── IOKitBSDInit.cpp
+│   │   ├── IOKitBSDInit.h
+│   │   └── skywalk
+│   │       └── IOSkywalkSupport.cpp
+│   └── conf
+│       ├── Makefile
+│       ├── Makefile.arm
+│       ├── Makefile.arm64
+│       ├── Makefile.template
+│       ├── Makefile.x86_64
+│       ├── copyright
+│       ├── files
+│       ├── files.arm
+│       ├── files.arm64
+│       └── files.x86_64
+├── libkdd
+│   ├── KCDBasicTypeDescription.h
+│   ├── KCDBasicTypeDescription.m
+│   ├── KCDEmbeddedBufferDescription.h
+│   ├── KCDEmbeddedBufferDescription.m
+│   ├── KCDStructTypeDescription.h
+│   ├── KCDStructTypeDescription.m
+│   ├── README.md
+│   ├── kcdata.h
+│   ├── kcdata_core.m
+│   ├── kcdtypes.c
+│   ├── kdd.framework
+│   │   ├── Info.plist
+│   │   └── module.modulemap
+│   ├── kdd.frameworkTests
+│   │   └── Info.plist
+│   ├── kdd.h
+│   ├── kdd.m
+│   ├── kdd.xcodeproj
+│   │   └── project.pbxproj
+│   ├── kdd_main.m
+│   └── xnu.libkdd.plist
+├── libkern
+│   ├── Makefile
+│   ├── OSKextLib.cpp
+│   ├── OSKextVersion.c
+│   ├── amfi
+│   │   └── amfi.c
+│   ├── apple_encrypted_archive
+│   │   └── apple_encrypted_archive.c
+│   ├── c++
+│   │   ├── OSArray.cpp
+│   │   ├── OSBoolean.cpp
+│   │   ├── OSCPPDebug.cpp
+│   │   ├── OSCollection.cpp
+│   │   ├── OSCollectionIterator.cpp
+│   │   ├── OSData.cpp
+│   │   ├── OSDictionary.cpp
+│   │   ├── OSIterator.cpp
+│   │   ├── OSKext.cpp
+│   │   ├── OSMetaClass.cpp
+│   │   ├── OSNumber.cpp
+│   │   ├── OSObject.cpp
+│   │   ├── OSOrderedSet.cpp
+│   │   ├── OSRuntime.cpp
+│   │   ├── OSRuntimeSupport.c
+│   │   ├── OSSerialize.cpp
+│   │   ├── OSSerializeBinary.cpp
+│   │   ├── OSSet.cpp
+│   │   ├── OSString.cpp
+│   │   ├── OSSymbol.cpp
+│   │   ├── OSUnserialize.cpp
+│   │   ├── OSUnserialize.y
+│   │   ├── OSUnserializeXML.cpp
+│   │   ├── OSUnserializeXML.y
+│   │   ├── OSValueObject.cpp
+│   │   ├── Tests
+│   │   │   └── TestSerialization
+│   │   │       ├── test1
+│   │   │       │   ├── Info.plist
+│   │   │       │   ├── test1.xcodeproj
+│   │   │       │   │   └── project.pbxproj
+│   │   │       │   └── test1_main.cpp
+│   │   │       └── test2
+│   │   │           ├── Info.plist
+│   │   │           ├── test2.xcodeproj
+│   │   │           │   └── project.pbxproj
+│   │   │           └── test2_main.cpp
+│   │   └── priority_queue.cpp
+│   ├── conf
+│   │   ├── Makefile
+│   │   ├── Makefile.arm
+│   │   ├── Makefile.arm64
+│   │   ├── Makefile.template
+│   │   ├── Makefile.x86_64
+│   │   ├── copyright
+│   │   ├── files
+│   │   ├── files.arm
+│   │   ├── files.arm64
+│   │   └── files.x86_64
+│   ├── coreanalytics
+│   │   └── coreanalytics_shim.cpp
+│   ├── coretrust
+│   │   └── coretrust.c
+│   ├── crypto
+│   │   ├── corecrypto_aes.c
+│   │   ├── corecrypto_aesxts.c
+│   │   ├── corecrypto_chacha20poly1305.c
+│   │   ├── corecrypto_des.c
+│   │   ├── corecrypto_md5.c
+│   │   ├── corecrypto_rand.c
+│   │   ├── corecrypto_rsa.c
+│   │   ├── corecrypto_sha1.c
+│   │   ├── corecrypto_sha2.c
+│   │   └── register_crypto.c
+│   ├── firehose
+│   │   ├── Makefile
+│   │   ├── chunk_private.h
+│   │   ├── firehose_types_private.h
+│   │   ├── ioctl_private.h
+│   │   ├── module.modulemap
+│   │   ├── private.h
+│   │   └── tracepoint_private.h
+│   ├── gen
+│   │   ├── OSAtomicOperations.c
+│   │   ├── OSDebug.cpp
+│   │   └── OSSpinLock.c
+│   ├── img4
+│   │   └── interface.c
+│   ├── kernel_mach_header.c
+│   ├── kmod
+│   │   ├── README
+│   │   ├── c_start.c
+│   │   ├── c_stop.c
+│   │   ├── cplus_start.c
+│   │   ├── cplus_stop.c
+│   │   ├── libkmod.xcodeproj
+│   │   │   └── project.pbxproj
+│   │   └── libkmodtest
+│   │       ├── libkmodtest-Info.plist
+│   │       ├── libkmodtest.cpp
+│   │       └── libkmodtest.h
+│   ├── kxld
+│   │   ├── Makefile
+│   │   ├── WKdmCompress.c
+│   │   ├── WKdmDecompress.c
+│   │   ├── kxld.c
+│   │   ├── kxld_array.c
+│   │   ├── kxld_array.h
+│   │   ├── kxld_copyright.c
+│   │   ├── kxld_demangle.c
+│   │   ├── kxld_demangle.h
+│   │   ├── kxld_dict.c
+│   │   ├── kxld_dict.h
+│   │   ├── kxld_kext.c
+│   │   ├── kxld_kext.h
+│   │   ├── kxld_object.c
+│   │   ├── kxld_object.h
+│   │   ├── kxld_reloc.c
+│   │   ├── kxld_reloc.h
+│   │   ├── kxld_sect.c
+│   │   ├── kxld_sect.h
+│   │   ├── kxld_seg.c
+│   │   ├── kxld_seg.h
+│   │   ├── kxld_splitinfolc.c
+│   │   ├── kxld_splitinfolc.h
+│   │   ├── kxld_srcversion.c
+│   │   ├── kxld_srcversion.h
+│   │   ├── kxld_sym.c
+│   │   ├── kxld_sym.h
+│   │   ├── kxld_symtab.c
+│   │   ├── kxld_symtab.h
+│   │   ├── kxld_util.c
+│   │   ├── kxld_util.h
+│   │   ├── kxld_uuid.c
+│   │   ├── kxld_uuid.h
+│   │   ├── kxld_versionmin.c
+│   │   ├── kxld_versionmin.h
+│   │   ├── kxld_vtable.c
+│   │   ├── kxld_vtable.h
+│   │   └── tests
+│   │       ├── kextcopyright.c
+│   │       ├── kxld_array_test.c
+│   │       ├── kxld_dict_test.c
+│   │       ├── kxld_test.c
+│   │       ├── kxld_test.h
+│   │       └── loadtest.py
+│   ├── libclosure
+│   │   ├── libclosuredata.c
+│   │   └── runtime.cpp
+│   ├── libkern
+│   │   ├── Block.h
+│   │   ├── Block_private.h
+│   │   ├── Makefile
+│   │   ├── OSAtomic.h
+│   │   ├── OSBase.h
+│   │   ├── OSByteOrder.h
+│   │   ├── OSCrossEndian.h
+│   │   ├── OSDebug.h
+│   │   ├── OSKextLib.h
+│   │   ├── OSKextLibPrivate.h
+│   │   ├── OSMalloc.h
+│   │   ├── OSReturn.h
+│   │   ├── OSSerializeBinary.h
+│   │   ├── OSTypes.h
+│   │   ├── _OSByteOrder.h
+│   │   ├── amfi
+│   │   │   ├── Makefile
+│   │   │   └── amfi.h
+│   │   ├── apple_encrypted_archive
+│   │   │   ├── Makefile
+│   │   │   └── apple_encrypted_archive.h
+│   │   ├── arm
+│   │   │   ├── Makefile
+│   │   │   └── OSByteOrder.h
+│   │   ├── c++
+│   │   │   ├── Makefile
+│   │   │   ├── OSAllocation.h
+│   │   │   ├── OSArray.h
+│   │   │   ├── OSBoolean.h
+│   │   │   ├── OSBoundedArray.h
+│   │   │   ├── OSBoundedArrayRef.h
+│   │   │   ├── OSBoundedPtr.h
+│   │   │   ├── OSBoundedPtrFwd.h
+│   │   │   ├── OSCPPDebug.h
+│   │   │   ├── OSCollection.h
+│   │   │   ├── OSCollectionIterator.h
+│   │   │   ├── OSContainers.h
+│   │   │   ├── OSData.h
+│   │   │   ├── OSDictionary.h
+│   │   │   ├── OSEndianTypes.h
+│   │   │   ├── OSIterator.h
+│   │   │   ├── OSKext.h
+│   │   │   ├── OSLib.h
+│   │   │   ├── OSMetaClass.h
+│   │   │   ├── OSNumber.h
+│   │   │   ├── OSObject.h
+│   │   │   ├── OSOrderedSet.h
+│   │   │   ├── OSPtr.h
+│   │   │   ├── OSSerialize.h
+│   │   │   ├── OSSet.h
+│   │   │   ├── OSSharedPtr.h
+│   │   │   ├── OSString.h
+│   │   │   ├── OSSymbol.h
+│   │   │   ├── OSUnserialize.h
+│   │   │   ├── OSUnserializeXMLSharedImplementation.h
+│   │   │   ├── OSValueObject.h
+│   │   │   ├── bounded_array.h
+│   │   │   ├── bounded_array_ref.h
+│   │   │   ├── bounded_ptr.h
+│   │   │   ├── bounded_ptr_fwd.h
+│   │   │   ├── intrusive_shared_ptr.h
+│   │   │   └── safe_allocation.h
+│   │   ├── coreanalytics
+│   │   │   ├── Makefile
+│   │   │   ├── coreanalytics.h
+│   │   │   ├── coreanalytics_internal.h
+│   │   │   └── coreanalytics_shim.h
+│   │   ├── coretrust
+│   │   │   ├── Makefile
+│   │   │   └── coretrust.h
+│   │   ├── crc.h
+│   │   ├── crypto
+│   │   │   ├── Makefile
+│   │   │   ├── aes.h
+│   │   │   ├── aesxts.h
+│   │   │   ├── chacha20poly1305.h
+│   │   │   ├── crypto_internal.h
+│   │   │   ├── des.h
+│   │   │   ├── md5.h
+│   │   │   ├── rand.h
+│   │   │   ├── register_crypto.h
+│   │   │   ├── rsa.h
+│   │   │   ├── sha1.h
+│   │   │   └── sha2.h
+│   │   ├── i386
+│   │   │   ├── Makefile
+│   │   │   ├── OSByteOrder.h
+│   │   │   └── _OSByteOrder.h
+│   │   ├── img4
+│   │   │   ├── Makefile
+│   │   │   └── interface.h
+│   │   ├── kernel_mach_header.h
+│   │   ├── kext_panic_report.h
+│   │   ├── kext_request_keys.h
+│   │   ├── kxld.h
+│   │   ├── kxld_types.h
+│   │   ├── locks.h
+│   │   ├── machine
+│   │   │   ├── Makefile
+│   │   │   └── OSByteOrder.h
+│   │   ├── mkext.h
+│   │   ├── prelink.h
+│   │   ├── ptrauth_utils.h
+│   │   ├── section_keywords.h
+│   │   ├── stack_protector.h
+│   │   ├── sysctl.h
+│   │   ├── tree.h
+│   │   ├── version.h.template
+│   │   ├── zconf.h
+│   │   └── zlib.h
+│   ├── mkext.c
+│   ├── net
+│   │   ├── inet_aton.c
+│   │   ├── inet_ntoa.c
+│   │   ├── inet_ntop.c
+│   │   └── inet_pton.c
+│   ├── os
+│   │   ├── Makefile
+│   │   ├── alloc_util.h
+│   │   ├── atomic.h
+│   │   ├── atomic_private.h
+│   │   ├── atomic_private_arch.h
+│   │   ├── atomic_private_impl.h
+│   │   ├── base.h
+│   │   ├── base_private.h
+│   │   ├── cpp_util.h
+│   │   ├── firehose.h
+│   │   ├── hash.h
+│   │   ├── internal.c
+│   │   ├── log.c
+│   │   ├── log.h
+│   │   ├── log_encode.c
+│   │   ├── log_encode.h
+│   │   ├── log_encode_types.h
+│   │   ├── log_internal.h
+│   │   ├── log_mem.c
+│   │   ├── log_mem.h
+│   │   ├── log_private.h
+│   │   ├── log_queue.c
+│   │   ├── log_queue.h
+│   │   ├── object.c
+│   │   ├── object.h
+│   │   ├── overflow.h
+│   │   ├── ptrtools.h
+│   │   ├── reason_private.h
+│   │   ├── refcnt.c
+│   │   ├── refcnt.h
+│   │   ├── refcnt_internal.h
+│   │   ├── trace.h
+│   │   └── trace_internal.h
+│   ├── ptrauth_utils.c
+│   ├── stack_protector.c
+│   ├── stdio
+│   │   └── scanf.c
+│   ├── uuid
+│   │   └── uuid.c
+│   └── zlib
+│       ├── README
+│       ├── adler32.c
+│       ├── compress.c
+│       ├── crc32.h
+│       ├── deflate.c
+│       ├── deflate.h
+│       ├── infback.c
+│       ├── inffast.c
+│       ├── inffast.h
+│       ├── inffixed.h
+│       ├── inflate.c
+│       ├── inflate.h
+│       ├── inftrees.c
+│       ├── inftrees.h
+│       ├── trees.c
+│       ├── trees.h
+│       ├── uncompr.c
+│       ├── z_crc32.c
+│       ├── zutil.c
+│       └── zutil.h
+├── libsa
+│   ├── Makefile
+│   ├── bootstrap.cpp
+│   ├── conf
+│   │   ├── Makefile
+│   │   ├── Makefile.arm
+│   │   ├── Makefile.arm64
+│   │   ├── Makefile.template
+│   │   ├── Makefile.x86_64
+│   │   ├── copyright
+│   │   ├── files
+│   │   ├── files.arm
+│   │   ├── files.arm64
+│   │   └── files.x86_64
+│   ├── lastkernelconstructor.c
+│   ├── lastkerneldataconst.c
+│   └── nonlto.c
+├── libsyscall
+│   ├── Libsyscall.xcconfig
+│   ├── Libsyscall.xcodeproj
+│   │   └── project.pbxproj
+│   ├── Platforms
+│   │   ├── DriverKit
+│   │   │   ├── arm
+│   │   │   │   └── syscall.map
+│   │   │   ├── arm64
+│   │   │   │   └── syscall.map
+│   │   │   └── x86_64
+│   │   │       └── syscall.map
+│   │   ├── MacOSX
+│   │   │   ├── arm64
+│   │   │   │   └── syscall.map
+│   │   │   ├── i386
+│   │   │   │   └── syscall.map
+│   │   │   └── x86_64
+│   │   │       └── syscall.map
+│   │   ├── iPhoneOS
+│   │   │   ├── arm
+│   │   │   │   └── syscall.map
+│   │   │   └── arm64
+│   │   │       └── syscall.map
+│   │   └── syscall.map
+│   ├── custom
+│   │   ├── SYS.h
+│   │   ├── __fork.s
+│   │   ├── __getpid.s
+│   │   ├── __gettimeofday.s
+│   │   ├── __kdebug_trace_string.s
+│   │   ├── __lseek.s
+│   │   ├── __pipe.s
+│   │   ├── __ptrace.s
+│   │   ├── __sigaltstack.s
+│   │   ├── __sigreturn.s
+│   │   ├── __syscall.s
+│   │   ├── __thread_selfid.s
+│   │   ├── __thread_selfusage.s
+│   │   ├── __vfork.s
+│   │   ├── custom.s
+│   │   ├── dummy.c
+│   │   └── errno.c
+│   ├── mach
+│   │   ├── abort.h
+│   │   ├── add_attributes_to_mig.txt
+│   │   ├── clock.defs
+│   │   ├── clock_priv.defs
+│   │   ├── clock_reply.defs
+│   │   ├── clock_sleep.c
+│   │   ├── err_iokit.sub
+│   │   ├── err_ipc.sub
+│   │   ├── err_kern.sub
+│   │   ├── err_libkern.sub
+│   │   ├── err_mach_ipc.sub
+│   │   ├── err_server.sub
+│   │   ├── err_us.sub
+│   │   ├── error_codes.c
+│   │   ├── errorlib.h
+│   │   ├── exc.defs
+│   │   ├── exc_catcher.c
+│   │   ├── exc_catcher.h
+│   │   ├── exc_catcher_state.c
+│   │   ├── exc_catcher_state_identity.c
+│   │   ├── externs.h
+│   │   ├── fprintf_stderr.c
+│   │   ├── host.c
+│   │   ├── host_priv.defs
+│   │   ├── host_security.defs
+│   │   ├── ledger.defs
+│   │   ├── lock_set.defs
+│   │   ├── mach
+│   │   │   ├── errorlib.h
+│   │   │   ├── mach.h
+│   │   │   ├── mach_error.h
+│   │   │   ├── mach_init.h
+│   │   │   ├── mach_interface.h
+│   │   │   ├── mach_right.h
+│   │   │   ├── mach_right_private.h
+│   │   │   ├── mach_sync_ipc.h
+│   │   │   ├── port_descriptions.h
+│   │   │   ├── port_obj.h
+│   │   │   ├── sync.h
+│   │   │   ├── thread_state.h
+│   │   │   ├── vm_page_size.h
+│   │   │   └── vm_task.h
+│   │   ├── mach_error.c
+│   │   ├── mach_error_string.c
+│   │   ├── mach_eventlink.c
+│   │   ├── mach_eventlink.defs
+│   │   ├── mach_host.defs
+│   │   ├── mach_init.c
+│   │   ├── mach_legacy.c
+│   │   ├── mach_msg.c
+│   │   ├── mach_port.c
+│   │   ├── mach_port.defs
+│   │   ├── mach_right.c
+│   │   ├── mach_traps.s
+│   │   ├── mach_vm.c
+│   │   ├── mach_vm.defs
+│   │   ├── mach_voucher.defs
+│   │   ├── memory_entry.defs
+│   │   ├── mig_allocate.c
+│   │   ├── mig_deallocate.c
+│   │   ├── mig_reply_port.c
+│   │   ├── mig_reply_setup.c
+│   │   ├── mig_strncpy.c
+│   │   ├── ms_thread_switch.c
+│   │   ├── notify.defs
+│   │   ├── panic.c
+│   │   ├── port_descriptions.c
+│   │   ├── port_obj.c
+│   │   ├── processor.defs
+│   │   ├── processor_set.defs
+│   │   ├── restartable.defs
+│   │   ├── semaphore.c
+│   │   ├── servers
+│   │   │   ├── key_defs.h
+│   │   │   ├── ls_defs.h
+│   │   │   ├── netname.defs
+│   │   │   ├── netname_defs.h
+│   │   │   └── nm_defs.h
+│   │   ├── slot_name.c
+│   │   ├── stack_logging_internal.h
+│   │   ├── string.c
+│   │   ├── string.h
+│   │   ├── task.c
+│   │   ├── task.defs
+│   │   ├── thread_act.c
+│   │   ├── thread_act.defs
+│   │   └── vm_map.defs
+│   ├── os
+│   │   ├── alloc_once.c
+│   │   ├── log_data.c
+│   │   ├── proc.h
+│   │   ├── thread_self_restrict.h
+│   │   └── tsd.h
+│   ├── wrappers
+│   │   ├── __commpage_gettimeofday.c
+│   │   ├── __get_cpu_capabilities.s
+│   │   ├── _errno.h
+│   │   ├── _libc_funcptr.c
+│   │   ├── _libkernel_init.c
+│   │   ├── _libkernel_init.h
+│   │   ├── cancelable
+│   │   │   ├── fcntl-base.c
+│   │   │   ├── fcntl-cancel.c
+│   │   │   ├── fcntl.c
+│   │   │   ├── open.c
+│   │   │   ├── pselect-darwinext-cancel.c
+│   │   │   ├── pselect-darwinext.c
+│   │   │   ├── select-cancel.c
+│   │   │   ├── select.c
+│   │   │   ├── sigsuspend-cancel.c
+│   │   │   └── sigsuspend.c
+│   │   ├── carbon_delete.c
+│   │   ├── clonefile.c
+│   │   ├── coalition.c
+│   │   ├── csr.c
+│   │   ├── fs_snapshot.c
+│   │   ├── gethostuuid.c
+│   │   ├── gethostuuid.h
+│   │   ├── gethostuuid_private.h
+│   │   ├── getiopolicy_np.c
+│   │   ├── guarded_open_dprotected_np.c
+│   │   ├── guarded_open_np.c
+│   │   ├── init_cpu_capabilities.c
+│   │   ├── ioctl.c
+│   │   ├── kdebug_trace.c
+│   │   ├── kern_debug.c
+│   │   ├── kill.c
+│   │   ├── legacy
+│   │   │   ├── accept.c
+│   │   │   ├── bind.c
+│   │   │   ├── connect.c
+│   │   │   ├── getattrlist.c
+│   │   │   ├── getaudit.c
+│   │   │   ├── getpeername.c
+│   │   │   ├── getsockname.c
+│   │   │   ├── kill.c
+│   │   │   ├── lchown.c
+│   │   │   ├── listen.c
+│   │   │   ├── mprotect.c
+│   │   │   ├── msync.c
+│   │   │   ├── munmap.c
+│   │   │   ├── recvfrom.c
+│   │   │   ├── recvmsg.c
+│   │   │   ├── select-pre1050.c
+│   │   │   ├── select.c
+│   │   │   ├── sendmsg.c
+│   │   │   ├── sendto.c
+│   │   │   ├── setattrlist.c
+│   │   │   ├── sigsuspend.c
+│   │   │   └── socketpair.c
+│   │   ├── libproc
+│   │   │   ├── libproc.c
+│   │   │   ├── libproc.h
+│   │   │   ├── libproc_internal.h
+│   │   │   ├── libproc_private.h
+│   │   │   └── proc_listpidspath.c
+│   │   ├── mach_absolute_time.s
+│   │   ├── mach_approximate_time.c
+│   │   ├── mach_approximate_time.s
+│   │   ├── mach_boottime.c
+│   │   ├── mach_bridge_remote_time.c
+│   │   ├── mach_continuous_time.c
+│   │   ├── mach_get_times.c
+│   │   ├── mach_timebase_info.c
+│   │   ├── open-base.c
+│   │   ├── open_dprotected_np.c
+│   │   ├── persona.c
+│   │   ├── pid_shutdown_networking.c
+│   │   ├── posix_sem_obsolete.c
+│   │   ├── proc.c
+│   │   ├── quota_obsolete.c
+│   │   ├── reboot.c
+│   │   ├── remove-counter.c
+│   │   ├── rename.c
+│   │   ├── renameat.c
+│   │   ├── renamex.c
+│   │   ├── rmdir.c
+│   │   ├── select-base.c
+│   │   ├── setpriority.c
+│   │   ├── sfi.c
+│   │   ├── sigsuspend-base.c
+│   │   ├── skywalk
+│   │   │   ├── cpu_copy_in_cksum.s
+│   │   │   ├── cpu_copy_in_cksum_gen.c
+│   │   │   ├── cpu_in_cksum.s
+│   │   │   ├── cpu_in_cksum_gen.c
+│   │   │   ├── os_channel.c
+│   │   │   ├── os_channel_event.c
+│   │   │   ├── os_nexus.c
+│   │   │   └── os_packet.c
+│   │   ├── spawn
+│   │   │   ├── posix_spawn.c
+│   │   │   ├── posix_spawn_filtering.c
+│   │   │   ├── spawn.h
+│   │   │   └── spawn_private.h
+│   │   ├── stackshot.c
+│   │   ├── string
+│   │   │   ├── index.c
+│   │   │   ├── memcpy.c
+│   │   │   ├── memset.c
+│   │   │   ├── strcmp.c
+│   │   │   ├── strcpy.c
+│   │   │   ├── strings.h
+│   │   │   ├── strlcpy.c
+│   │   │   ├── strlen.c
+│   │   │   └── strsep.c
+│   │   ├── system-version-compat-support.c
+│   │   ├── system-version-compat-support.h
+│   │   ├── system-version-compat.c
+│   │   ├── terminate_with_reason.c
+│   │   ├── thread_register_state.c
+│   │   ├── unix03
+│   │   │   ├── chmod.c
+│   │   │   ├── fchmod.c
+│   │   │   ├── getrlimit.c
+│   │   │   ├── mmap.c
+│   │   │   ├── munmap.c
+│   │   │   └── setrlimit.c
+│   │   ├── unlink.c
+│   │   ├── unlinkat.c
+│   │   ├── utimensat.c
+│   │   ├── varargs_wrappers.s
+│   │   └── work_interval.c
+│   └── xcodescripts
+│       ├── compile-syscalls.pl
+│       ├── create-syscalls.pl
+│       ├── filter_mig.awk
+│       └── mach_install_mig.sh
+├── makedefs
+│   ├── MakeInc.cmd
+│   ├── MakeInc.color
+│   ├── MakeInc.def
+│   ├── MakeInc.dir
+│   ├── MakeInc.kernel
+│   ├── MakeInc.rule
+│   ├── MakeInc.san
+│   └── MakeInc.top
+├── nwnode:
+├── osfmk
+│   ├── Makefile
+│   ├── UserNotification
+│   │   ├── KUNCUserNotifications.c
+│   │   ├── KUNCUserNotifications.h
+│   │   ├── Makefile
+│   │   ├── UNDReply.defs
+│   │   ├── UNDRequest.defs
+│   │   ├── UNDTypes.defs
+│   │   └── UNDTypes.h
+│   ├── arm
+│   │   ├── Makefile
+│   │   ├── WKdmCompress_new.s
+│   │   ├── WKdmData_new.s
+│   │   ├── WKdmDecompress_new.s
+│   │   ├── arch.h
+│   │   ├── arm_init.c
+│   │   ├── arm_timer.c
+│   │   ├── arm_vm_init.c
+│   │   ├── asm.h
+│   │   ├── atomic.h
+│   │   ├── bcopy.s
+│   │   ├── bsd_arm.c
+│   │   ├── bzero.s
+│   │   ├── caches.c
+│   │   ├── caches_asm.s
+│   │   ├── caches_internal.h
+│   │   ├── commpage
+│   │   │   ├── commpage.c
+│   │   │   ├── commpage.h
+│   │   │   ├── commpage_asm.s
+│   │   │   └── commpage_sigs.h
+│   │   ├── counter.c
+│   │   ├── cpu.c
+│   │   ├── cpu_affinity.h
+│   │   ├── cpu_capabilities.h
+│   │   ├── cpu_common.c
+│   │   ├── cpu_data.h
+│   │   ├── cpu_data_internal.h
+│   │   ├── cpu_internal.h
+│   │   ├── cpu_number.h
+│   │   ├── cpu_x86_64_capabilities.h
+│   │   ├── cpuid.c
+│   │   ├── cpuid.h
+│   │   ├── cpuid_internal.h
+│   │   ├── cswitch.s
+│   │   ├── data.s
+│   │   ├── dbgwrap.c
+│   │   ├── dbgwrap.h
+│   │   ├── dwarf_unwind.h
+│   │   ├── exception.h
+│   │   ├── genassym.c
+│   │   ├── globals_asm.h
+│   │   ├── hw_lock_types.h
+│   │   ├── io_map.c
+│   │   ├── io_map_entries.h
+│   │   ├── kpc_arm.c
+│   │   ├── lock.h
+│   │   ├── locks.h
+│   │   ├── locks_arm.c
+│   │   ├── locore.s
+│   │   ├── loose_ends.c
+│   │   ├── lowglobals.h
+│   │   ├── lowmem_vectors.c
+│   │   ├── lz4_decode_armv7NEON.s
+│   │   ├── lz4_encode_armv7.s
+│   │   ├── machdep_call.c
+│   │   ├── machdep_call.h
+│   │   ├── machine_cpu.h
+│   │   ├── machine_cpuid.c
+│   │   ├── machine_cpuid.h
+│   │   ├── machine_kpc.h
+│   │   ├── machine_routines.c
+│   │   ├── machine_routines.h
+│   │   ├── machine_routines_apple.c
+│   │   ├── machine_routines_asm.s
+│   │   ├── machine_routines_common.c
+│   │   ├── machine_task.c
+│   │   ├── machlimits.h
+│   │   ├── machparam.h
+│   │   ├── memory_types.h
+│   │   ├── misc_protos.h
+│   │   ├── model_dep.c
+│   │   ├── monotonic.h
+│   │   ├── monotonic_arm.c
+│   │   ├── pal_routines.c
+│   │   ├── pal_routines.h
+│   │   ├── pcb.c
+│   │   ├── pmap
+│   │   │   ├── pmap_cs.c
+│   │   │   ├── pmap_data.c
+│   │   │   ├── pmap_data.h
+│   │   │   ├── pmap_internal.h
+│   │   │   ├── pmap_iommu.c
+│   │   │   ├── pmap_misc.c
+│   │   │   ├── pmap_ppl_interface.c
+│   │   │   └── pmap_pt_geometry.h
+│   │   ├── pmap.c
+│   │   ├── pmap.h
+│   │   ├── pmap_public.h
+│   │   ├── proc_reg.h
+│   │   ├── rtclock.c
+│   │   ├── rtclock.h
+│   │   ├── sched_param.h
+│   │   ├── setjmp.h
+│   │   ├── simple_lock.h
+│   │   ├── smp.h
+│   │   ├── start.s
+│   │   ├── status.c
+│   │   ├── status_shared.c
+│   │   ├── strlcpy.c
+│   │   ├── strlen.s
+│   │   ├── strncmp.s
+│   │   ├── strncpy.c
+│   │   ├── strnlen.s
+│   │   ├── task.h
+│   │   ├── thread.h
+│   │   ├── tlb.h
+│   │   ├── trap.c
+│   │   ├── trap.h
+│   │   ├── trustcache.c
+│   │   └── vm_tuning.h
+│   ├── arm64
+│   │   ├── Makefile
+│   │   ├── WKdmCompress_16k.s
+│   │   ├── WKdmCompress_4k.s
+│   │   ├── WKdmData.s
+│   │   ├── WKdmDecompress_16k.s
+│   │   ├── WKdmDecompress_4k.s
+│   │   ├── alternate_debugger.c
+│   │   ├── alternate_debugger.h
+│   │   ├── alternate_debugger_asm.s
+│   │   ├── amcc_rorgn.h
+│   │   ├── arm_vm_init.c
+│   │   ├── asm.h
+│   │   ├── bcopy.s
+│   │   ├── bsd_arm64.c
+│   │   ├── bzero.s
+│   │   ├── caches_asm.s
+│   │   ├── copyio.c
+│   │   ├── corecrypto
+│   │   │   ├── arm64_isa_compatibility.h
+│   │   │   └── sha256_compress_arm64.s
+│   │   ├── cpu.c
+│   │   ├── cswitch.s
+│   │   ├── dbgwrap.c
+│   │   ├── dwarf_unwind.h
+│   │   ├── exception_asm.h
+│   │   ├── genassym.c
+│   │   ├── gxf_exceptions.s
+│   │   ├── hibernate_arm64.c
+│   │   ├── hibernate_ppl_hmac.c
+│   │   ├── hibernate_ppl_hmac.h
+│   │   ├── hibernate_restore.c
+│   │   ├── instructions.h
+│   │   ├── locore.s
+│   │   ├── loose_ends.c
+│   │   ├── lowglobals.h
+│   │   ├── lowmem_vectors.c
+│   │   ├── lz4_decode_arm64.s
+│   │   ├── lz4_encode_arm64.s
+│   │   ├── machine_cpuid.h
+│   │   ├── machine_kpc.h
+│   │   ├── machine_machdep.h
+│   │   ├── machine_remote_time.c
+│   │   ├── machine_remote_time.h
+│   │   ├── machine_routines.c
+│   │   ├── machine_routines_asm.h
+│   │   ├── machine_routines_asm.s
+│   │   ├── machine_task.c
+│   │   ├── memcmp_zero.s
+│   │   ├── monotonic.h
+│   │   ├── monotonic_arm64.c
+│   │   ├── pac_asm.h
+│   │   ├── pal_hibernate.h
+│   │   ├── pcb.c
+│   │   ├── perfmon_arm64.c
+│   │   ├── perfmon_arm64_regs.h
+│   │   ├── pinst.s
+│   │   ├── platform_tests.c
+│   │   ├── platform_tests_asm.s
+│   │   ├── proc_reg.h
+│   │   ├── serror_handler.c
+│   │   ├── serror_handler.h
+│   │   ├── sleh.c
+│   │   ├── smccc_asm.h
+│   │   ├── start.s
+│   │   ├── status.c
+│   │   ├── strncmp.s
+│   │   ├── strnlen.s
+│   │   └── tlb.h
+│   ├── atm
+│   │   ├── Makefile
+│   │   ├── atm.c
+│   │   ├── atm_internal.h
+│   │   ├── atm_notification.defs
+│   │   ├── atm_types.defs
+│   │   └── atm_types.h
+│   ├── bank
+│   │   ├── Makefile
+│   │   ├── bank.c
+│   │   ├── bank.modulemap
+│   │   ├── bank_internal.h
+│   │   └── bank_types.h
+│   ├── conf
+│   │   ├── Makefile
+│   │   ├── Makefile.arm
+│   │   ├── Makefile.arm64
+│   │   ├── Makefile.template
+│   │   ├── Makefile.x86_64
+│   │   ├── copyright
+│   │   ├── copyright.cmu
+│   │   ├── copyright.osf
+│   │   ├── files
+│   │   ├── files.arm
+│   │   ├── files.arm64
+│   │   └── files.x86_64
+│   ├── console
+│   │   ├── Makefile
+│   │   ├── art
+│   │   │   ├── ProgressBarEmptyLeftEndcap.png
+│   │   │   ├── ProgressBarEmptyLeftEndcap@2x.png
+│   │   │   ├── ProgressBarEmptyMiddle.png
+│   │   │   ├── ProgressBarEmptyMiddle@2x.png
+│   │   │   ├── ProgressBarEmptyRightEndcap.png
+│   │   │   ├── ProgressBarEmptyRightEndcap@2x.png
+│   │   │   ├── ProgressBarFullLeftEndcap.png
+│   │   │   ├── ProgressBarFullLeftEndcap@2x.png
+│   │   │   ├── ProgressBarFullMiddle.png
+│   │   │   ├── ProgressBarFullMiddle@2x.png
+│   │   │   ├── ProgressBarFullRightEndcap.png
+│   │   │   ├── ProgressBarFullRightEndcap@2x.png
+│   │   │   ├── progress.m
+│   │   │   └── scalegear.c
+│   │   ├── iso_font.c
+│   │   ├── progress_meter_data.c
+│   │   ├── serial_console.c
+│   │   ├── serial_general.c
+│   │   ├── serial_protos.h
+│   │   ├── video_console.c
+│   │   ├── video_console.h
+│   │   └── video_scroll.c
+│   ├── corecrypto
+│   │   ├── cc_abort.c
+│   │   ├── cc_clear.c
+│   │   ├── cc_cmp_safe.c
+│   │   ├── ccdigest_final_64be.c
+│   │   ├── ccdigest_init.c
+│   │   ├── ccdigest_internal.h
+│   │   ├── ccdigest_update.c
+│   │   ├── ccdrbg_nisthmac.c
+│   │   ├── cchmac.c
+│   │   ├── cchmac_final.c
+│   │   ├── cchmac_init.c
+│   │   ├── cchmac_update.c
+│   │   ├── ccsha256_K.c
+│   │   ├── ccsha256_di.c
+│   │   ├── ccsha256_initial_state.c
+│   │   ├── ccsha256_ltc_compress.c
+│   │   ├── ccsha256_ltc_di.c
+│   │   └── ccsha2_internal.h
+│   ├── corpses
+│   │   ├── Makefile
+│   │   ├── corpse.c
+│   │   └── task_corpse.h
+│   ├── default_pager
+│   │   ├── Makefile
+│   │   └── default_pager_types.h
+│   ├── device
+│   │   ├── Makefile
+│   │   ├── device.defs
+│   │   ├── device.modulemap
+│   │   ├── device_init.c
+│   │   ├── device_port.h
+│   │   ├── device_types.defs
+│   │   ├── device_types.h
+│   │   ├── iokit_rpc.c
+│   │   └── subrs.c
+│   ├── gssd
+│   │   ├── Makefile
+│   │   ├── gssd_mach.defs
+│   │   └── gssd_mach_types.h
+│   ├── i386
+│   │   ├── AT386
+│   │   │   └── model_dep.c
+│   │   ├── Diagnostics.c
+│   │   ├── Diagnostics.h
+│   │   ├── Makefile
+│   │   ├── acpi.c
+│   │   ├── acpi.h
+│   │   ├── apic.h
+│   │   ├── arch_types.h
+│   │   ├── asm.h
+│   │   ├── asm64.h
+│   │   ├── atomic.h
+│   │   ├── bit_routines.h
+│   │   ├── bsd_i386.c
+│   │   ├── bsd_i386_native.c
+│   │   ├── commpage
+│   │   │   ├── commpage.c
+│   │   │   ├── commpage.h
+│   │   │   ├── commpage_asm.s
+│   │   │   └── fifo_queues.s
+│   │   ├── cpu.c
+│   │   ├── cpu_affinity.h
+│   │   ├── cpu_capabilities.h
+│   │   ├── cpu_data.h
+│   │   ├── cpu_number.h
+│   │   ├── cpu_threads.c
+│   │   ├── cpu_threads.h
+│   │   ├── cpu_topology.c
+│   │   ├── cpu_topology.h
+│   │   ├── cpuid.c
+│   │   ├── cpuid.h
+│   │   ├── eflags.h
+│   │   ├── endian.h
+│   │   ├── exec.h
+│   │   ├── fp_simd.s
+│   │   ├── fpu.c
+│   │   ├── fpu.h
+│   │   ├── gdt.c
+│   │   ├── genassym.c
+│   │   ├── hibernate_i386.c
+│   │   ├── hibernate_restore.c
+│   │   ├── hpet.c
+│   │   ├── hpet.h
+│   │   ├── hw_defs.h
+│   │   ├── hw_lock_types.h
+│   │   ├── i386_init.c
+│   │   ├── i386_lock.s
+│   │   ├── i386_lowmem.h
+│   │   ├── i386_timer.c
+│   │   ├── i386_vm_init.c
+│   │   ├── io_map.c
+│   │   ├── io_map_entries.h
+│   │   ├── io_port.h
+│   │   ├── iopb.h
+│   │   ├── ktss.c
+│   │   ├── lapic.c
+│   │   ├── lapic.h
+│   │   ├── lapic_native.c
+│   │   ├── lbr.h
+│   │   ├── ldt.c
+│   │   ├── lock.h
+│   │   ├── locks.h
+│   │   ├── locks_i386.c
+│   │   ├── locks_i386_inlines.h
+│   │   ├── locks_i386_opt.c
+│   │   ├── machdep_call.c
+│   │   ├── machdep_call.h
+│   │   ├── machine_check.c
+│   │   ├── machine_check.h
+│   │   ├── machine_cpu.h
+│   │   ├── machine_routines.c
+│   │   ├── machine_routines.h
+│   │   ├── machine_rpc.h
+│   │   ├── machine_task.c
+│   │   ├── machlimits.h
+│   │   ├── machparam.h
+│   │   ├── memory_types.h
+│   │   ├── misc_protos.h
+│   │   ├── mp.c
+│   │   ├── mp.h
+│   │   ├── mp_desc.c
+│   │   ├── mp_desc.h
+│   │   ├── mp_events.h
+│   │   ├── mp_native.c
+│   │   ├── mtrr.c
+│   │   ├── mtrr.h
+│   │   ├── pal_hibernate.h
+│   │   ├── pal_lock_asm.h
+│   │   ├── pal_native.h
+│   │   ├── pal_routines.c
+│   │   ├── pal_routines.h
+│   │   ├── pal_rtclock_asm.h
+│   │   ├── panic_hooks.c
+│   │   ├── panic_hooks.h
+│   │   ├── panic_notify.c
+│   │   ├── panic_notify.h
+│   │   ├── pcb.c
+│   │   ├── pcb_native.c
+│   │   ├── phys.c
+│   │   ├── pio.h
+│   │   ├── pmCPU.c
+│   │   ├── pmCPU.h
+│   │   ├── pmap.h
+│   │   ├── pmap_common.c
+│   │   ├── pmap_internal.h
+│   │   ├── pmap_pcid.h
+│   │   ├── pmap_x86_common.c
+│   │   ├── postcode.h
+│   │   ├── proc_reg.h
+│   │   ├── rtclock.c
+│   │   ├── rtclock_asm.h
+│   │   ├── rtclock_asm_native.h
+│   │   ├── rtclock_native.c
+│   │   ├── rtclock_protos.h
+│   │   ├── sched_param.h
+│   │   ├── seg.h
+│   │   ├── serial_io.h
+│   │   ├── setjmp.h
+│   │   ├── simple_lock.h
+│   │   ├── smp.h
+│   │   ├── stab.h
+│   │   ├── task.h
+│   │   ├── thread.h
+│   │   ├── trap.c
+│   │   ├── trap.h
+│   │   ├── trap_native.c
+│   │   ├── tsc.c
+│   │   ├── tsc.h
+│   │   ├── tss.h
+│   │   ├── ucode.c
+│   │   ├── ucode.h
+│   │   ├── user_ldt.c
+│   │   ├── user_ldt.h
+│   │   ├── vm_tuning.h
+│   │   ├── vmx
+│   │   │   ├── vmx_asm.h
+│   │   │   ├── vmx_cpu.c
+│   │   │   ├── vmx_cpu.h
+│   │   │   ├── vmx_shims.c
+│   │   │   └── vmx_shims.h
+│   │   ├── vmx.h
+│   │   ├── x86_hypercall.c
+│   │   └── x86_hypercall.h
+│   ├── ipc
+│   │   ├── Makefile
+│   │   ├── flipc.c
+│   │   ├── flipc.h
+│   │   ├── ipc_entry.c
+│   │   ├── ipc_entry.h
+│   │   ├── ipc_eventlink.c
+│   │   ├── ipc_eventlink.h
+│   │   ├── ipc_hash.c
+│   │   ├── ipc_hash.h
+│   │   ├── ipc_importance.c
+│   │   ├── ipc_importance.h
+│   │   ├── ipc_init.c
+│   │   ├── ipc_init.h
+│   │   ├── ipc_kmsg.c
+│   │   ├── ipc_kmsg.h
+│   │   ├── ipc_machdep.h
+│   │   ├── ipc_mqueue.c
+│   │   ├── ipc_mqueue.h
+│   │   ├── ipc_notify.c
+│   │   ├── ipc_notify.h
+│   │   ├── ipc_object.c
+│   │   ├── ipc_object.h
+│   │   ├── ipc_port.c
+│   │   ├── ipc_port.h
+│   │   ├── ipc_pset.c
+│   │   ├── ipc_pset.h
+│   │   ├── ipc_right.c
+│   │   ├── ipc_right.h
+│   │   ├── ipc_service_port.c
+│   │   ├── ipc_service_port.h
+│   │   ├── ipc_space.c
+│   │   ├── ipc_space.h
+│   │   ├── ipc_table.c
+│   │   ├── ipc_table.h
+│   │   ├── ipc_types.h
+│   │   ├── ipc_voucher.c
+│   │   ├── ipc_voucher.h
+│   │   ├── mach_debug.c
+│   │   ├── mach_kernelrpc.c
+│   │   ├── mach_msg.c
+│   │   ├── mach_port.c
+│   │   ├── mig_log.c
+│   │   └── port.h
+│   ├── kdp
+│   │   ├── Makefile
+│   │   ├── kdp.c
+│   │   ├── kdp.h
+│   │   ├── kdp_callout.h
+│   │   ├── kdp_core.c
+│   │   ├── kdp_core.h
+│   │   ├── kdp_dyld.h
+│   │   ├── kdp_en_debugger.h
+│   │   ├── kdp_internal.h
+│   │   ├── kdp_out_stage.h
+│   │   ├── kdp_private.h
+│   │   ├── kdp_protocol.h
+│   │   ├── kdp_serial.c
+│   │   ├── kdp_serial.h
+│   │   ├── kdp_udp.c
+│   │   ├── kdp_udp.h
+│   │   ├── ml
+│   │   │   ├── arm
+│   │   │   │   ├── kdp_machdep.c
+│   │   │   │   └── kdp_vm.c
+│   │   │   ├── i386
+│   │   │   │   ├── kdp_x86_common.c
+│   │   │   │   └── kdp_x86_common.h
+│   │   │   └── x86_64
+│   │   │       ├── kdp_machdep.c
+│   │   │       └── kdp_vm.c
+│   │   ├── output_stages
+│   │   │   ├── out_aea.c
+│   │   │   ├── out_buffer.c
+│   │   │   ├── out_disk.c
+│   │   │   ├── out_memory_backing_aware_buffer.c
+│   │   │   ├── out_net.c
+│   │   │   ├── out_progress_notify.c
+│   │   │   ├── out_shmem.c
+│   │   │   ├── out_zlib.c
+│   │   │   └── output_stages.h
+│   │   ├── processor_core.c
+│   │   └── processor_core.h
+│   ├── kern
+│   │   ├── Makefile
+│   │   ├── affinity.c
+│   │   ├── affinity.h
+│   │   ├── arcade.c
+│   │   ├── arcade.h
+│   │   ├── arithmetic_128.h
+│   │   ├── assert.h
+│   │   ├── ast.c
+│   │   ├── ast.h
+│   │   ├── audit_sessionport.c
+│   │   ├── audit_sessionport.h
+│   │   ├── backtrace.c
+│   │   ├── backtrace.h
+│   │   ├── bits.h
+│   │   ├── block_hint.h
+│   │   ├── bsd_kern.c
+│   │   ├── btlog.c
+│   │   ├── btlog.h
+│   │   ├── build_config.c
+│   │   ├── build_config.h
+│   │   ├── cambria_layout.h
+│   │   ├── circle_queue.h
+│   │   ├── clock.c
+│   │   ├── clock.h
+│   │   ├── clock_oldops.c
+│   │   ├── coalition.c
+│   │   ├── coalition.h
+│   │   ├── copyout_shim.c
+│   │   ├── copyout_shim.h
+│   │   ├── core_analytics.c
+│   │   ├── counter.h
+│   │   ├── counter_common.c
+│   │   ├── cpu_data.h
+│   │   ├── cpu_number.h
+│   │   ├── cpu_quiesce.c
+│   │   ├── cpu_quiesce.h
+│   │   ├── cs_blobs.h
+│   │   ├── debug.c
+│   │   ├── debug.h
+│   │   ├── ecc.h
+│   │   ├── ecc_logging.c
+│   │   ├── energy_perf.c
+│   │   ├── energy_perf.h
+│   │   ├── exc_guard.h
+│   │   ├── exc_resource.h
+│   │   ├── exception.c
+│   │   ├── exception.h
+│   │   ├── extmod_statistics.c
+│   │   ├── extmod_statistics.h
+│   │   ├── gzalloc.c
+│   │   ├── hazard.c
+│   │   ├── hazard.h
+│   │   ├── hibernate.c
+│   │   ├── host.c
+│   │   ├── host.h
+│   │   ├── host_notify.c
+│   │   ├── host_notify.h
+│   │   ├── host_statistics.h
+│   │   ├── hv_io_notifier.c
+│   │   ├── hv_io_notifier.h
+│   │   ├── hv_support.h
+│   │   ├── hv_support_kext.c
+│   │   ├── hv_support_kext.h
+│   │   ├── hvg_hypercall.h
+│   │   ├── ipc_clock.c
+│   │   ├── ipc_host.c
+│   │   ├── ipc_host.h
+│   │   ├── ipc_kobject.c
+│   │   ├── ipc_kobject.h
+│   │   ├── ipc_mig.c
+│   │   ├── ipc_mig.h
+│   │   ├── ipc_misc.c
+│   │   ├── ipc_misc.h
+│   │   ├── ipc_tt.c
+│   │   ├── ipc_tt.h
+│   │   ├── kalloc.c
+│   │   ├── kalloc.h
+│   │   ├── kcdata.h
+│   │   ├── kcdata.modulemap
+│   │   ├── kern_cdata.c
+│   │   ├── kern_cdata.h
+│   │   ├── kern_debug.modulemap
+│   │   ├── kern_monotonic.c
+│   │   ├── kern_perfmon.c
+│   │   ├── kern_private.modulemap
+│   │   ├── kern_stackshot.c
+│   │   ├── kern_types.h
+│   │   ├── kext_alloc.c
+│   │   ├── kext_alloc.h
+│   │   ├── kmod.c
+│   │   ├── kpc.h
+│   │   ├── kpc_common.c
+│   │   ├── kpc_thread.c
+│   │   ├── ktrace_background_notify.c
+│   │   ├── ledger.c
+│   │   ├── ledger.h
+│   │   ├── lock.h
+│   │   ├── lock_attr.h
+│   │   ├── lock_group.c
+│   │   ├── lock_group.h
+│   │   ├── lock_rw.c
+│   │   ├── lock_rw.h
+│   │   ├── lock_sleep.h
+│   │   ├── lock_stat.h
+│   │   ├── lock_ticket.c
+│   │   ├── lock_types.h
+│   │   ├── locks.c
+│   │   ├── locks.h
+│   │   ├── mach_filter.h
+│   │   ├── mach_node.c
+│   │   ├── mach_node.h
+│   │   ├── mach_node_link.h
+│   │   ├── mach_param.h
+│   │   ├── machine.c
+│   │   ├── machine.h
+│   │   ├── macro_help.h
+│   │   ├── memset_s.c
+│   │   ├── misc_protos.h
+│   │   ├── mk_sp.c
+│   │   ├── mk_timer.c
+│   │   ├── monotonic.h
+│   │   ├── mpqueue.h
+│   │   ├── mpsc_queue.c
+│   │   ├── mpsc_queue.h
+│   │   ├── page_decrypt.c
+│   │   ├── page_decrypt.h
+│   │   ├── percpu.h
+│   │   ├── perfmon.h
+│   │   ├── pms.h
+│   │   ├── policy_internal.h
+│   │   ├── printf.c
+│   │   ├── priority.c
+│   │   ├── priority_queue.h
+│   │   ├── processor.c
+│   │   ├── processor.h
+│   │   ├── queue.h
+│   │   ├── remote_time.c
+│   │   ├── remote_time.h
+│   │   ├── restartable.c
+│   │   ├── restartable.h
+│   │   ├── sched.h
+│   │   ├── sched_amp.c
+│   │   ├── sched_amp_common.c
+│   │   ├── sched_amp_common.h
+│   │   ├── sched_average.c
+│   │   ├── sched_clutch.c
+│   │   ├── sched_clutch.h
+│   │   ├── sched_dualq.c
+│   │   ├── sched_grrr.c
+│   │   ├── sched_hygiene.h
+│   │   ├── sched_multiq.c
+│   │   ├── sched_prim.c
+│   │   ├── sched_prim.h
+│   │   ├── sched_proto.c
+│   │   ├── sched_traditional.c
+│   │   ├── sched_urgency.h
+│   │   ├── sfi.c
+│   │   ├── sfi.h
+│   │   ├── simple_lock.h
+│   │   ├── smp.h
+│   │   ├── smr.c
+│   │   ├── smr.h
+│   │   ├── socd_client.c
+│   │   ├── socd_client.h
+│   │   ├── socd_client_kern.h
+│   │   ├── spl.c
+│   │   ├── spl.h
+│   │   ├── stack.c
+│   │   ├── startup.c
+│   │   ├── startup.h
+│   │   ├── sync_sema.c
+│   │   ├── sync_sema.h
+│   │   ├── syscall_emulation.c
+│   │   ├── syscall_subr.c
+│   │   ├── syscall_subr.h
+│   │   ├── syscall_sw.c
+│   │   ├── syscall_sw.h
+│   │   ├── sysdiagnose.c
+│   │   ├── task.c
+│   │   ├── task.h
+│   │   ├── task_ident.c
+│   │   ├── task_ident.h
+│   │   ├── task_policy.c
+│   │   ├── task_ref.c
+│   │   ├── task_ref.h
+│   │   ├── telemetry.c
+│   │   ├── telemetry.h
+│   │   ├── test_lock.c
+│   │   ├── test_mpsc_queue.c
+│   │   ├── thread.c
+│   │   ├── thread.h
+│   │   ├── thread_act.c
+│   │   ├── thread_call.c
+│   │   ├── thread_call.h
+│   │   ├── thread_group.c
+│   │   ├── thread_group.h
+│   │   ├── thread_kernel_state.h
+│   │   ├── thread_policy.c
+│   │   ├── ticket_lock.h
+│   │   ├── timer.c
+│   │   ├── timer.h
+│   │   ├── timer_call.c
+│   │   ├── timer_call.h
+│   │   ├── timer_queue.h
+│   │   ├── trustcache.h
+│   │   ├── turnstile.c
+│   │   ├── turnstile.h
+│   │   ├── ux_handler.c
+│   │   ├── ux_handler.h
+│   │   ├── waitq.c
+│   │   ├── waitq.h
+│   │   ├── work_interval.c
+│   │   ├── work_interval.h
+│   │   ├── zalloc.c
+│   │   ├── zalloc.h
+│   │   ├── zalloc_internal.h
+│   │   └── zalloc_ro_shim.h
+│   ├── kextd
+│   │   ├── Makefile
+│   │   └── kextd_mach.defs
+│   ├── kperf
+│   │   ├── Makefile
+│   │   ├── action.c
+│   │   ├── action.h
+│   │   ├── ast.h
+│   │   ├── buffer.h
+│   │   ├── callstack.c
+│   │   ├── callstack.h
+│   │   ├── context.h
+│   │   ├── kdebug_trigger.c
+│   │   ├── kdebug_trigger.h
+│   │   ├── kperf.c
+│   │   ├── kperf.h
+│   │   ├── kperf_kpc.c
+│   │   ├── kperf_kpc.h
+│   │   ├── kperfbsd.c
+│   │   ├── kperfbsd.h
+│   │   ├── kptimer.c
+│   │   ├── kptimer.h
+│   │   ├── lazy.c
+│   │   ├── lazy.h
+│   │   ├── meminfo.c
+│   │   ├── meminfo.h
+│   │   ├── pet.c
+│   │   ├── pet.h
+│   │   ├── sample.h
+│   │   ├── task_samplers.c
+│   │   ├── task_samplers.h
+│   │   ├── thread_samplers.c
+│   │   └── thread_samplers.h
+│   ├── libsa
+│   │   ├── Makefile
+│   │   ├── arm
+│   │   │   └── types.h
+│   │   ├── i386
+│   │   │   └── types.h
+│   │   ├── machine
+│   │   │   └── types.h
+│   │   ├── stdlib.h
+│   │   ├── string.h
+│   │   ├── sys
+│   │   │   └── timers.h
+│   │   └── types.h
+│   ├── lockd
+│   │   ├── Makefile
+│   │   ├── lockd_mach.defs
+│   │   └── lockd_mach_types.h
+│   ├── mach
+│   │   ├── Makefile
+│   │   ├── arcade_register.defs
+│   │   ├── arcade_upcall.defs
+│   │   ├── arm
+│   │   │   ├── Makefile
+│   │   │   ├── _structs.h
+│   │   │   ├── boolean.h
+│   │   │   ├── exception.h
+│   │   │   ├── kern_return.h
+│   │   │   ├── ndr_def.h
+│   │   │   ├── processor_info.h
+│   │   │   ├── rpc.h
+│   │   │   ├── sdt_isa.h
+│   │   │   ├── syscall_sw.h
+│   │   │   ├── thread_state.h
+│   │   │   ├── thread_status.h
+│   │   │   ├── traps.h
+│   │   │   ├── vm_param.h
+│   │   │   └── vm_types.h
+│   │   ├── arm64
+│   │   │   └── Makefile
+│   │   ├── audit_triggers.defs
+│   │   ├── audit_triggers_types.h
+│   │   ├── boolean.h
+│   │   ├── bootstrap.h
+│   │   ├── clock.defs
+│   │   ├── clock_priv.defs
+│   │   ├── clock_reply.defs
+│   │   ├── clock_types.defs
+│   │   ├── clock_types.h
+│   │   ├── coalition.h
+│   │   ├── coalition_notification.defs
+│   │   ├── dyld_kernel.h
+│   │   ├── dyld_kernel_fixups.h
+│   │   ├── error.h
+│   │   ├── events_info.h
+│   │   ├── exc.defs
+│   │   ├── exception.h
+│   │   ├── exception_types.h
+│   │   ├── fairplayd_notification.defs
+│   │   ├── host_info.h
+│   │   ├── host_notify.h
+│   │   ├── host_notify_reply.defs
+│   │   ├── host_priv.defs
+│   │   ├── host_reboot.h
+│   │   ├── host_security.defs
+│   │   ├── host_special_ports.h
+│   │   ├── i386
+│   │   │   ├── Makefile
+│   │   │   ├── _structs.h
+│   │   │   ├── boolean.h
+│   │   │   ├── exception.h
+│   │   │   ├── fp_reg.h
+│   │   │   ├── kern_return.h
+│   │   │   ├── ndr_def.h
+│   │   │   ├── processor_info.h
+│   │   │   ├── rpc.h
+│   │   │   ├── sdt_isa.h
+│   │   │   ├── syscall_sw.h
+│   │   │   ├── thread_state.h
+│   │   │   ├── thread_status.h
+│   │   │   ├── vm_param.h
+│   │   │   └── vm_types.h
+│   │   ├── iocompressionstats_notification.defs
+│   │   ├── kern_return.h
+│   │   ├── kmod.h
+│   │   ├── ktrace_background.defs
+│   │   ├── ledger.defs
+│   │   ├── lock_set.defs
+│   │   ├── mach.h
+│   │   ├── mach.modulemap
+│   │   ├── mach_eventlink.defs
+│   │   ├── mach_eventlink_types.h
+│   │   ├── mach_exc.defs
+│   │   ├── mach_host.defs
+│   │   ├── mach_interface.h
+│   │   ├── mach_notify.defs
+│   │   ├── mach_param.h
+│   │   ├── mach_port.defs
+│   │   ├── mach_private.modulemap
+│   │   ├── mach_syscalls.h
+│   │   ├── mach_test_upcall.defs
+│   │   ├── mach_time.h
+│   │   ├── mach_traps.h
+│   │   ├── mach_types.defs
+│   │   ├── mach_types.h
+│   │   ├── mach_vm.defs
+│   │   ├── mach_voucher.defs
+│   │   ├── mach_voucher_attr_control.defs
+│   │   ├── mach_voucher_types.h
+│   │   ├── machine
+│   │   │   ├── Makefile
+│   │   │   ├── _structs.h
+│   │   │   ├── asm.h
+│   │   │   ├── boolean.h
+│   │   │   ├── exception.h
+│   │   │   ├── kern_return.h
+│   │   │   ├── mach_machine.modulemap
+│   │   │   ├── machine_types.defs
+│   │   │   ├── ndr_def.h
+│   │   │   ├── processor_info.h
+│   │   │   ├── rpc.h
+│   │   │   ├── sdt.h
+│   │   │   ├── sdt_isa.h
+│   │   │   ├── syscall_sw.h
+│   │   │   ├── thread_state.h
+│   │   │   ├── thread_status.h
+│   │   │   ├── vm_param.h
+│   │   │   └── vm_types.h
+│   │   ├── machine.h
+│   │   ├── memory_entry.defs
+│   │   ├── memory_object.defs
+│   │   ├── memory_object.h
+│   │   ├── memory_object_control.defs
+│   │   ├── memory_object_default.defs
+│   │   ├── memory_object_types.h
+│   │   ├── message.h
+│   │   ├── mig.h
+│   │   ├── mig_errors.h
+│   │   ├── mig_log.h
+│   │   ├── mig_strncpy_zerofill_support.h
+│   │   ├── mig_voucher_support.h
+│   │   ├── mk_timer.h
+│   │   ├── mk_traps.h
+│   │   ├── msg_type.h
+│   │   ├── ndr.h
+│   │   ├── notify.defs
+│   │   ├── notify.h
+│   │   ├── policy.h
+│   │   ├── port.h
+│   │   ├── processor.defs
+│   │   ├── processor_info.h
+│   │   ├── processor_set.defs
+│   │   ├── prof.defs
+│   │   ├── prof_types.h
+│   │   ├── resource_monitors.h
+│   │   ├── resource_notify.defs
+│   │   ├── restartable.defs
+│   │   ├── rpc.h
+│   │   ├── sdt.h
+│   │   ├── semaphore.defs
+│   │   ├── semaphore.h
+│   │   ├── sfi_class.h
+│   │   ├── shared_memory_server.h
+│   │   ├── shared_region.h
+│   │   ├── std_types.defs
+│   │   ├── std_types.h
+│   │   ├── sync_policy.h
+│   │   ├── syscall_sw.h
+│   │   ├── sysdiagnose_notification.defs
+│   │   ├── task.defs
+│   │   ├── task_access.defs
+│   │   ├── task_info.h
+│   │   ├── task_inspect.h
+│   │   ├── task_ledger.h
+│   │   ├── task_policy.h
+│   │   ├── task_special_ports.h
+│   │   ├── telemetry_notification.defs
+│   │   ├── thread_act.defs
+│   │   ├── thread_info.h
+│   │   ├── thread_policy.h
+│   │   ├── thread_special_ports.h
+│   │   ├── thread_status.h
+│   │   ├── thread_switch.h
+│   │   ├── time_value.h
+│   │   ├── upl.defs
+│   │   ├── vfs_nspace.defs
+│   │   ├── vm32_map.defs
+│   │   ├── vm_attributes.h
+│   │   ├── vm_behavior.h
+│   │   ├── vm_inherit.h
+│   │   ├── vm_map.defs
+│   │   ├── vm_param.h
+│   │   ├── vm_prot.h
+│   │   ├── vm_purgable.h
+│   │   ├── vm_region.h
+│   │   ├── vm_statistics.h
+│   │   ├── vm_sync.h
+│   │   └── vm_types.h
+│   ├── mach_debug
+│   │   ├── Makefile
+│   │   ├── hash_info.h
+│   │   ├── ipc_info.h
+│   │   ├── lockgroup_info.h
+│   │   ├── mach_debug.h
+│   │   ├── mach_debug.modulemap
+│   │   ├── mach_debug_types.defs
+│   │   ├── mach_debug_types.h
+│   │   ├── page_info.h
+│   │   ├── vm_info.h
+│   │   └── zone_info.h
+│   ├── machine
+│   │   ├── Makefile
+│   │   ├── asm.h
+│   │   ├── atomic.h
+│   │   ├── commpage.h
+│   │   ├── config.h
+│   │   ├── cpu_affinity.h
+│   │   ├── cpu_capabilities.h
+│   │   ├── cpu_data.h
+│   │   ├── cpu_number.h
+│   │   ├── endian.h
+│   │   ├── io_map_entries.h
+│   │   ├── lock.h
+│   │   ├── locks.h
+│   │   ├── lowglobals.h
+│   │   ├── machine_cpu.h
+│   │   ├── machine_cpuid.h
+│   │   ├── machine_kpc.h
+│   │   ├── machine_perfmon.h
+│   │   ├── machine_remote_time.h
+│   │   ├── machine_routines.h
+│   │   ├── machine_rpc.h
+│   │   ├── machlimits.h
+│   │   ├── machparam.h
+│   │   ├── memory_types.h
+│   │   ├── monotonic.h
+│   │   ├── pal_hibernate.h
+│   │   ├── pal_routines.h
+│   │   ├── pmap.h
+│   │   ├── sched_param.h
+│   │   ├── setjmp.h
+│   │   ├── simple_lock.h
+│   │   ├── smp.h
+│   │   ├── task.h
+│   │   ├── thread.h
+│   │   ├── trap.h
+│   │   └── vm_tuning.h
+│   ├── man
+│   │   ├── DMN_port_deleted.html
+│   │   ├── DMN_port_destroyed.html
+│   │   ├── DP_backing_store_create.html
+│   │   ├── DP_backing_store_delete.html
+│   │   ├── DP_backing_store_info.html
+│   │   ├── DP_object_create.html
+│   │   ├── DR_overwrite_async.html
+│   │   ├── HD_memory_manager.html
+│   │   ├── MO_SY_completed.html
+│   │   ├── MO_change_attributes.html
+│   │   ├── MO_change_completed.html
+│   │   ├── MO_data_initialize.html
+│   │   ├── MO_data_unavailable.html
+│   │   ├── MO_default_server.html
+│   │   ├── MO_get_attributes.html
+│   │   ├── MO_lock_completed.html
+│   │   ├── MO_supply_completed.html
+│   │   ├── MP_allocate_subsystem.html
+│   │   ├── MP_request_notification.html
+│   │   ├── P_set_policy_control.html
+│   │   ├── P_set_policy_disable.html
+│   │   ├── P_set_policy_enable.html
+│   │   ├── SMO_default_server.html
+│   │   ├── SMO_server.html
+│   │   ├── TS_exception_ports.html
+│   │   ├── VSD_memory_manager.html
+│   │   ├── bootstrap_arguments.html
+│   │   ├── bootstrap_completed.html
+│   │   ├── bootstrap_environment.html
+│   │   ├── bootstrap_ports.html
+│   │   ├── catch_exception_raise.html
+│   │   ├── clock_alarm.html
+│   │   ├── clock_alarm_reply.html
+│   │   ├── clock_get_attributes.html
+│   │   ├── clock_get_time.html
+│   │   ├── clock_map_time.html
+│   │   ├── clock_reply_server.html
+│   │   ├── clock_set_attributes.html
+│   │   ├── clock_set_time.html
+│   │   ├── clock_sleep.html
+│   │   ├── default_pager_add_segment.html
+│   │   ├── default_pager_info.html
+│   │   ├── device_close.html
+│   │   ├── device_get_status.html
+│   │   ├── device_map.html
+│   │   ├── device_open.html
+│   │   ├── device_read.html
+│   │   ├── device_read_async.html
+│   │   ├── device_read_async_inband.html
+│   │   ├── device_read_inband.html
+│   │   ├── device_read_overwrite.html
+│   │   ├── device_reply_server.html
+│   │   ├── device_set_filter.html
+│   │   ├── device_set_status.html
+│   │   ├── device_write.html
+│   │   ├── device_write_async.html
+│   │   ├── device_write_async_inband.html
+│   │   ├── device_write_inband.html
+│   │   ├── do_mach_notify_dead_name.html
+│   │   ├── do_mach_notify_no_senders.html
+│   │   ├── do_mach_notify_send_once.html
+│   │   ├── etap_get_info.html
+│   │   ├── etap_probe.html
+│   │   ├── etap_trace_event.html
+│   │   ├── etap_trace_thread.html
+│   │   ├── evc_wait.html
+│   │   ├── exc_server.html
+│   │   ├── host_adjust_time.html
+│   │   ├── host_basic_info.html
+│   │   ├── host_get_boot_info.html
+│   │   ├── host_get_clock_control.html
+│   │   ├── host_get_clock_service.html
+│   │   ├── host_get_time.html
+│   │   ├── host_info.html
+│   │   ├── host_kernel_version.html
+│   │   ├── host_load_info.html
+│   │   ├── host_page_size.html
+│   │   ├── host_processor_set_priv.html
+│   │   ├── host_processor_sets.html
+│   │   ├── host_processor_slots.html
+│   │   ├── host_processors.html
+│   │   ├── host_reboot.html
+│   │   ├── host_sched_info.html
+│   │   ├── host_security_create_task_token.html
+│   │   ├── host_security_set_task_token.html
+│   │   ├── host_set_time.html
+│   │   ├── host_statistics.html
+│   │   ├── i386_get_ldt.html
+│   │   ├── i386_io_port_add.html
+│   │   ├── i386_io_port_list.html
+│   │   ├── i386_io_port_remove.html
+│   │   ├── i386_set_ldt.html
+│   │   ├── index.html
+│   │   ├── io_done_queue_create.html
+│   │   ├── io_done_queue_terminate.html
+│   │   ├── io_done_queue_wait.html
+│   │   ├── kernel_resource_sizes.html
+│   │   ├── ledger_create.html
+│   │   ├── ledger_get_remote.html
+│   │   ├── ledger_read.html
+│   │   ├── ledger_set_remote.html
+│   │   ├── ledger_terminate.html
+│   │   ├── ledger_transfer.html
+│   │   ├── lock_acquire.html
+│   │   ├── lock_handoff.html
+│   │   ├── lock_handoff_accept.html
+│   │   ├── lock_make_stable.html
+│   │   ├── lock_release.html
+│   │   ├── lock_set_create.html
+│   │   ├── lock_set_destroy.html
+│   │   ├── lock_try.html
+│   │   ├── mach_host_self.html
+│   │   ├── mach_msg.html
+│   │   ├── mach_msg_descriptor.html
+│   │   ├── mach_msg_header.html
+│   │   ├── mach_port_allocate.html
+│   │   ├── mach_port_allocate_full.html
+│   │   ├── mach_port_allocate_name.html
+│   │   ├── mach_port_allocate_qos.html
+│   │   ├── mach_port_deallocate.html
+│   │   ├── mach_port_destroy.html
+│   │   ├── mach_port_extract_member.html
+│   │   ├── mach_port_extract_right.html
+│   │   ├── mach_port_get_attributes.html
+│   │   ├── mach_port_get_refs.html
+│   │   ├── mach_port_get_set_status.html
+│   │   ├── mach_port_insert_member.html
+│   │   ├── mach_port_insert_right.html
+│   │   ├── mach_port_limits.html
+│   │   ├── mach_port_mod_refs.html
+│   │   ├── mach_port_move_member.html
+│   │   ├── mach_port_names.html
+│   │   ├── mach_port_qos.html
+│   │   ├── mach_port_set_attributes.html
+│   │   ├── mach_port_set_mscount.html
+│   │   ├── mach_port_set_seqno.html
+│   │   ├── mach_port_status.html
+│   │   ├── mach_port_type.html
+│   │   ├── mach_ports_lookup.html
+│   │   ├── mach_ports_register.html
+│   │   ├── mach_reply_port.html
+│   │   ├── mach_rpc_return_trap.html
+│   │   ├── mach_rpc_trap.html
+│   │   ├── mach_subsystem_create.html
+│   │   ├── mach_task_self.html
+│   │   ├── mach_thread_self.html
+│   │   ├── mapped_tvalspec.html
+│   │   ├── memory_object_attr_info.html
+│   │   ├── memory_object_create.html
+│   │   ├── memory_object_data_error.html
+│   │   ├── memory_object_data_request.html
+│   │   ├── memory_object_data_return.html
+│   │   ├── memory_object_data_supply.html
+│   │   ├── memory_object_data_unlock.html
+│   │   ├── memory_object_destroy.html
+│   │   ├── memory_object_init.html
+│   │   ├── memory_object_lock_request.html
+│   │   ├── memory_object_perf_info.html
+│   │   ├── memory_object_server.html
+│   │   ├── memory_object_synchronize.html
+│   │   ├── memory_object_terminate.html
+│   │   ├── notify_server.html
+│   │   ├── policy_fifo_info.html
+│   │   ├── policy_rr_info.html
+│   │   ├── policy_timeshare_info.html
+│   │   ├── processor_assign.html
+│   │   ├── processor_basic_info.html
+│   │   ├── processor_control.html
+│   │   ├── processor_exit.html
+│   │   ├── processor_get_assignment.html
+│   │   ├── processor_info.html
+│   │   ├── processor_set_basic_info.html
+│   │   ├── processor_set_create.html
+│   │   ├── processor_set_default.html
+│   │   ├── processor_set_destroy.html
+│   │   ├── processor_set_info.html
+│   │   ├── processor_set_load_info.html
+│   │   ├── processor_set_max_priority.html
+│   │   ├── processor_set_statistics.html
+│   │   ├── processor_set_tasks.html
+│   │   ├── processor_set_threads.html
+│   │   ├── processor_start.html
+│   │   ├── prof_server.html
+│   │   ├── receive_samples.html
+│   │   ├── semaphore_create.html
+│   │   ├── semaphore_destroy.html
+│   │   ├── semaphore_signal.html
+│   │   ├── semaphore_signal_all.html
+│   │   ├── semaphore_wait.html
+│   │   ├── seqnos_notify_server.html
+│   │   ├── task_assign.html
+│   │   ├── task_assign_default.html
+│   │   ├── task_basic_info.html
+│   │   ├── task_create.html
+│   │   ├── task_get_assignment.html
+│   │   ├── task_get_emulation_vector.html
+│   │   ├── task_get_exception_ports.html
+│   │   ├── task_get_special_port.html
+│   │   ├── task_info.html
+│   │   ├── task_policy.html
+│   │   ├── task_resume.html
+│   │   ├── task_sample.html
+│   │   ├── task_set_emulation.html
+│   │   ├── task_set_emulation_vector.html
+│   │   ├── task_set_exception_ports.html
+│   │   ├── task_set_info.html
+│   │   ├── task_set_policy.html
+│   │   ├── task_set_port_space.html
+│   │   ├── task_set_special_port.html
+│   │   ├── task_suspend.html
+│   │   ├── task_swap_exception_ports.html
+│   │   ├── task_terminate.html
+│   │   ├── task_thread_times_info.html
+│   │   ├── task_threads.html
+│   │   ├── thread_abort.html
+│   │   ├── thread_abort_safely.html
+│   │   ├── thread_activation_create.html
+│   │   ├── thread_assign.html
+│   │   ├── thread_assign_default.html
+│   │   ├── thread_basic_info.html
+│   │   ├── thread_create.html
+│   │   ├── thread_create_running.html
+│   │   ├── thread_depress_abort.html
+│   │   ├── thread_get_assignment.html
+│   │   ├── thread_get_exception_ports.html
+│   │   ├── thread_get_special_port.html
+│   │   ├── thread_get_state.html
+│   │   ├── thread_info.html
+│   │   ├── thread_policy.html
+│   │   ├── thread_resume.html
+│   │   ├── thread_sample.html
+│   │   ├── thread_set_exception_ports.html
+│   │   ├── thread_set_policy.html
+│   │   ├── thread_set_special_port.html
+│   │   ├── thread_set_state.html
+│   │   ├── thread_suspend.html
+│   │   ├── thread_switch.html
+│   │   ├── thread_terminate.html
+│   │   ├── thread_wire.html
+│   │   ├── tvalspec.html
+│   │   ├── vm_allocate.html
+│   │   ├── vm_behavior_set.html
+│   │   ├── vm_copy.html
+│   │   ├── vm_deallocate.html
+│   │   ├── vm_inherit.html
+│   │   ├── vm_machine_attribute.html
+│   │   ├── vm_map.html
+│   │   ├── vm_msync.html
+│   │   ├── vm_protect.html
+│   │   ├── vm_read.html
+│   │   ├── vm_region.html
+│   │   ├── vm_region_basic_info.html
+│   │   ├── vm_remap.html
+│   │   ├── vm_statistics.html
+│   │   ├── vm_wire.html
+│   │   └── vm_write.html
+│   ├── prng
+│   │   ├── Makefile
+│   │   ├── entropy.c
+│   │   ├── entropy.h
+│   │   ├── prng_random.c
+│   │   └── random.h
+│   ├── tests
+│   │   ├── Makefile
+│   │   ├── README.md
+│   │   ├── bitmap_test.c
+│   │   ├── kernel_tests.c
+│   │   ├── ktest.c
+│   │   ├── ktest.h
+│   │   ├── ktest_accessor.c
+│   │   ├── ktest_emit.c
+│   │   ├── ktest_global.c
+│   │   ├── ktest_internal.h
+│   │   ├── pmap_tests.c
+│   │   ├── ptrauth_data_tests.c
+│   │   ├── test_thread_call.c
+│   │   ├── vfp_state_test.c
+│   │   └── xnupost.h
+│   ├── vm
+│   │   ├── Makefile
+│   │   ├── WKdm_new.h
+│   │   ├── analytics.c
+│   │   ├── bsd_vm.c
+│   │   ├── cpm.h
+│   │   ├── device_vm.c
+│   │   ├── lz4.c
+│   │   ├── lz4.h
+│   │   ├── lz4_assembly_select.h
+│   │   ├── lz4_constants.h
+│   │   ├── memory_object.c
+│   │   ├── memory_object.h
+│   │   ├── memory_types.h
+│   │   ├── pmap.h
+│   │   ├── pmap_cs.h
+│   │   ├── vm32_user.c
+│   │   ├── vm_apple_protect.c
+│   │   ├── vm_compressor.c
+│   │   ├── vm_compressor.h
+│   │   ├── vm_compressor_algorithms.c
+│   │   ├── vm_compressor_algorithms.h
+│   │   ├── vm_compressor_backing_store.c
+│   │   ├── vm_compressor_backing_store.h
+│   │   ├── vm_compressor_pager.c
+│   │   ├── vm_compressor_pager.h
+│   │   ├── vm_debug.c
+│   │   ├── vm_debug.h
+│   │   ├── vm_external.h
+│   │   ├── vm_fault.c
+│   │   ├── vm_fault.h
+│   │   ├── vm_fourk_pager.c
+│   │   ├── vm_init.c
+│   │   ├── vm_init.h
+│   │   ├── vm_kern.c
+│   │   ├── vm_kern.h
+│   │   ├── vm_map.c
+│   │   ├── vm_map.h
+│   │   ├── vm_map_internal.h
+│   │   ├── vm_map_store.c
+│   │   ├── vm_map_store.h
+│   │   ├── vm_map_store_ll.c
+│   │   ├── vm_map_store_ll.h
+│   │   ├── vm_map_store_rb.c
+│   │   ├── vm_map_store_rb.h
+│   │   ├── vm_object.c
+│   │   ├── vm_object.h
+│   │   ├── vm_options.h
+│   │   ├── vm_page.h
+│   │   ├── vm_pageout.c
+│   │   ├── vm_pageout.h
+│   │   ├── vm_phantom_cache.c
+│   │   ├── vm_phantom_cache.h
+│   │   ├── vm_protos.h
+│   │   ├── vm_purgeable.c
+│   │   ├── vm_purgeable_internal.h
+│   │   ├── vm_resident.c
+│   │   ├── vm_shared_region.c
+│   │   ├── vm_shared_region.h
+│   │   ├── vm_shared_region_pager.c
+│   │   ├── vm_swapfile_pager.c
+│   │   ├── vm_tests.c
+│   │   └── vm_user.c
+│   ├── voucher
+│   │   ├── Makefile
+│   │   ├── ipc_pthread_priority.c
+│   │   ├── ipc_pthread_priority_internal.h
+│   │   └── ipc_pthread_priority_types.h
+│   └── x86_64
+│       ├── Makefile
+│       ├── WKdmCompress_new.s
+│       ├── WKdmData_new.s
+│       ├── WKdmDecompress_new.s
+│       ├── bcopy.s
+│       ├── boot_pt.c
+│       ├── bzero.s
+│       ├── copyio.c
+│       ├── counter.c
+│       ├── cswitch.s
+│       ├── dwarf_unwind.h
+│       ├── idt64.s
+│       ├── idt_table.h
+│       ├── kpc_x86.c
+│       ├── locore.s
+│       ├── loose_ends.c
+│       ├── lowglobals.h
+│       ├── lowmem_vectors.c
+│       ├── lz4_decode_x86_64.s
+│       ├── machine_kpc.h
+│       ├── machine_remote_time.c
+│       ├── machine_remote_time.h
+│       ├── machine_routines_asm.s
+│       ├── mcount.s
+│       ├── monotonic.h
+│       ├── monotonic_x86_64.c
+│       ├── pal_routines_asm.s
+│       ├── pmap.c
+│       ├── pmap_pcid.c
+│       └── start.s
+├── pexpert
+│   ├── Makefile
+│   ├── arm
+│   │   ├── pe_bootargs.c
+│   │   ├── pe_consistent_debug.c
+│   │   ├── pe_fiq.c
+│   │   ├── pe_identify_machine.c
+│   │   ├── pe_init.c
+│   │   ├── pe_kprintf.c
+│   │   └── pe_serial.c
+│   ├── conf
+│   │   ├── Makefile
+│   │   ├── Makefile.arm
+│   │   ├── Makefile.arm64
+│   │   ├── Makefile.template
+│   │   ├── Makefile.x86_64
+│   │   ├── copyright
+│   │   ├── files
+│   │   ├── files.arm
+│   │   ├── files.arm64
+│   │   └── files.x86_64
+│   ├── gen
+│   │   ├── bootargs.c
+│   │   ├── device_tree.c
+│   │   ├── kcformat.c
+│   │   └── pe_gen.c
+│   ├── i386
+│   │   ├── boot_images.h
+│   │   ├── pe_bootargs.c
+│   │   ├── pe_identify_machine.c
+│   │   ├── pe_init.c
+│   │   ├── pe_interrupt.c
+│   │   ├── pe_kprintf.c
+│   │   └── pe_serial.c
+│   └── pexpert
+│       ├── AppleBoot.h
+│       ├── Clut.h
+│       ├── GearImage.h
+│       ├── Makefile
+│       ├── arm
+│       │   ├── AIC.h
+│       │   ├── Makefile
+│       │   ├── PL192_VIC.h
+│       │   ├── T8002.h
+│       │   ├── apple_uart_regs.h
+│       │   ├── board_config.h
+│       │   ├── boot.h
+│       │   ├── consistent_debug.h
+│       │   ├── dockchannel.h
+│       │   └── protos.h
+│       ├── arm64
+│       │   ├── AIC.h
+│       │   ├── BCM2837.h
+│       │   ├── H13.h
+│       │   ├── Makefile
+│       │   ├── VMAPPLE.h
+│       │   ├── apple_arm64_common.h
+│       │   ├── apple_arm64_regs.h
+│       │   ├── board_config.h
+│       │   ├── boot.h
+│       │   └── platform.h
+│       ├── boot.h
+│       ├── device_tree.h
+│       ├── i386
+│       │   ├── Makefile
+│       │   ├── boot.h
+│       │   ├── efi.h
+│       │   └── protos.h
+│       ├── machine
+│       │   ├── Makefile
+│       │   ├── boot.h
+│       │   └── protos.h
+│       ├── pe_images.h
+│       ├── pexpert.h
+│       └── protos.h
+├── san
+│   ├── Makefile
+│   ├── conf
+│   │   ├── Makefile
+│   │   ├── Makefile.arm
+│   │   ├── Makefile.arm64
+│   │   ├── Makefile.template
+│   │   ├── Makefile.x86_64
+│   │   ├── files
+│   │   ├── files.arm
+│   │   ├── files.arm64
+│   │   └── files.x86_64
+│   ├── coverage
+│   │   ├── Makefile
+│   │   ├── kcov-blacklist
+│   │   ├── kcov-blacklist-arm64
+│   │   ├── kcov-blacklist-x86_64
+│   │   ├── kcov.c
+│   │   ├── kcov.h
+│   │   ├── kcov_data.h
+│   │   ├── kcov_ksancov.c
+│   │   ├── kcov_ksancov.h
+│   │   ├── kcov_ksancov_data.h
+│   │   ├── kcov_stksz.c
+│   │   ├── kcov_stksz.h
+│   │   └── kcov_stksz_data.h
+│   ├── memory
+│   │   ├── Makefile
+│   │   ├── kasan-arm64.c
+│   │   ├── kasan-blacklist
+│   │   ├── kasan-blacklist-arm64
+│   │   ├── kasan-blacklist-dynamic
+│   │   ├── kasan-blacklist-x86_64
+│   │   ├── kasan-classic-arm64.h
+│   │   ├── kasan-classic.c
+│   │   ├── kasan-classic.h
+│   │   ├── kasan-fakestack.c
+│   │   ├── kasan-helper.c
+│   │   ├── kasan-memintrinsics.c
+│   │   ├── kasan-report.c
+│   │   ├── kasan-tbi-arm64.h
+│   │   ├── kasan-tbi.c
+│   │   ├── kasan-tbi.h
+│   │   ├── kasan-test-arm64.s
+│   │   ├── kasan-test-x86_64.s
+│   │   ├── kasan-test.c
+│   │   ├── kasan-x86_64.c
+│   │   ├── kasan.c
+│   │   ├── kasan.h
+│   │   ├── kasan_dynamic_blacklist.c
+│   │   ├── kasan_internal.h
+│   │   ├── memintrinsics.h
+│   │   ├── ubsan-blacklist
+│   │   ├── ubsan.c
+│   │   ├── ubsan.h
+│   │   ├── ubsan_log.c
+│   │   ├── ubsan_minimal.c
+│   │   └── ubsan_minimal.h
+│   └── tools
+│       ├── generate_dynamic_blacklist.py
+│       ├── kasan_install
+│       ├── ksancov.c
+│       ├── ksancov.h
+│       ├── kstksz
+│       ├── kstksz.plist
+│       └── validate_blacklist.sh
+├── security
+│   ├── Makefile
+│   ├── _label.h
+│   ├── conf
+│   │   ├── Makefile
+│   │   ├── Makefile.arm
+│   │   ├── Makefile.arm64
+│   │   ├── Makefile.template
+│   │   ├── Makefile.x86_64
+│   │   ├── copyright.nai
+│   │   ├── files
+│   │   ├── files.arm
+│   │   ├── files.arm64
+│   │   └── files.x86_64
+│   ├── mac.h
+│   ├── mac_audit.c
+│   ├── mac_base.c
+│   ├── mac_data.c
+│   ├── mac_data.h
+│   ├── mac_file.c
+│   ├── mac_framework.h
+│   ├── mac_internal.h
+│   ├── mac_iokit.c
+│   ├── mac_kext.c
+│   ├── mac_label.c
+│   ├── mac_mach.c
+│   ├── mac_mach_internal.h
+│   ├── mac_necp.c
+│   ├── mac_pipe.c
+│   ├── mac_policy.h
+│   ├── mac_posix_sem.c
+│   ├── mac_posix_shm.c
+│   ├── mac_priv.c
+│   ├── mac_process.c
+│   ├── mac_pty.c
+│   ├── mac_skywalk.c
+│   ├── mac_socket.c
+│   ├── mac_system.c
+│   ├── mac_sysv_msg.c
+│   ├── mac_sysv_sem.c
+│   ├── mac_sysv_shm.c
+│   ├── mac_vfs.c
+│   └── mac_vfs_subr.c
+├── tests
+│   ├── IP6_EXTHDR_CHECK_61873584.c
+│   ├── Makefile
+│   ├── aqm_qdelay_utun.c
+│   ├── arm_cpu_capabilities.c
+│   ├── atm_diagnostic_flag.c
+│   ├── atm_diagnostic_flag.entitlements
+│   ├── atm_diagnostic_flag_entitled.c
+│   ├── avx.c
+│   ├── backtracing_tests.c
+│   ├── benchmark
+│   │   ├── helpers.c
+│   │   └── helpers.h
+│   ├── bootstrap_msgfilter.c
+│   ├── bounded_array.cpp
+│   ├── bounded_array_ref.cpp
+│   ├── bounded_array_ref_src
+│   │   ├── begin_end.cpp
+│   │   ├── compare.equal.nullptr.cpp
+│   │   ├── ctor.C_array.cpp
+│   │   ├── ctor.begin_end.cpp
+│   │   ├── ctor.bounded_array.cpp
+│   │   ├── ctor.bounded_ptr.cpp
+│   │   ├── ctor.default.cpp
+│   │   ├── ctor.raw_ptr.cpp
+│   │   ├── data.cpp
+│   │   ├── for_loop.cpp
+│   │   ├── operator.bool.cpp
+│   │   ├── operator.subscript.cpp
+│   │   ├── size.cpp
+│   │   ├── slice.cpp
+│   │   └── test_policy.h
+│   ├── bounded_array_src
+│   │   ├── begin_end.cpp
+│   │   ├── ctor.aggregate_init.cpp
+│   │   ├── ctor.default.cpp
+│   │   ├── data.cpp
+│   │   ├── for_loop.cpp
+│   │   ├── operator.subscript.cpp
+│   │   ├── size.cpp
+│   │   └── test_policy.h
+│   ├── bounded_ptr.cpp
+│   ├── bounded_ptr_03.cpp
+│   ├── bounded_ptr_src
+│   │   ├── arith.add.cpp
+│   │   ├── arith.add_assign.cpp
+│   │   ├── arith.difference.cpp
+│   │   ├── arith.inc_dec.cpp
+│   │   ├── arith.subtract.cpp
+│   │   ├── arith.subtract_assign.cpp
+│   │   ├── assign.convert.cpp
+│   │   ├── assign.nullptr.cpp
+│   │   ├── compare.equal.cpp
+│   │   ├── compare.equal.nullptr.cpp
+│   │   ├── compare.equal.raw.cpp
+│   │   ├── compare.order.cpp
+│   │   ├── compare.order.raw.cpp
+│   │   ├── ctor.begin_end.cpp
+│   │   ├── ctor.convert.cpp
+│   │   ├── ctor.default.cpp
+│   │   ├── ctor.nullptr.cpp
+│   │   ├── deref.cpp
+│   │   ├── discard_bounds.cpp
+│   │   ├── example.malloc.cpp
+│   │   ├── operator_bool.cpp
+│   │   ├── reinterpret_cast.cpp
+│   │   ├── subscript.cpp
+│   │   ├── test_utils.h
+│   │   └── unsafe_discard_bounds.cpp
+│   ├── bpflib.c
+│   ├── bpflib.h
+│   ├── coalition_info_tests.c
+│   ├── codesigntests-entitlements.plist
+│   ├── codesigntests.c
+│   ├── contextswitch.c
+│   ├── correct_kernel_booted.c
+│   ├── counter
+│   │   ├── benchmark.c
+│   │   ├── benchmark.lua
+│   │   ├── common.c
+│   │   ├── common.h
+│   │   └── counter.c
+│   ├── cpucount.c
+│   ├── data_protection.c
+│   ├── debug_control_port_for_pid.c
+│   ├── debug_control_port_for_pid_entitlement.plist
+│   ├── debug_enable_syscall_rejection.c
+│   ├── decompression_failure.c
+│   ├── dev_zero.c
+│   ├── disk_mount_conditioner-entitlements.plist
+│   ├── disk_mount_conditioner.c
+│   ├── driverkit
+│   │   └── Makefile
+│   ├── drop_priv.c
+│   ├── drop_priv.h
+│   ├── entropy.c
+│   ├── exc_helpers.c
+│   ├── exc_helpers.h
+│   ├── exc_resource_threads.c
+│   ├── exception_ports_info.c
+│   ├── exception_tests.c
+│   ├── exception_tests.entitlements
+│   ├── excserver.defs
+│   ├── excserver_protect.defs
+│   ├── exec-race-58566604.c
+│   ├── extended_getdirentries64.c
+│   ├── extract_right_soft_fail.c
+│   ├── fcntl.c
+│   ├── fd.c
+│   ├── fd_aio_fsync_uaf.c
+│   ├── fd_guarded.c
+│   ├── fd_send.c
+│   ├── fd_table_limits.c
+│   ├── fd_table_limits_client.c
+│   ├── fduiomove.c
+│   ├── flow_div_doubleconnect_55917185.c
+│   ├── fp_exception.c
+│   ├── freebsd_waitpid_nohang.c
+│   ├── ftruncate.c
+│   ├── get_shared_cache_address.c
+│   ├── gettimeofday.c
+│   ├── gettimeofday_29192647.c
+│   ├── hazard.c
+│   ├── host_notifications.c
+│   ├── host_statistics_rate_limiting.c
+│   ├── hvbench.c
+│   ├── hvtest_x86.m
+│   ├── hvtest_x86_asm.s
+│   ├── hvtest_x86_guest.c
+│   ├── hvtest_x86_guest.h
+│   ├── hw_breakpoint_step_arm64.c
+│   ├── icmp_fragmented_payload.c
+│   ├── imm_pinned_control_port.c
+│   ├── imm_pinned_control_port_crasher.c
+│   ├── immovable_rights.c
+│   ├── immovable_send.c
+│   ├── immovable_send_client.c
+│   ├── in_cksum.c
+│   ├── in_cksum.h
+│   ├── in_cksum_test.c
+│   ├── inet_transfer.c
+│   ├── inet_transfer.h
+│   ├── int_time.c
+│   ├── intrusive_shared_ptr.cpp
+│   ├── intrusive_shared_ptr_src
+│   │   ├── abi.callee.raw.cpp
+│   │   ├── abi.callee.smart.cpp
+│   │   ├── abi.caller.raw.cpp
+│   │   ├── abi.caller.smart.cpp
+│   │   ├── abi.size_alignment.cpp
+│   │   ├── abi_helper.h
+│   │   ├── assign.copy.cpp
+│   │   ├── assign.move.cpp
+│   │   ├── assign.nullptr.cpp
+│   │   ├── cast.const.cpp
+│   │   ├── cast.reinterpret.cpp
+│   │   ├── cast.static.cpp
+│   │   ├── compare.equal.cpp
+│   │   ├── compare.equal.nullptr.cpp
+│   │   ├── compare.equal.raw.cpp
+│   │   ├── ctor.copy.cpp
+│   │   ├── ctor.default.cpp
+│   │   ├── ctor.move.cpp
+│   │   ├── ctor.nullptr.cpp
+│   │   ├── ctor.ptr.no_retain.cpp
+│   │   ├── ctor.ptr.retain.cpp
+│   │   ├── deref.cpp
+│   │   ├── detach.cpp
+│   │   ├── dtor.cpp
+│   │   ├── get.cpp
+│   │   ├── operator.bool.cpp
+│   │   ├── reset.cpp
+│   │   ├── reset.no_retain.cpp
+│   │   ├── reset.retain.cpp
+│   │   ├── swap.cpp
+│   │   └── test_policy.h
+│   ├── invalid_setaudit_57414044.c
+│   ├── ioc_str.h
+│   ├── ioconnectasyncmethod_57641955.c
+│   ├── iokit
+│   │   ├── io_catalog_send_data.m
+│   │   ├── ioserviceusernotification_race.c
+│   │   ├── ioserviceusernotification_race.entitlements
+│   │   ├── map_memory_port_leak_45265408.c
+│   │   ├── map_memory_port_leak_45265408.entitlements
+│   │   ├── port_object_description_race_77259918.c
+│   │   ├── rosetta_map_mmio.c
+│   │   ├── rosetta_map_mmio.entitlements
+│   │   ├── service_helpers.c
+│   │   └── service_helpers.h
+│   ├── ioperf.c
+│   ├── ipc
+│   │   ├── kernel_signed_pac_thread_state.c
+│   │   ├── pac_exception_entitlement.plist
+│   │   ├── port_turnstile_stash.c
+│   │   └── waitq.c
+│   ├── ipc_mach_port.c
+│   ├── ipc_read_inspect.c
+│   ├── ipc_thread_ports_race.c
+│   ├── ipsec.entitlements
+│   ├── ipsec.m
+│   ├── jumbo_va_spaces_28530648-identifier.plist
+│   ├── jumbo_va_spaces_28530648.c
+│   ├── jumbo_va_spaces_28530648.entitlements
+│   ├── jumbo_va_spaces_52551256.entitlements
+│   ├── jumbo_va_spaces_common.c
+│   ├── jumbo_va_spaces_common.h
+│   ├── kalloc.c
+│   ├── kas_info.c
+│   ├── kernel_inspection.c
+│   ├── kernel_symbolication_entitlements.plist
+│   ├── kevent_continuous_time.c
+│   ├── kevent_pty.c
+│   ├── kevent_qos.c
+│   ├── kqueue_add_and_trigger.c
+│   ├── kqueue_close.c
+│   ├── kqueue_fifo_18776047.c
+│   ├── kqueue_file_tests.c
+│   ├── kqueue_in_select.c
+│   ├── kqueue_port_tests.c
+│   ├── kqueue_timer_tests.c
+│   ├── ktrace
+│   │   ├── kdebug_coproc_tests.c
+│   │   ├── kdebug_tests.c
+│   │   ├── kpc_tests.c
+│   │   ├── kperf_backtracing_tests.c
+│   │   ├── kperf_helpers.c
+│   │   ├── kperf_helpers.h
+│   │   ├── kperf_tests.c
+│   │   ├── ktrace_helpers.h
+│   │   └── ktrace_meta.h
+│   ├── launchd_plists
+│   │   ├── com.apple.xnu.test.kevent_qos.plist
+│   │   ├── com.apple.xnu.test.mach_port.plist
+│   │   └── com.apple.xnu.test.turnstile_multihop.plist
+│   ├── ldt.c
+│   ├── ldt_code32.s
+│   ├── ldt_entitlement.plist
+│   ├── legacy_footprint.entitlement
+│   ├── lockf_EOF_77264182.c
+│   ├── mach_boottime_usec.c
+│   ├── mach_continuous_time.c
+│   ├── mach_eventlink.c
+│   ├── mach_exc.defs
+│   ├── mach_exception_reply.c
+│   ├── mach_get_times.c
+│   ├── mach_port_deallocate_21692215.c
+│   ├── mach_port_insert_right.c
+│   ├── mach_port_mod_refs.c
+│   ├── mach_service_port.c
+│   ├── mach_timebase_info.c
+│   ├── macho_size_63133398.c
+│   ├── manual_wq_cooperative.c
+│   ├── mcast_group_race_82820812.c
+│   ├── memcmp_zero.c
+│   ├── memorystatus_assertion_helpers.c
+│   ├── memorystatus_assertion_helpers.h
+│   ├── memorystatus_freeze_test.c
+│   ├── memorystatus_is_assertion.c
+│   ├── memorystatus_vm_map_fork.c
+│   ├── memorystatus_zone_test.c
+│   ├── microstackshot_tests.c
+│   ├── mktimer_kobject.c
+│   ├── mo_immovable_receive.c
+│   ├── monotonic_core.c
+│   ├── monotonic_uncore.c
+│   ├── mpsc.c
+│   ├── net_bridge.c
+│   ├── net_tun_pr_35136664.c
+│   ├── net_tuntests.c
+│   ├── netagent_kctl_header_infodisc_56190773.c
+│   ├── netagent_race_infodisc_56244905.c
+│   ├── netbsd_utimensat.c
+│   ├── network_entitlements.plist
+│   ├── notifyserver.defs
+│   ├── ntp_adjtime_29192647.c
+│   ├── os_atomic.cpp
+│   ├── os_proc.c
+│   ├── os_refcnt.c
+│   ├── os_thread_self_restrict-identifier.plist
+│   ├── os_unaligned.c
+│   ├── osptr_compat.cpp
+│   ├── perf_compressor.c
+│   ├── perf_exit.c
+│   ├── perf_exit_proc.c
+│   ├── perf_spawn_fork.c
+│   ├── perf_vmfault.c
+│   ├── perfmon_tests.c
+│   ├── perfmon_unit_tests.c
+│   ├── pfkey.c
+│   ├── pfz.c
+│   ├── phys_footprint_interval_max.c
+│   ├── pid_for_task_test.c
+│   ├── pipe_drain.c
+│   ├── pipe_kevent.c
+│   ├── pipe_read_infloop_55437634.c
+│   ├── pmap_bench.c
+│   ├── poll.c
+│   ├── poll_select_kevent_paired_fds.c
+│   ├── port_descriptions.c
+│   ├── port_exhaustion.c
+│   ├── port_exhaustion_client.c
+│   ├── port_table_limits.c
+│   ├── port_table_limits_client.c
+│   ├── posix_spawn_alt_rosetta.c
+│   ├── posix_spawn_alt_rosetta_helper.c
+│   ├── posix_spawn_archpref.c
+│   ├── posix_spawn_archpref_helper.c
+│   ├── posix_spawn_file_actions.c
+│   ├── posix_spawn_file_actions_add_fileportdup2_np.c
+│   ├── posix_spawn_filtering.c
+│   ├── posix_spawn_posix_cred.c
+│   ├── pread.c
+│   ├── preoslog.c
+│   ├── print_apple_array.c
+│   ├── prioritize_process_launch.c
+│   ├── prioritize_process_launch_helper.c
+│   ├── priority_queue.cpp
+│   ├── private_entitlement.plist
+│   ├── prng.c
+│   ├── proc_core_name_24152432.c
+│   ├── proc_info.c
+│   ├── proc_info_44873309.c
+│   ├── proc_info_44873309.entitlements
+│   ├── proc_info_list_kthreads.c
+│   ├── proc_info_list_kthreads.entitlements
+│   ├── proc_info_udata.c
+│   ├── proc_pidpath_audittoken.c
+│   ├── proc_rlimit.c
+│   ├── proc_uuid_policy_26567533.c
+│   ├── processor_info.c
+│   ├── ptrauth-entitlements.plist
+│   ├── ptrauth_data_tests.c
+│   ├── ptrauth_failure.c
+│   ├── pwrite.c
+│   ├── pwrite_avoid_sigxfsz_28581610.c
+│   ├── quiesce_counter.c
+│   ├── readonly_proc_tests.c
+│   ├── recvmsg_x_test.c
+│   ├── regression_17272465.c
+│   ├── remote_time.c
+│   ├── rename_excl.c
+│   ├── restart.c
+│   ├── restrict_jit.c
+│   ├── restrict_jit.entitlements
+│   ├── rm
+│   │   └── pthread_setugid.c
+│   ├── rnserver.defs
+│   ├── route_output_stack_oflow_56033075.c
+│   ├── rump.h
+│   ├── rusage_tests.c
+│   ├── safe_allocation.cpp
+│   ├── safe_allocation_src
+│   │   ├── assign.copy.cpp
+│   │   ├── assign.move.cpp
+│   │   ├── assign.nullptr.cpp
+│   │   ├── begin_end.cpp
+│   │   ├── compare.equal.nullptr.cpp
+│   │   ├── ctor.adopt.cpp
+│   │   ├── ctor.allocate.cpp
+│   │   ├── ctor.allocate_zero.cpp
+│   │   ├── ctor.copy.cpp
+│   │   ├── ctor.default.cpp
+│   │   ├── ctor.move.cpp
+│   │   ├── ctor.nullptr.cpp
+│   │   ├── data.cpp
+│   │   ├── dtor.cpp
+│   │   ├── operator.bool.cpp
+│   │   ├── operator.subscript.cpp
+│   │   ├── size.cpp
+│   │   ├── swap.cpp
+│   │   ├── test_utils.h
+│   │   ├── usage.for_loop.cpp
+│   │   └── usage.two_dimensions.cpp
+│   ├── sbuf_tests.c
+│   ├── scanf.c
+│   ├── sched_cluster_bound_threads.c
+│   ├── scm_rights_leak.c
+│   ├── select_stress.c
+│   ├── settimeofday_29193041.c
+│   ├── settimeofday_29193041.entitlements
+│   ├── settimeofday_29193041_entitled.c
+│   ├── shared_cache_reslide_test.c
+│   ├── shared_cache_tests.c
+│   ├── sigchld_return.c
+│   ├── sigcont_return.c
+│   ├── signal_stack.c
+│   ├── sioc-if-addr-bounds.c
+│   ├── socket_0byte_udp_poll_58140856.c
+│   ├── socket_bind_35243417.c
+│   ├── socket_bind_35685803.c
+│   ├── socket_poll_close_25786011.c
+│   ├── socket_raw_uint8_max.c
+│   ├── socket_v4mappedv6.c
+│   ├── sr_entitlement.c
+│   ├── sr_entitlement.entitlements
+│   ├── sr_entitlement_helper.c
+│   ├── ssbs.c
+│   ├── stack_chk_tests.c
+│   ├── stackshot_accuracy.m
+│   ├── stackshot_block_owner_14362384.m
+│   ├── stackshot_idle_25570396.m
+│   ├── stackshot_spawn_exit_stress.c
+│   ├── stackshot_tests.m
+│   ├── stackshot_translated_child.c
+│   ├── subsystem_root_path-entitlements.plist
+│   ├── subsystem_root_path.c
+│   ├── subsystem_root_path.h
+│   ├── subsystem_root_path_helper.c
+│   ├── suspended_spawn_26184412.c
+│   ├── sysctl_get_owned_vmobjects.c
+│   ├── sysctl_hw.c
+│   ├── sysctl_system_version.c
+│   ├── sysctl_wire_limits.c
+│   ├── task_fatal_port.c
+│   ├── task_filter_msg.c
+│   ├── task_for_pid_entitlement.plist
+│   ├── task_ident_test.c
+│   ├── task_info.c
+│   ├── task_info_28439149.c
+│   ├── task_is_self.c
+│   ├── task_policy.c
+│   ├── task_policy_entitlement.plist
+│   ├── task_vm_info_decompressions.c
+│   ├── tcp_bind_connect.c
+│   ├── tcp_input_outputopts_uaf_56155583.c
+│   ├── test_note_exec.c
+│   ├── test_static_binary_csflags.c
+│   ├── test_sysctl_kern_procargs_25397314.m
+│   ├── test_utils.c
+│   ├── test_utils.h
+│   ├── testposixshm.c
+│   ├── text_corruption.c
+│   ├── text_corruption_helper.c
+│   ├── thread_call_race_71455282.c
+│   ├── thread_group_set_32261625.c
+│   ├── thread_set_state_arm64_cpsr.c
+│   ├── time.c
+│   ├── trial_experiments.c
+│   ├── trial_experiments.entitlements
+│   ├── troll.c
+│   ├── tty_hang.c
+│   ├── turnstile_multihop.c
+│   ├── turnstile_multihop_helper.h
+│   ├── turnstile_multihop_types.h
+│   ├── turnstiles_test.c
+│   ├── udp_kao_opt.c
+│   ├── uipc_uaf.c
+│   ├── ulock.c
+│   ├── unp_connect_thread_uaf.c
+│   ├── unp_externalize_fd_alloc.c
+│   ├── user_msrs.c
+│   ├── utimensat.c
+│   ├── v4mappedv6_recvpktinfo.c
+│   ├── verify_kalloc_config.c
+│   ├── vm
+│   │   ├── analytics.c
+│   │   ├── compression_sweep.c
+│   │   ├── entitlement_increased_memory_limit.c
+│   │   ├── entitlement_increased_memory_limit.entitlements
+│   │   ├── fault_throughput.c
+│   │   ├── fault_throughput.lua
+│   │   ├── fault_throughput.plist
+│   │   ├── kern_max_task_pmem.c
+│   │   ├── memorystatus_sort_test.c
+│   │   ├── mixed_pagesize.c
+│   │   ├── mixed_pagesize.plist
+│   │   ├── mmap_resilient_media.c
+│   │   ├── page_size_globals.c
+│   │   ├── panic.c
+│   │   ├── perf_madvise.c
+│   │   ├── perf_madvise.lua
+│   │   ├── retired_pages.c
+│   │   ├── vm_allocation.c
+│   │   ├── vm_sysctl_tests.c
+│   │   ├── vm_test_90774260.c
+│   │   ├── vm_test_cow_before_zf_read.c
+│   │   ├── zalloc.c
+│   │   ├── zalloc_buddy.c
+│   │   └── zone_gc_replenish_test.c
+│   ├── vm_kern_count_wired_kernelcache.c
+│   ├── vm_memory_tests_src
+│   │   ├── common.c
+│   │   ├── mach_vm_tests.h
+│   │   ├── main.c
+│   │   ├── server.c
+│   │   └── vm_tests.c
+│   ├── vm_phys_footprint.c
+│   ├── vm_set_max_addr_helper.c
+│   ├── vm_set_max_addr_test.c
+│   ├── vm_spawn_tool.c
+│   ├── vm_test_code_signing_helper.c
+│   ├── vm_test_mach_map.c
+│   ├── voucher_entry_18826844.c
+│   ├── voucher_traps.c
+│   ├── vsock.c
+│   ├── work_interval_test.c
+│   ├── work_interval_test.entitlements
+│   ├── work_interval_test_unentitled.c
+│   ├── workq
+│   │   ├── workq_83476290.c
+│   │   └── workq_sigprof.c
+│   ├── workqueue.plist
+│   ├── workqueue_cooperative.c
+│   ├── x18.c
+│   ├── xnu_quick_test.c
+│   ├── xnu_quick_test_getsetpriority.c
+│   ├── xnu_quick_test_helpers.c
+│   ├── xnu_quick_test_helpers.h
+│   └── zero_to_n_tests.c
+├── tools
+│   ├── Makefile
+│   ├── cocci
+│   │   ├── OSAtomic_rewrite.cocci
+│   │   ├── c11_atomic_builtin_rewrite.cocci
+│   │   ├── hw_atomic_rewrite.cocci
+│   │   ├── mcache_atomic_rewrite.cocci
+│   │   ├── os_atomic_normalize.cocci
+│   │   ├── zalloc-data.cocci
+│   │   ├── zalloc-nofail.cocci
+│   │   ├── zalloc-zero.cocci
+│   │   └── zalloc.iso
+│   ├── cred_dump_backtraces.c
+│   ├── cred_dump_creds.c
+│   ├── entropy_health_test_bounds.py
+│   ├── kt-dump
+│   │   ├── Makefile
+│   │   └── kt-dump.cpp
+│   ├── lldbmacros
+│   │   ├── Makefile
+│   │   ├── README.md
+│   │   ├── apic.py
+│   │   ├── bank.py
+│   │   ├── btlog.py
+│   │   ├── core
+│   │   │   ├── __init__.py
+│   │   │   ├── caching.py
+│   │   │   ├── compat.py
+│   │   │   ├── configuration.py
+│   │   │   ├── cvalue.py
+│   │   │   ├── io.py
+│   │   │   ├── kernelcore.py
+│   │   │   ├── lazytarget.py
+│   │   │   ├── operating_system.py
+│   │   │   ├── standard.py
+│   │   │   ├── syntax_checker.py
+│   │   │   └── xnu_lldb_init.py
+│   │   ├── coreanalytics.py
+│   │   ├── counter.py
+│   │   ├── ioreg.py
+│   │   ├── ipc.py
+│   │   ├── ipcimportancedetail.py
+│   │   ├── kasan.py
+│   │   ├── kauth.py
+│   │   ├── kcdata.py
+│   │   ├── kdp.py
+│   │   ├── kevent.py
+│   │   ├── kext.py
+│   │   ├── ktrace.py
+│   │   ├── macho.py
+│   │   ├── mbufdefines.py
+│   │   ├── mbufs.py
+│   │   ├── memory.py
+│   │   ├── misc.py
+│   │   ├── net.py
+│   │   ├── netdefines.py
+│   │   ├── ntstat.py
+│   │   ├── pci.py
+│   │   ├── plugins
+│   │   │   ├── __init__.py
+│   │   │   ├── iosspeedtracer.py
+│   │   │   ├── iosspeedtracer.sh
+│   │   │   ├── speedtracer.py
+│   │   │   └── zprint_perf_log.py
+│   │   ├── pmap.py
+│   │   ├── process.py
+│   │   ├── refgrp.py
+│   │   ├── routedefines.py
+│   │   ├── scheduler.py
+│   │   ├── skywalk.py
+│   │   ├── structanalyze.py
+│   │   ├── sysreg.py
+│   │   ├── sysregdoc
+│   │   │   └── AArch64-esr_el1.xml
+│   │   ├── turnstile.py
+│   │   ├── ulock.py
+│   │   ├── userspace.py
+│   │   ├── usertaskdebugging
+│   │   │   ├── __init__.py
+│   │   │   ├── gdbserver.py
+│   │   │   ├── interface.py
+│   │   │   ├── rsprotocol.py
+│   │   │   ├── target.py
+│   │   │   └── userprocess.py
+│   │   ├── usertaskgdbserver.py
+│   │   ├── utils.py
+│   │   ├── waitq.py
+│   │   ├── workqueue.py
+│   │   ├── xnu.py
+│   │   ├── xnudefines.py
+│   │   ├── xnutriage.py
+│   │   └── zonetriage.py
+│   ├── lockstat
+│   │   ├── Makefile
+│   │   └── lockstat.c
+│   ├── remote_build.sh
+│   ├── symbolify.py
+│   ├── tests
+│   │   ├── MPMMTest
+│   │   │   ├── KQMPMMtest.c
+│   │   │   ├── MPMMtest.c
+│   │   │   ├── MPMMtest_run.sh
+│   │   │   ├── Makefile
+│   │   │   └── README
+│   │   ├── Makefile
+│   │   ├── Makefile.common
+│   │   ├── TLBcoherency
+│   │   │   ├── Makefile
+│   │   │   └── TLBcoherency.c
+│   │   ├── affinity
+│   │   │   ├── Makefile
+│   │   │   ├── pool.c
+│   │   │   ├── sets.c
+│   │   │   └── tags.c
+│   │   ├── execperf
+│   │   │   ├── Makefile
+│   │   │   ├── exit-asm.S
+│   │   │   ├── exit.c
+│   │   │   ├── printexecinfo.c
+│   │   │   ├── run.c
+│   │   │   └── test.sh
+│   │   ├── jitter
+│   │   │   ├── Makefile
+│   │   │   └── timer_jitter.c
+│   │   ├── kernpost_test_report
+│   │   │   ├── Makefile
+│   │   │   └── kernpost_test_report.lua
+│   │   ├── mktimer
+│   │   │   ├── Makefile
+│   │   │   └── mktimer_test.c
+│   │   ├── perf_index
+│   │   │   ├── Makefile
+│   │   │   ├── PerfIndex_COPS_Module
+│   │   │   │   ├── Info.plist
+│   │   │   │   ├── PITest.h
+│   │   │   │   ├── PITest.m
+│   │   │   │   ├── PerfIndex.h
+│   │   │   │   ├── PerfIndex.xcodeproj
+│   │   │   │   │   └── project.pbxproj
+│   │   │   │   └── Prefix.pch
+│   │   │   ├── README
+│   │   │   ├── fail.h
+│   │   │   ├── md5.c
+│   │   │   ├── md5.h
+│   │   │   ├── perf_index.c
+│   │   │   ├── perf_index.h
+│   │   │   ├── perfindex-compile.c
+│   │   │   ├── perfindex-cpu.c
+│   │   │   ├── perfindex-fault.c
+│   │   │   ├── perfindex-file_create.c
+│   │   │   ├── perfindex-file_read.c
+│   │   │   ├── perfindex-file_write.c
+│   │   │   ├── perfindex-iperf.c
+│   │   │   ├── perfindex-memory.c
+│   │   │   ├── perfindex-ram_file_create.c
+│   │   │   ├── perfindex-ram_file_read.c
+│   │   │   ├── perfindex-ram_file_write.c
+│   │   │   ├── perfindex-syscall.c
+│   │   │   ├── perfindex-zfod.c
+│   │   │   ├── ramdisk.c
+│   │   │   ├── ramdisk.h
+│   │   │   ├── test_controller.py
+│   │   │   ├── test_fault_helper.c
+│   │   │   ├── test_fault_helper.h
+│   │   │   ├── test_file_helper.c
+│   │   │   └── test_file_helper.h
+│   │   ├── personas
+│   │   │   ├── Makefile
+│   │   │   ├── persona-entitlements.plist
+│   │   │   ├── persona_mgr.c
+│   │   │   ├── persona_spawn.c
+│   │   │   ├── persona_test.h
+│   │   │   └── persona_test_run_src.sh
+│   │   ├── superpages
+│   │   │   ├── Makefile
+│   │   │   ├── measure_tlbs.c
+│   │   │   └── testsp.c
+│   │   ├── testkext
+│   │   │   ├── pgokext
+│   │   │   │   ├── Info.plist
+│   │   │   │   └── pgokext.c
+│   │   │   ├── testkext.xcodeproj
+│   │   │   │   └── project.pbxproj
+│   │   │   ├── testthreadcall-Info.plist
+│   │   │   ├── testthreadcall.cpp
+│   │   │   ├── testthreadcall.h
+│   │   │   ├── testvmx-Info.plist
+│   │   │   ├── testvmx.cpp
+│   │   │   └── testvmx.h
+│   │   └── zero-to-n
+│   │       ├── Makefile
+│   │       └── zero-to-n.c
+│   ├── trace
+│   │   ├── bridgetime.lua
+│   │   ├── ios_trace_ipc.sh
+│   │   ├── kqtrace.lua
+│   │   ├── ktruss.lua
+│   │   ├── parse_ipc_trace.py
+│   │   ├── pirate.lua
+│   │   └── wqtrace.lua
+│   └── xcrun_cache.sh
+├── tree.txt
+└── vcpkg-configuration.json
+
+327 directories, 4852 files
