@@ -7,7 +7,8 @@
 ---
 **This Repo is in no way official; volunteers have made some additions to Apple XNU (macOS Tahoe). It has been designed without exploiting Apple Intellectual Property in any way. Review the licence!**
 
-### Dear reader, before reading the code, please proceed by solving the test.txt document (in the test fork).
+**Low-level systems code demands extreme attention to detail.
+Some parts of this repository include optional analytical warm-up exercises (see test/test.txt) designed to shift your mindset into careful, low-level reasoning before diving into kernel code.**
 
 ---
 
