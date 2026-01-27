@@ -7,6 +7,8 @@
 ---
 **This Repo is in no way official; volunteers have made some additions to Apple XNU (macOS Tahoe). It has been designed without exploiting Apple Intellectual Property in any way. Review the licence!**
 
+### Dear reader, before reading the code, please proceed by solving the test.txt document (in the test fork).
+
 ---
 
 What is XNU?
