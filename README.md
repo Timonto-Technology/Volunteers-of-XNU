@@ -4,8 +4,10 @@
 
 <br/>
 
+---
 **This Repo is in no way official; volunteers have made some additions to Apple XNU (macOS Tahoe). It has been designed without exploiting Apple Intellectual Property in any way. Review the licence!**
 
+---
 
 What is XNU?
 ===========
