@@ -19,3 +19,4 @@ __lib_case__
 __whoami_zsh_run
 __pwd_zsh_run__
 __$__
+__kernbase_rm__
