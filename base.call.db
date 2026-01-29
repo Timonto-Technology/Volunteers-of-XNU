@@ -20,3 +20,4 @@ __whoami_zsh_run
 __pwd_zsh_run__
 __$__
 __kernbase_rm__
+__krntop_monitor__
