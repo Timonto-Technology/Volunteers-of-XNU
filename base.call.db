@@ -16,4 +16,5 @@ __kcvl_run__
 
 __sup_base_lib_on__
 __lib_case__
-__who_am_i__
+__whoami_zsh_run
+__pwd_zsh_run__
