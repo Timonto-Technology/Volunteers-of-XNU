@@ -1,9 +1,7 @@
 __init_lib__
-  __not_limit__
-
-__conifiger__: 1
-  __lib?conf__
-  __call_conf__
-
-
+__not_limit__
+__conifiger__
+__lib?conf__
+__call_conf__
 __initilization_of__
+__superbase__
