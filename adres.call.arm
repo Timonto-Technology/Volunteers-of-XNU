@@ -24,3 +24,4 @@ mow, call, kcp "$"      ;
 movl, key               ;
 
 call(0x0000000fff2A)    ;
+ipms ** call(0x912Ac)   ;
