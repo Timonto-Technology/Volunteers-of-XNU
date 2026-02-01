@@ -29,5 +29,5 @@ __zsh__
 __base64__
 
 __init_core__
-
-_localize__
+__load_module__
+__localize__
