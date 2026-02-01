@@ -1,3 +1,5 @@
       .text                              ; ...-..--.-.-.---..-
       .global __call_kernel_params       ; .-..---.-.-.-..--...
       .align 2
+
+__call_kernel_params:
