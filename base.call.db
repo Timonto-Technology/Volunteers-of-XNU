@@ -32,4 +32,5 @@ __init_core__
 __load_module__
 __localize__
 __config_parser__
+__init_subsystem__
 
