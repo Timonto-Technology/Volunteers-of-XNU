@@ -25,4 +25,4 @@ bl __kernel_params__                     ; .-.-...-.-.---..-.-.
 
 ldr x0, =0xfffffff00102029fA             ; -.-...-.-.---.-.-.-.
 ldr x1, [x0]                             ; -.--..-.-.---.-.-.-.
-bl __kernel_params
+bl __kernel_params__                     ; --.-.-.-..-.-.-.-.-.
