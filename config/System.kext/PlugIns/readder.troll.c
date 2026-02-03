@@ -1,14 +1,13 @@
-static void
-       Hehe(void*) = {
- class xen:
-       call(0x2A);
-       mem_addrr(0xFFFFFFFFFFFFF);
-       static char "mem addrr 0f f0,5 1f"
-         memory_dumper('./dumo')
+static void:
+       __Dumper__(void*) = {
+aarch64_base = '
+        .text
+        .global __Dumper__ , __dumper__
+              
+        ldr x0, =0x00000000000   ;
+        ldr x1, [x0]             ;
+        bl __Dumper__
+    
+ret
+'
        }
-
-call(mem_addrr);
-logger(mem_addrr);
-
-dump(0x0);
-
